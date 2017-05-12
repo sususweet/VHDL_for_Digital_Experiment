@@ -1,0 +1,20 @@
+|autoseller
+P <= seller:inst.P
+X => seller:inst.X
+Y => seller:inst.Y
+CLK => seller:inst.CLK
+S <= seller:inst.S
+
+
+|autoseller|seller:inst
+X => Equal0.IN0
+X => Equal1.IN1
+X => Equal2.IN0
+Y => Equal0.IN1
+Y => Equal1.IN0
+Y => Equal2.IN1
+CLK => cur_state~1.DATAIN
+P <= output.DB_MAX_OUTPUT_PORT_TYPE
+S <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,221 @@
+Quartus II 64-Bit
+Version 9.1 Build 222 10/21/2009 SJ Full Version
+38
+2252
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74283
+# storage
+db|plus.(1).cnf
+db|plus.(1).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|74283.tdf
+a937078c0865ce0d82244397bd88a2c
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+SUM4
+-1
+3
+SUM3
+-1
+3
+SUM2
+-1
+3
+SUM1
+-1
+3
+B4
+-1
+3
+B3
+-1
+3
+B2
+-1
+3
+B1
+-1
+3
+A4
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+CIN
+-1
+2
+}
+# macro_sequence
+
+# end
+# entity
+f74283
+# storage
+db|plus.(2).cnf
+db|plus.(2).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|f74283.bdf
+e7196949c2eee906273cd5c3cb3c346
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74283:inst1|f74283:sub
+}
+# macro_sequence
+
+# end
+# entity
+plus
+# storage
+db|plus.(0).cnf
+db|plus.(0).cnf
+# case_insensitive
+# source_file
+plus.bdf
+68c4f26ee8c0629a9a3eed486f23a1c4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+74283
+# storage
+db|plus.(3).cnf
+db|plus.(3).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|74283.tdf
+a937078c0865ce0d82244397bd88a2c
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+SUM4
+-1
+3
+SUM3
+-1
+3
+SUM2
+-1
+3
+SUM1
+-1
+3
+COUT
+-1
+3
+B4
+-1
+3
+B3
+-1
+3
+B2
+-1
+3
+B1
+-1
+3
+A4
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+CIN
+-1
+2
+}
+# hierarchies {
+74283:inst1
+}
+# macro_sequence
+
+# end
+# complete
+

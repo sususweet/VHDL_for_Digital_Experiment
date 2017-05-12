@@ -1,0 +1,19 @@
+Fitter Status : Successful - Sun Apr 09 17:07:21 2017
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : plus
+Top-level Entity Name : plus
+Family : Stratix II GX
+Device : EP2SGX130GF1508C3
+Timing Models : Final
+Logic utilization : < 1 %
+    Combinational ALUTs : 6 / 106,032 ( < 1 % )
+    Dedicated logic registers : 0 / 106,032 ( 0 % )
+Total registers : 0
+Total pins : 13 / 843 ( 2 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 6,747,840 ( 0 % )
+DSP block 9-bit elements : 0 / 504 ( 0 % )
+Total GXB Receiver Channels : 0 / 20 ( 0 % )
+Total GXB Transmitter Channels : 0 / 20 ( 0 % )
+Total PLLs : 0 / 8 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

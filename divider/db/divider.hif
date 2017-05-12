@@ -1,0 +1,730 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Full Version
+38
+2252
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74175
+# storage
+db|divider.(1).cnf
+db|divider.(1).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|74175.bdf
+72e5cdf7f5d159b1f998d946f53ce9b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74175:inst
+}
+# macro_sequence
+
+# end
+# entity
+74283
+# storage
+db|divider.(2).cnf
+db|divider.(2).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|74283.tdf
+a937078c0865ce0d82244397bd88a2c
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+SUM4
+-1
+3
+SUM3
+-1
+3
+SUM2
+-1
+3
+SUM1
+-1
+3
+COUT
+-1
+3
+B4
+-1
+3
+B3
+-1
+3
+B2
+-1
+3
+B1
+-1
+3
+A4
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+CIN
+-1
+2
+}
+# hierarchies {
+74283:inst1
+}
+# macro_sequence
+
+# end
+# entity
+f74283
+# storage
+db|divider.(3).cnf
+db|divider.(3).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|f74283.bdf
+e7196949c2eee906273cd5c3cb3c346
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74283:inst1|f74283:sub
+74283:inst26|f74283:sub
+74283:inst30|f74283:sub
+}
+# macro_sequence
+
+# end
+# entity
+74283
+# storage
+db|divider.(4).cnf
+db|divider.(4).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|74283.tdf
+a937078c0865ce0d82244397bd88a2c
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+SUM4
+-1
+3
+SUM3
+-1
+3
+SUM2
+-1
+3
+SUM1
+-1
+3
+A4
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+CIN
+-1
+1
+B4
+-1
+2
+B3
+-1
+2
+B2
+-1
+2
+B1
+-1
+2
+}
+# hierarchies {
+74283:inst26
+}
+# macro_sequence
+
+# end
+# entity
+74161
+# storage
+db|divider.(5).cnf
+db|divider.(5).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|74161.tdf
+2ed0a3ddd766ade752e5112f973aaea
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+QD
+-1
+3
+QC
+-1
+3
+QB
+-1
+3
+QA
+-1
+3
+CLK
+-1
+3
+LDN
+-1
+2
+ENT
+-1
+2
+ENP
+-1
+2
+CLRN
+-1
+2
+}
+# hierarchies {
+74161:inst2
+}
+# macro_sequence
+
+# end
+# entity
+f74161
+# storage
+db|divider.(6).cnf
+db|divider.(6).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|f74161.bdf
+7336e83179d5c5b17228174483d7f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74161:inst2|f74161:sub
+}
+# macro_sequence
+
+# end
+# entity
+7485
+# storage
+db|divider.(7).cnf
+db|divider.(7).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|7485.tdf
+db5798c1ffefb99d615e441d5c3f6cca
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+B3
+-1
+3
+B2
+-1
+3
+B1
+-1
+3
+B0
+-1
+3
+ALBO
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+A0
+-1
+3
+ALBI
+-1
+1
+AGBI
+-1
+1
+AEBI
+-1
+2
+}
+# macro_sequence
+
+# end
+# entity
+f7485
+# storage
+db|divider.(8).cnf
+db|divider.(8).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|f7485.bdf
+9cfa81cfd1e35d4f38e3ce49f0d4ec0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+7485:inst32|f7485:sub
+}
+# macro_sequence
+
+# end
+# entity
+74283
+# storage
+db|divider.(9).cnf
+db|divider.(9).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|74283.tdf
+a937078c0865ce0d82244397bd88a2c
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+SUM4
+-1
+3
+SUM3
+-1
+3
+SUM2
+-1
+3
+SUM1
+-1
+3
+B4
+-1
+3
+B3
+-1
+3
+B2
+-1
+3
+B1
+-1
+3
+A4
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+CIN
+-1
+1
+}
+# macro_sequence
+
+# end
+# entity
+7485
+# storage
+db|divider.(10).cnf
+db|divider.(10).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|7485.tdf
+db5798c1ffefb99d615e441d5c3f6cca
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+B3
+-1
+3
+B2
+-1
+3
+B1
+-1
+3
+B0
+-1
+3
+ALBO
+-1
+3
+AGBI
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+A0
+-1
+3
+ALBI
+-1
+1
+AEBI
+-1
+2
+}
+# hierarchies {
+7485:inst32
+}
+# macro_sequence
+
+# end
+# entity
+74283
+# storage
+db|divider.(11).cnf
+db|divider.(11).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|74283.tdf
+a937078c0865ce0d82244397bd88a2c
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+SUM4
+-1
+3
+SUM3
+-1
+3
+SUM2
+-1
+3
+SUM1
+-1
+3
+COUT
+-1
+3
+B4
+-1
+3
+B3
+-1
+3
+B2
+-1
+3
+B1
+-1
+3
+A4
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+CIN
+-1
+1
+}
+# hierarchies {
+74283:inst30
+}
+# macro_sequence
+
+# end
+# entity
+7485
+# storage
+db|divider.(12).cnf
+db|divider.(12).cnf
+# case_insensitive
+# source_file
+e:|altera|91|quartus|libraries|others|maxplus2|7485.tdf
+db5798c1ffefb99d615e441d5c3f6cca
+7
+# user_parameter {
+DEVICE_FAMILY
+Stratix II GX
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+B3
+-1
+3
+B2
+-1
+3
+B1
+-1
+3
+B0
+-1
+3
+ALBO
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+A0
+-1
+3
+ALBI
+-1
+1
+AEBI
+-1
+2
+}
+# macro_sequence
+
+# end
+# entity
+divider
+# storage
+db|divider.(0).cnf
+db|divider.(0).cnf
+# case_insensitive
+# source_file
+divider.bdf
+1e6bfe6ff1640c4c04a9882b44f5acc
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

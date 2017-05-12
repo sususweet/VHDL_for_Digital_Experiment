@@ -1,0 +1,116 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.738 ns
+From           : B4
+To             : 74175:inst|14
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.358 ns
+From           : 74175:inst|15
+To             : pin_name13
+From Clock     : B4
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.111 ns
+From           : B4
+To             : pin_name13
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.404 ns
+From           : EN24
+To             : 74175:inst|14
+From Clock     : --
+To Clock       : B4
+Failed Paths   : 0
+
+Type           : Clock Setup: 'B3'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 354.61 MHz ( period = 2.820 ns )
+From           : 74175:inst|15
+To             : 74175:inst|13
+From Clock     : B3
+To Clock       : B3
+Failed Paths   : 0
+
+Type           : Clock Setup: 'B4'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 354.61 MHz ( period = 2.820 ns )
+From           : 74175:inst|15
+To             : 74175:inst|13
+From Clock     : B4
+To Clock       : B4
+Failed Paths   : 0
+
+Type           : Clock Setup: 'B2'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 354.61 MHz ( period = 2.820 ns )
+From           : 74175:inst|15
+To             : 74175:inst|13
+From Clock     : B2
+To Clock       : B2
+Failed Paths   : 0
+
+Type           : Clock Setup: 'EN24'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 354.61 MHz ( period = 2.820 ns )
+From           : 74175:inst|15
+To             : 74175:inst|13
+From Clock     : EN24
+To Clock       : EN24
+Failed Paths   : 0
+
+Type           : Clock Setup: 'B1'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 354.61 MHz ( period = 2.820 ns )
+From           : 74175:inst|15
+To             : 74175:inst|13
+From Clock     : B1
+To Clock       : B1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 354.61 MHz ( period = 2.820 ns )
+From           : 74175:inst|15
+To             : 74175:inst|13
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

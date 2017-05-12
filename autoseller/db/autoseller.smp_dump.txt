@@ -1,0 +1,6 @@
+
+State Machine - |autoseller|seller:inst|cur_state
+Name cur_state.st2 cur_state.st1 cur_state.st0 
+cur_state.st0 0 0 0 
+cur_state.st1 0 1 1 
+cur_state.st2 1 0 1 

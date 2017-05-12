@@ -1,0 +1,19 @@
+Fitter Status : Successful - Fri Apr 14 12:15:03 2017
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : divider
+Top-level Entity Name : divider
+Family : Stratix II GX
+Device : EP2SGX130GF1508C3
+Timing Models : Final
+Logic utilization : < 1 %
+    Combinational ALUTs : 24 / 106,032 ( < 1 % )
+    Dedicated logic registers : 8 / 106,032 ( < 1 % )
+Total registers : 8
+Total pins : 25 / 843 ( 3 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 6,747,840 ( 0 % )
+DSP block 9-bit elements : 0 / 504 ( 0 % )
+Total GXB Receiver Channels : 0 / 20 ( 0 % )
+Total GXB Transmitter Channels : 0 / 20 ( 0 % )
+Total PLLs : 0 / 8 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

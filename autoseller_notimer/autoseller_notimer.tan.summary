@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : -3.221 ns
+From           : Y
+To             : seller:inst|cur_state.st1_88
+From Clock     : --
+To Clock       : Y
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.175 ns
+From           : seller:inst|cur_state.st1_88
+To             : S
+From Clock     : X
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.241 ns
+From           : X
+To             : P
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.648 ns
+From           : Y
+To             : seller:inst|cur_state.st2_82
+From Clock     : --
+To Clock       : X
+Failed Paths   : 0
+
+Type           : Clock Setup: 'X'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 145.22 MHz ( period = 6.886 ns )
+From           : seller:inst|cur_state.st1_88
+To             : seller:inst|cur_state.st1_88
+From Clock     : X
+To Clock       : X
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Y'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 146.54 MHz ( period = 6.824 ns )
+From           : seller:inst|cur_state.st1_88
+To             : seller:inst|cur_state.st1_88
+From Clock     : Y
+To Clock       : Y
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

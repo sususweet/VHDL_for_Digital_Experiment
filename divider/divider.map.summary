@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Fri Apr 14 12:14:43 2017
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : divider
+Top-level Entity Name : divider
+Family : Stratix II GX
+Logic utilization : N/A
+    Combinational ALUTs : 24
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 25
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total GXB Receiver Channels : 0
+Total GXB Transmitter Channels : 0
+Total PLLs : 0
+Total DLLs : 0

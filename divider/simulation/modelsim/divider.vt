@@ -1,0 +1,91 @@
+// Copyright (C) 1991-2009 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/09/2017 11:26:51"
+                                                                                
+// Verilog Test Bench template for design : divider
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 100 ns/ 1 ps
+module divider_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg B1;
+reg B2;
+reg B3;
+reg B4;
+reg clk;
+reg treg_pin_name24;
+reg treg_pin_name25;
+reg treg_pin_name26;
+reg treg_pin_name27;
+// wires                                               
+wire pin_name24;
+wire pin_name25;
+wire pin_name26;
+wire pin_name27;
+
+// assign statements (if any)                          
+assign pin_name24 = treg_pin_name24;
+assign pin_name25 = treg_pin_name25;
+assign pin_name26 = treg_pin_name26;
+assign pin_name27 = treg_pin_name27;
+divider i1 (
+// port map - connection between master ports and signals/registers   
+	.B1(B1),
+	.B2(B2),
+	.B3(B3),
+	.B4(B4),
+	.clk(clk),
+	.pin_name24(pin_name24),
+	.pin_name25(pin_name25),
+	.pin_name26(pin_name26),
+	.pin_name27(pin_name27)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+pin_name24<=1;
+pin_name25<=0;
+pin_name26<=0;
+pin_name27<=0;
+B4<=0;
+B3<=0;  
+B2<=1;
+B1<=1;                                    
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

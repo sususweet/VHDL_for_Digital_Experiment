@@ -1,0 +1,28 @@
+|xor8b
+Z <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A => xor4b:inst.a
+B => xor4b:inst.b
+C => xor4b:inst.c
+D => xor4b:inst.d
+E => xor4b:inst1.a
+F => xor4b:inst1.b
+G => xor4b:inst1.c
+H => xor4b:inst1.d
+
+
+|xor8b|xor4b:inst
+a => z1.IN0
+b => z1.IN1
+c => z2.IN0
+d => z2.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor8b|xor4b:inst1
+a => z1.IN0
+b => z1.IN1
+c => z2.IN0
+d => z2.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

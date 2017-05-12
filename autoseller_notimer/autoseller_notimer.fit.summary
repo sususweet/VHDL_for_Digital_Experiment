@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri May 12 20:24:44 2017
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : autoseller_notimer
+Top-level Entity Name : autoseller_notimer
+Family : MAX II
+Device : EPM570T100C5
+Timing Models : Final
+Total logic elements : 10 / 570 ( 2 % )
+Total pins : 4 / 76 ( 5 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
