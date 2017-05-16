@@ -1,5 +1,5 @@
 Flow report for autoseller_notimer
-Fri May 12 20:24:46 2017
+Fri May 12 20:45:59 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Fri May 12 20:24:46 2017    ;
+; Flow Status             ; Successful - Fri May 12 20:45:59 2017    ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; autoseller_notimer                       ;
 ; Top-level Entity Name   ; autoseller_notimer                       ;
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/12/2017 20:24:42 ;
+; Start date & time ; 05/12/2017 20:45:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; autoseller_notimer  ;
 +-------------------+---------------------+
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +---------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 115410752129008.149459188211908 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 115410752129008.149459315610588 ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                               ; --            ; --          ; --             ;
 ; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                            ; --            ; --          ; --             ;
@@ -82,9 +82,9 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 252 MB              ; 00:00:01                           ;
+; Analysis & Synthesis    ; 00:00:00     ; 1.0                     ; 252 MB              ; 00:00:01                           ;
 ; Fitter                  ; 00:00:01     ; 1.0                     ; 268 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 202 MB              ; 00:00:00                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 202 MB              ; 00:00:00                           ;
 ; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 187 MB              ; 00:00:00                           ;
 ; Total                   ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+

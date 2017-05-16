@@ -68,7 +68,7 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 RESERVED_INPUT               : 1         :        :                   :         : 2         :                
 RESERVED_INPUT               : 2         :        :                   :         : 1         :                
-P                            : 3         : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 3         :        :                   :         : 1         :                
 Y                            : 4         : input  : 3.3-V LVTTL       :         : 1         : N              
 RESERVED_INPUT               : 5         :        :                   :         : 1         :                
 RESERVED_INPUT               : 6         :        :                   :         : 1         :                
@@ -139,7 +139,7 @@ RESERVED_INPUT               : 70        :        :                   :         
 RESERVED_INPUT               : 71        :        :                   :         : 2         :                
 RESERVED_INPUT               : 72        :        :                   :         : 2         :                
 RESERVED_INPUT               : 73        :        :                   :         : 2         :                
-RESERVED_INPUT               : 74        :        :                   :         : 2         :                
+X                            : 74        : input  : 3.3-V LVTTL       :         : 2         : N              
 RESERVED_INPUT               : 75        :        :                   :         : 2         :                
 RESERVED_INPUT               : 76        :        :                   :         : 2         :                
 RESERVED_INPUT               : 77        :        :                   :         : 2         :                
@@ -160,9 +160,9 @@ RESERVED_INPUT               : 91        :        :                   :         
 RESERVED_INPUT               : 92        :        :                   :         : 2         :                
 GNDIO                        : 93        : gnd    :                   :         :           :                
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                
-X                            : 95        : input  : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : 95        :        :                   :         : 2         :                
 RESERVED_INPUT               : 96        :        :                   :         : 2         :                
 RESERVED_INPUT               : 97        :        :                   :         : 2         :                
 RESERVED_INPUT               : 98        :        :                   :         : 2         :                
-RESERVED_INPUT               : 99        :        :                   :         : 2         :                
+P                            : 99        : output : 3.3-V LVTTL       :         : 2         : N              
 RESERVED_INPUT               : 100       :        :                   :         : 2         :                

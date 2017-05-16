@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue May 16 15:04:42 2017
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : timer_BLK
+Top-level Entity Name : timer_BLK
+Family : MAX II
+Device : EPM570T100C5
+Timing Models : Final
+Total logic elements : 35 / 570 ( 6 % )
+Total pins : 17 / 76 ( 22 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

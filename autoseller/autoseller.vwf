@@ -24,15 +24,32 @@ HEADER
 {
 	VERSION = 1;
 	TIME_UNIT = ns;
+	PRINT_OPTIONS = "Print_options_version 6\
+range_start 0ps\
+range_end 1.0us\
+width 1\
+names_percentage 25\
+comments 1\
+grid_lines 1\
+time_bars 1\
+name_every_page 0\
+expand_groups 0\
+print_all 1\
+print_row_height 100";
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 50000.0;
-	SIMULATION_TIME = 0.0;
+	DATA_DURATION = 70000.0;
+	SIMULATION_TIME = 50000.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 1000.0;
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("CLK")
+USER_TYPE("__seller:inst|cur_state")
+{
+	VALUES = "Undefined";
+}
+
+SIGNAL("clk")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -82,24 +99,35 @@ SIGNAL("Y")
 	PARENT = "";
 }
 
+GROUP("input")
+{
+	MEMBERS = "X", "Y";
+}
+
+GROUP("output")
+{
+	MEMBERS = "P", "S";
+}
+
 SIGNAL("seller:inst|cur_state")
 {
-	VALUE_TYPE = NINE_LEVEL_BIT;
+	VALUE_TYPE = ENUM;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = MACHINE;
 	PARENT = "";
+	ENUM_NAME = "__seller:inst|cur_state";
 }
 
-TRANSITION_LIST("CLK")
+TRANSITION_LIST("clk")
 {
 	NODE
 	{
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 12;
+			REPEAT = 17;
 			LEVEL 0 FOR 2000.0;
 			LEVEL 1 FOR 2000.0;
 		}
@@ -112,7 +140,7 @@ TRANSITION_LIST("P")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 70000.0;
 	}
 }
 
@@ -121,7 +149,7 @@ TRANSITION_LIST("S")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 70000.0;
 	}
 }
 
@@ -137,8 +165,12 @@ TRANSITION_LIST("X")
 		LEVEL 0 FOR 3000.0;
 		LEVEL 1 FOR 1000.0;
 		LEVEL 0 FOR 3000.0;
+		LEVEL 1 FOR 2000.0;
+		LEVEL 0 FOR 14000.0;
 		LEVEL 1 FOR 1000.0;
-		LEVEL 0 FOR 36000.0;
+		LEVEL 0 FOR 31000.0;
+		LEVEL 1 FOR 2000.0;
+		LEVEL 0 FOR 7000.0;
 	}
 }
 
@@ -153,7 +185,15 @@ TRANSITION_LIST("Y")
 		LEVEL 1 FOR 1000.0;
 		LEVEL 0 FOR 3000.0;
 		LEVEL 1 FOR 1000.0;
-		LEVEL 0 FOR 24000.0;
+		LEVEL 0 FOR 11000.0;
+		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 3000.0;
+		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 11000.0;
+		LEVEL 1 FOR 2000.0;
+		LEVEL 0 FOR 2000.0;
+		LEVEL 1 FOR 2000.0;
+		LEVEL 0 FOR 11000.0;
 	}
 }
 
@@ -162,53 +202,77 @@ TRANSITION_LIST("seller:inst|cur_state")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL U FOR 50000.0;
+		LEVEL Undefined FOR 70000.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "CLK";
+	CHANNEL = "clk";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "X";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	CHANNEL = "input";
+	EXPAND_STATUS = EXPANDED;
+	RADIX = Binary;
 	TREE_INDEX = 1;
 	TREE_LEVEL = 0;
+	CHILDREN = 2, 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "X";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 1;
+	PARENT = 1;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "Y";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 2;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "output";
+	EXPAND_STATUS = EXPANDED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
 	TREE_LEVEL = 0;
+	CHILDREN = 5, 6;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "P";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 3;
-	TREE_LEVEL = 0;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "S";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 4;
-	TREE_LEVEL = 0;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -216,13 +280,13 @@ DISPLAY_LINE
 	CHANNEL = "seller:inst|cur_state";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 5;
+	TREE_INDEX = 7;
 	TREE_LEVEL = 0;
 }
 
 TIME_BAR
 {
-	TIME = 0;
+	TIME = 10000;
 	MASTER = TRUE;
 }
 ;

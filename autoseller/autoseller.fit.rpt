@@ -1,5 +1,5 @@
 Fitter report for autoseller
-Fri May 12 20:28:54 2017
+Sun May 14 19:01:38 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------+
 ; Fitter Summary                                                   ;
 +-----------------------+------------------------------------------+
-; Fitter Status         ; Successful - Fri May 12 20:28:54 2017    ;
+; Fitter Status         ; Successful - Sun May 14 19:01:38 2017    ;
 ; Quartus II Version    ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name         ; autoseller                               ;
 ; Top-level Entity Name ; autoseller                               ;
@@ -151,9 +151,9 @@ The pin-out file can be found in F:/quartus/autoseller/autoseller.pin.
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
 ; Total logic elements                        ; 5 / 570 ( < 1 % ) ;
-;     -- Combinational with no register       ; 2                 ;
+;     -- Combinational with no register       ; 0                 ;
 ;     -- Register only                        ; 0                 ;
-;     -- Combinational with a register        ; 3                 ;
+;     -- Combinational with a register        ; 5                 ;
 ;                                             ;                   ;
 ; Logic element usage by number of LUT inputs ;                   ;
 ;     -- 4 input functions                    ; 4                 ;
@@ -170,7 +170,7 @@ The pin-out file can be found in F:/quartus/autoseller/autoseller.pin.
 ;     -- synchronous clear/load mode          ; 0                 ;
 ;     -- asynchronous clear/load mode         ; 0                 ;
 ;                                             ;                   ;
-; Total registers                             ; 3 / 570 ( < 1 % ) ;
+; Total registers                             ; 5 / 570 ( < 1 % ) ;
 ; Total LABs                                  ; 1 / 57 ( 2 % )    ;
 ; Logic elements in carry chains              ; 0                 ;
 ; User inserted logic elements                ; 0                 ;
@@ -187,8 +187,8 @@ The pin-out file can be found in F:/quartus/autoseller/autoseller.pin.
 ; Maximum fan-out                             ; 5                 ;
 ; Highest non-global fan-out signal           ; Y                 ;
 ; Highest non-global fan-out                  ; 5                 ;
-; Total fan-out                               ; 24                ;
-; Average fan-out                             ; 2.40              ;
+; Total fan-out                               ; 26                ;
+; Average fan-out                             ; 2.60              ;
 +---------------------------------------------+-------------------+
 
 
@@ -197,8 +197,8 @@ The pin-out file can be found in F:/quartus/autoseller/autoseller.pin.
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
-; CLK  ; 12    ; 1        ; 0            ; 5            ; 0           ; 3                     ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
-; X    ; 95    ; 2        ; 5            ; 8            ; 0           ; 5                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; CLK  ; 12    ; 1        ; 0            ; 5            ; 0           ; 5                     ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; X    ; 74    ; 2        ; 13           ; 7            ; 3           ; 5                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
 ; Y    ; 4     ; 1        ; 0            ; 7            ; 0           ; 5                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
 
@@ -208,19 +208,19 @@ The pin-out file can be found in F:/quartus/autoseller/autoseller.pin.
 +------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; P    ; 3     ; 1        ; 1            ; 8            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; P    ; 99    ; 2        ; 4            ; 8            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
 ; S    ; 43    ; 1        ; 8            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
-+-----------------------------------------------------------+
-; I/O Bank Usage                                            ;
-+----------+-----------------+---------------+--------------+
-; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
-+----------+-----------------+---------------+--------------+
-; 1        ; 4 / 36 ( 11 % ) ; 3.3V          ; --           ;
-; 2        ; 1 / 40 ( 3 % )  ; 3.3V          ; --           ;
-+----------+-----------------+---------------+--------------+
++----------------------------------------------------------+
+; I/O Bank Usage                                           ;
++----------+----------------+---------------+--------------+
+; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
++----------+----------------+---------------+--------------+
+; 1        ; 3 / 36 ( 8 % ) ; 3.3V          ; --           ;
+; 2        ; 2 / 40 ( 5 % ) ; 3.3V          ; --           ;
++----------+----------------+---------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -230,7 +230,7 @@ The pin-out file can be found in F:/quartus/autoseller/autoseller.pin.
 +----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
 ; 1        ; 161        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 2        ; 2          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 3        ; 4          ; 1        ; P              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 3        ; 4          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 4        ; 6          ; 1        ; Y              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 5        ; 8          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 6        ; 9          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
@@ -301,7 +301,7 @@ The pin-out file can be found in F:/quartus/autoseller/autoseller.pin.
 ; 71       ; 115        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 72       ; 116        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 73       ; 118        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 74       ; 120        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 74       ; 120        ; 2        ; X              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 75       ; 122        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 76       ; 125        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 77       ; 126        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
@@ -322,11 +322,11 @@ The pin-out file can be found in F:/quartus/autoseller/autoseller.pin.
 ; 92       ; 150        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 93       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 94       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
-; 95       ; 151        ; 2        ; X              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 95       ; 151        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 96       ; 152        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 97       ; 153        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 98       ; 155        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 99       ; 156        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 99       ; 156        ; 2        ; P              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 100      ; 158        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 +----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -353,8 +353,8 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name     ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------+--------------+
-; |autoseller                ; 5 (0)       ; 3            ; 0          ; 5    ; 0            ; 2 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |autoseller             ; work         ;
-;    |seller:inst|           ; 5 (5)       ; 3            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |autoseller|seller:inst ; work         ;
+; |autoseller                ; 5 (0)       ; 5            ; 0          ; 5    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |autoseller             ; work         ;
+;    |seller:inst|           ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |autoseller|seller:inst ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -377,7 +377,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+-------+--------+----------------------+------------------+
 ; Name ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
 +------+----------+---------+-------+--------+----------------------+------------------+
-; CLK  ; PIN_12   ; 3       ; Clock ; yes    ; Global Clock         ; GCLK0            ;
+; CLK  ; PIN_12   ; 5       ; Clock ; yes    ; Global Clock         ; GCLK0            ;
 +------+----------+---------+-------+--------+----------------------+------------------+
 
 
@@ -386,7 +386,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +------+----------+---------+----------------------+------------------+
-; CLK  ; PIN_12   ; 3       ; Global Clock         ; GCLK0            ;
+; CLK  ; PIN_12   ; 5       ; Global Clock         ; GCLK0            ;
 +------+----------+---------+----------------------+------------------+
 
 
@@ -400,8 +400,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; seller:inst|cur_state.st1 ; 4       ;
 ; seller:inst|cur_state.st2 ; 4       ;
 ; seller:inst|cur_state.st0 ; 1       ;
-; seller:inst|Selector0~0   ; 1       ;
-; seller:inst|P~0           ; 1       ;
+; seller:inst|output[0]     ; 1       ;
+; seller:inst|output[1]     ; 1       ;
 +---------------------------+---------+
 
 
@@ -410,13 +410,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+---------------------+
 ; Interconnect Resource Type ; Usage               ;
 +----------------------------+---------------------+
-; C4s                        ; 5 / 1,624 ( < 1 % ) ;
-; Direct links               ; 0 / 1,930 ( 0 % )   ;
+; C4s                        ; 1 / 1,624 ( < 1 % ) ;
+; Direct links               ; 2 / 1,930 ( < 1 % ) ;
 ; Global clocks              ; 1 / 4 ( 25 % )      ;
 ; LAB clocks                 ; 1 / 56 ( 2 % )      ;
 ; LUT chains                 ; 0 / 513 ( 0 % )     ;
-; Local interconnects        ; 6 / 1,930 ( < 1 % ) ;
-; R4s                        ; 6 / 1,472 ( < 1 % ) ;
+; Local interconnects        ; 9 / 1,930 ( < 1 % ) ;
+; R4s                        ; 7 / 1,472 ( < 1 % ) ;
 +----------------------------+---------------------+
 
 
@@ -512,7 +512,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri May 12 20:28:53 2017
+    Info: Processing started: Sun May 14 19:01:38 2017
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off autoseller -c autoseller
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Selected device EPM570T100C5 for design "autoseller"
@@ -558,12 +558,11 @@ Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
-Info: Estimated most critical path is register to pin delay of 6.676 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X1_Y6; Fanout = 4; REG Node = 'seller:inst|cur_state.st1'
-    Info: 2: + IC(0.620 ns) + CELL(0.740 ns) = 1.360 ns; Loc. = LAB_X1_Y6; Fanout = 1; COMB Node = 'seller:inst|Selector0~0'
-    Info: 3: + IC(2.994 ns) + CELL(2.322 ns) = 6.676 ns; Loc. = PIN_43; Fanout = 0; PIN Node = 'S'
-    Info: Total cell delay = 3.062 ns ( 45.87 % )
-    Info: Total interconnect delay = 3.614 ns ( 54.13 % )
+Info: Estimated most critical path is register to pin delay of 4.736 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X4_Y7; Fanout = 1; REG Node = 'seller:inst|output[0]'
+    Info: 2: + IC(2.414 ns) + CELL(2.322 ns) = 4.736 ns; Loc. = PIN_43; Fanout = 0; PIN Node = 'S'
+    Info: Total cell delay = 2.322 ns ( 49.03 % )
+    Info: Total interconnect delay = 2.414 ns ( 50.97 % )
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
     Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X13_Y8
@@ -574,8 +573,8 @@ Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped 
 Info: Generated suppressed messages file F:/quartus/autoseller/autoseller.fit.smsg
 Info: Quartus II Fitter was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 274 megabytes
-    Info: Processing ended: Fri May 12 20:28:54 2017
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sun May 14 19:01:38 2017
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

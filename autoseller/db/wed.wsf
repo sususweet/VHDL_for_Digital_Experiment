@@ -24,9 +24,9 @@ VECTOR("F:/quartus/autoseller/autoseller.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 27802652;
+		ZEND = 70000000;
 		NUMERATOR = 865;
-		DENOMINATOR = 27802652;
+		DENOMINATOR = 70000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -38,7 +38,7 @@ VECTOR("F:/quartus/autoseller/autoseller.vwf")
 		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
-		SIGNAL = "CLK";
+		SIGNAL = "clk";
 		INDEX = 0;
 		FORMAT = E;
 		SCALE = 1;
@@ -46,15 +46,15 @@ VECTOR("F:/quartus/autoseller/autoseller.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "X";
+		SIGNAL = "input";
 		INDEX = 1;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Y";
+		SIGNAL = "X";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -62,7 +62,7 @@ VECTOR("F:/quartus/autoseller/autoseller.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "P";
+		SIGNAL = "Y";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -70,8 +70,24 @@ VECTOR("F:/quartus/autoseller/autoseller.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S";
+		SIGNAL = "output";
 		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "P";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S";
+		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -79,7 +95,7 @@ VECTOR("F:/quartus/autoseller/autoseller.vwf")
 	}
 	LINE{
 		SIGNAL = "seller:inst|cur_state";
-		INDEX = 5;
+		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -91,9 +107,9 @@ VECTOR("F:/quartus/autoseller/db/autoseller.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 50000000;
-		NUMERATOR = 683;
-		DENOMINATOR = 50000000;
+		ZEND = 70000000;
+		NUMERATOR = 1155;
+		DENOMINATOR = 70000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -105,7 +121,7 @@ VECTOR("F:/quartus/autoseller/db/autoseller.sim.cvwf")
 		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
-		SIGNAL = "CLK";
+		SIGNAL = "clk";
 		INDEX = 0;
 		FORMAT = E;
 		SCALE = 1;
@@ -113,15 +129,15 @@ VECTOR("F:/quartus/autoseller/db/autoseller.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "X";
+		SIGNAL = "input";
 		INDEX = 1;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Y";
+		SIGNAL = "X";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -129,7 +145,7 @@ VECTOR("F:/quartus/autoseller/db/autoseller.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "P";
+		SIGNAL = "Y";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -137,8 +153,24 @@ VECTOR("F:/quartus/autoseller/db/autoseller.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S";
+		SIGNAL = "output";
 		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "P";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S";
+		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -146,7 +178,7 @@ VECTOR("F:/quartus/autoseller/db/autoseller.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "seller:inst|cur_state";
-		INDEX = 5;
+		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

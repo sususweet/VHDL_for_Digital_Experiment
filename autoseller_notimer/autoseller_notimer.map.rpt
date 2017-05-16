@@ -1,5 +1,5 @@
 Analysis & Synthesis report for autoseller_notimer
-Fri May 12 20:24:43 2017
+Fri May 12 20:45:56 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri May 12 20:24:43 2017    ;
+; Analysis & Synthesis Status ; Successful - Fri May 12 20:45:56 2017    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; autoseller_notimer                       ;
 ; Top-level Entity Name       ; autoseller_notimer                       ;
@@ -226,7 +226,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri May 12 20:24:42 2017
+    Info: Processing started: Fri May 12 20:45:56 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off autoseller_notimer -c autoseller_notimer
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Found 1 design units, including 1 entities, in source file autoseller_notimer.bdf
@@ -252,8 +252,8 @@ Info: Implemented 14 device resources after synthesis - the final resource count
     Info: Implemented 10 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 252 megabytes
-    Info: Processing ended: Fri May 12 20:24:43 2017
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri May 12 20:45:56 2017
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

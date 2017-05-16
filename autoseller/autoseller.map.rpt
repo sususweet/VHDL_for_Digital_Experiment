@@ -1,5 +1,5 @@
 Analysis & Synthesis report for autoseller
-Fri May 12 20:28:53 2017
+Sun May 14 19:01:37 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri May 12 20:28:53 2017    ;
+; Analysis & Synthesis Status ; Successful - Sun May 14 19:01:37 2017    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; autoseller                               ;
 ; Top-level Entity Name       ; autoseller                               ;
@@ -153,9 +153,9 @@ applicable agreement for further details.
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
 ; Total logic elements                        ; 5     ;
-;     -- Combinational with no register       ; 2     ;
+;     -- Combinational with no register       ; 0     ;
 ;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 3     ;
+;     -- Combinational with a register        ; 5     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 4     ;
@@ -172,12 +172,12 @@ applicable agreement for further details.
 ;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 3     ;
+; Total registers                             ; 5     ;
 ; I/O pins                                    ; 5     ;
 ; Maximum fan-out node                        ; Y     ;
 ; Maximum fan-out                             ; 5     ;
-; Total fan-out                               ; 24    ;
-; Average fan-out                             ; 2.40  ;
+; Total fan-out                               ; 26    ;
+; Average fan-out                             ; 2.60  ;
 +---------------------------------------------+-------+
 
 
@@ -186,8 +186,8 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name     ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------+--------------+
-; |autoseller                ; 5 (0)       ; 3            ; 0          ; 5    ; 0            ; 2 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |autoseller             ; work         ;
-;    |seller:inst|           ; 5 (5)       ; 3            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |autoseller|seller:inst ; work         ;
+; |autoseller                ; 5 (0)       ; 5            ; 0          ; 5    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |autoseller             ; work         ;
+;    |seller:inst|           ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |autoseller|seller:inst ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -209,7 +209,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3     ;
+; Total registers                              ; 5     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -225,7 +225,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri May 12 20:28:52 2017
+    Info: Processing started: Sun May 14 19:01:36 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off autoseller -c autoseller
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Found 1 design units, including 1 entities, in source file autoseller.bdf
@@ -235,13 +235,24 @@ Info: Found 2 design units, including 1 entities, in source file seller.vhd
     Info: Found entity 1: seller
 Info: Elaborating entity "autoseller" for the top level hierarchy
 Info: Elaborating entity "seller" for hierarchy "seller:inst"
+Warning (10492): VHDL Process Statement warning at seller.vhd(65): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(68): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(71): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(80): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(83): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(86): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(95): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(98): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(101): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(109): signal "output" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at seller.vhd(110): signal "output" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info: Implemented 10 device resources after synthesis - the final resource count might be different
     Info: Implemented 3 input pins
     Info: Implemented 2 output pins
     Info: Implemented 5 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 259 megabytes
-    Info: Processing ended: Fri May 12 20:28:53 2017
+    Info: Processing ended: Sun May 14 19:01:37 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for autoseller
-Fri May 12 20:28:56 2017
+Sun May 14 19:01:40 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -14,9 +14,8 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   6. Clock Setup: 'CLK'
   7. tsu
   8. tco
-  9. tpd
- 10. th
- 11. Timing Analyzer Messages
+  9. th
+ 10. Timing Analyzer Messages
 
 
 
@@ -44,11 +43,10 @@ applicable agreement for further details.
 +------------------------------+-------+---------------+------------------------------------------------+---------------------------+---------------------------+------------+----------+--------------+
 ; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                      ; To                        ; From Clock ; To Clock ; Failed Paths ;
 +------------------------------+-------+---------------+------------------------------------------------+---------------------------+---------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 2.114 ns                                       ; Y                         ; seller:inst|cur_state.st0 ; --         ; CLK      ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 11.152 ns                                      ; seller:inst|cur_state.st2 ; S                         ; CLK        ; --       ; 0            ;
-; Worst-case tpd               ; N/A   ; None          ; 9.633 ns                                       ; X                         ; S                         ; --         ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; -1.219 ns                                      ; X                         ; seller:inst|cur_state.st0 ; --         ; CLK      ; 0            ;
-; Clock Setup: 'CLK'           ; N/A   ; None          ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st2 ; seller:inst|cur_state.st0 ; CLK        ; CLK      ; 0            ;
+; Worst-case tsu               ; N/A   ; None          ; 2.086 ns                                       ; Y                         ; seller:inst|cur_state.st0 ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.088 ns                                       ; seller:inst|output[0]     ; S                         ; CLK        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.327 ns                                      ; X                         ; seller:inst|output[1]     ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st1 ; seller:inst|output[0]     ; CLK        ; CLK      ; 0            ;
 ; Total number of failed paths ;       ;               ;                                                ;                           ;                           ;            ;          ; 0            ;
 +------------------------------+-------+---------------+------------------------------------------------+---------------------------+---------------------------+------------+----------+--------------+
 
@@ -118,12 +116,15 @@ applicable agreement for further details.
 +-------+------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack ; Actual fmax (period)                           ; From                      ; To                        ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-------+------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st2 ; seller:inst|cur_state.st0 ; CLK        ; CLK      ; None                        ; None                      ; 1.818 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st2 ; seller:inst|cur_state.st2 ; CLK        ; CLK      ; None                        ; None                      ; 1.810 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st0 ; seller:inst|cur_state.st1 ; CLK        ; CLK      ; None                        ; None                      ; 1.790 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st1 ; seller:inst|cur_state.st0 ; CLK        ; CLK      ; None                        ; None                      ; 1.553 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st1 ; seller:inst|cur_state.st2 ; CLK        ; CLK      ; None                        ; None                      ; 1.545 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st1 ; seller:inst|cur_state.st1 ; CLK        ; CLK      ; None                        ; None                      ; 1.540 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st1 ; seller:inst|output[0]     ; CLK        ; CLK      ; None                        ; None                      ; 2.249 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st1 ; seller:inst|cur_state.st0 ; CLK        ; CLK      ; None                        ; None                      ; 2.247 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st1 ; seller:inst|cur_state.st1 ; CLK        ; CLK      ; None                        ; None                      ; 2.239 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st2 ; seller:inst|cur_state.st0 ; CLK        ; CLK      ; None                        ; None                      ; 1.916 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st2 ; seller:inst|output[0]     ; CLK        ; CLK      ; None                        ; None                      ; 1.912 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st2 ; seller:inst|output[1]     ; CLK        ; CLK      ; None                        ; None                      ; 1.772 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st2 ; seller:inst|cur_state.st2 ; CLK        ; CLK      ; None                        ; None                      ; 1.763 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st1 ; seller:inst|cur_state.st2 ; CLK        ; CLK      ; None                        ; None                      ; 1.500 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; seller:inst|cur_state.st0 ; seller:inst|cur_state.st1 ; CLK        ; CLK      ; None                        ; None                      ; 1.498 ns                ;
 +-------+------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
@@ -132,36 +133,27 @@ applicable agreement for further details.
 +-------+--------------+------------+------+---------------------------+----------+
 ; Slack ; Required tsu ; Actual tsu ; From ; To                        ; To Clock ;
 +-------+--------------+------------+------+---------------------------+----------+
-; N/A   ; None         ; 2.114 ns   ; Y    ; seller:inst|cur_state.st0 ; CLK      ;
-; N/A   ; None         ; 2.109 ns   ; Y    ; seller:inst|cur_state.st2 ; CLK      ;
-; N/A   ; None         ; 2.106 ns   ; Y    ; seller:inst|cur_state.st1 ; CLK      ;
-; N/A   ; None         ; 1.781 ns   ; X    ; seller:inst|cur_state.st1 ; CLK      ;
-; N/A   ; None         ; 1.778 ns   ; X    ; seller:inst|cur_state.st2 ; CLK      ;
-; N/A   ; None         ; 1.773 ns   ; X    ; seller:inst|cur_state.st0 ; CLK      ;
+; N/A   ; None         ; 2.086 ns   ; Y    ; seller:inst|cur_state.st0 ; CLK      ;
+; N/A   ; None         ; 2.082 ns   ; Y    ; seller:inst|output[1]     ; CLK      ;
+; N/A   ; None         ; 2.018 ns   ; X    ; seller:inst|cur_state.st2 ; CLK      ;
+; N/A   ; None         ; 2.018 ns   ; X    ; seller:inst|output[0]     ; CLK      ;
+; N/A   ; None         ; 1.986 ns   ; X    ; seller:inst|cur_state.st1 ; CLK      ;
+; N/A   ; None         ; 1.932 ns   ; Y    ; seller:inst|output[0]     ; CLK      ;
+; N/A   ; None         ; 1.931 ns   ; Y    ; seller:inst|cur_state.st2 ; CLK      ;
+; N/A   ; None         ; 1.888 ns   ; Y    ; seller:inst|cur_state.st1 ; CLK      ;
+; N/A   ; None         ; 1.888 ns   ; X    ; seller:inst|cur_state.st0 ; CLK      ;
+; N/A   ; None         ; 1.881 ns   ; X    ; seller:inst|output[1]     ; CLK      ;
 +-------+--------------+------------+------+---------------------------+----------+
 
 
-+---------------------------------------------------------------------------------+
-; tco                                                                             ;
-+-------+--------------+------------+---------------------------+----+------------+
-; Slack ; Required tco ; Actual tco ; From                      ; To ; From Clock ;
-+-------+--------------+------------+---------------------------+----+------------+
-; N/A   ; None         ; 11.152 ns  ; seller:inst|cur_state.st2 ; S  ; CLK        ;
-; N/A   ; None         ; 10.447 ns  ; seller:inst|cur_state.st1 ; S  ; CLK        ;
-; N/A   ; None         ; 10.007 ns  ; seller:inst|cur_state.st2 ; P  ; CLK        ;
-+-------+--------------+------------+---------------------------+----+------------+
-
-
-+---------------------------------------------------------+
-; tpd                                                     ;
-+-------+-------------------+-----------------+------+----+
-; Slack ; Required P2P Time ; Actual P2P Time ; From ; To ;
-+-------+-------------------+-----------------+------+----+
-; N/A   ; None              ; 9.633 ns        ; X    ; S  ;
-; N/A   ; None              ; 9.074 ns        ; Y    ; S  ;
-; N/A   ; None              ; 8.682 ns        ; Y    ; P  ;
-; N/A   ; None              ; 8.615 ns        ; X    ; P  ;
-+-------+-------------------+-----------------+------+----+
++-----------------------------------------------------------------------------+
+; tco                                                                         ;
++-------+--------------+------------+-----------------------+----+------------+
+; Slack ; Required tco ; Actual tco ; From                  ; To ; From Clock ;
++-------+--------------+------------+-----------------------+----+------------+
+; N/A   ; None         ; 9.088 ns   ; seller:inst|output[0] ; S  ; CLK        ;
+; N/A   ; None         ; 7.153 ns   ; seller:inst|output[1] ; P  ; CLK        ;
++-------+--------------+------------+-----------------------+----+------------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -169,12 +161,16 @@ applicable agreement for further details.
 +---------------+-------------+-----------+------+---------------------------+----------+
 ; Minimum Slack ; Required th ; Actual th ; From ; To                        ; To Clock ;
 +---------------+-------------+-----------+------+---------------------------+----------+
-; N/A           ; None        ; -1.219 ns ; X    ; seller:inst|cur_state.st0 ; CLK      ;
-; N/A           ; None        ; -1.224 ns ; X    ; seller:inst|cur_state.st2 ; CLK      ;
-; N/A           ; None        ; -1.227 ns ; X    ; seller:inst|cur_state.st1 ; CLK      ;
-; N/A           ; None        ; -1.552 ns ; Y    ; seller:inst|cur_state.st1 ; CLK      ;
-; N/A           ; None        ; -1.555 ns ; Y    ; seller:inst|cur_state.st2 ; CLK      ;
-; N/A           ; None        ; -1.560 ns ; Y    ; seller:inst|cur_state.st0 ; CLK      ;
+; N/A           ; None        ; -1.327 ns ; X    ; seller:inst|output[1]     ; CLK      ;
+; N/A           ; None        ; -1.334 ns ; Y    ; seller:inst|cur_state.st1 ; CLK      ;
+; N/A           ; None        ; -1.334 ns ; X    ; seller:inst|cur_state.st0 ; CLK      ;
+; N/A           ; None        ; -1.377 ns ; Y    ; seller:inst|cur_state.st2 ; CLK      ;
+; N/A           ; None        ; -1.378 ns ; Y    ; seller:inst|output[0]     ; CLK      ;
+; N/A           ; None        ; -1.432 ns ; X    ; seller:inst|cur_state.st1 ; CLK      ;
+; N/A           ; None        ; -1.464 ns ; X    ; seller:inst|cur_state.st2 ; CLK      ;
+; N/A           ; None        ; -1.464 ns ; X    ; seller:inst|output[0]     ; CLK      ;
+; N/A           ; None        ; -1.528 ns ; Y    ; seller:inst|output[1]     ; CLK      ;
+; N/A           ; None        ; -1.532 ns ; Y    ; seller:inst|cur_state.st0 ; CLK      ;
 +---------------+-------------+-----------+------+---------------------------+----------+
 
 
@@ -184,80 +180,73 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri May 12 20:28:55 2017
+    Info: Processing started: Sun May 14 19:01:40 2017
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off autoseller -c autoseller
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "CLK" is an undefined clock
-Info: Clock "CLK" Internal fmax is restricted to 304.04 MHz between source register "seller:inst|cur_state.st2" and destination register "seller:inst|cur_state.st0"
+Info: Clock "CLK" Internal fmax is restricted to 304.04 MHz between source register "seller:inst|cur_state.st1" and destination register "seller:inst|output[0]"
     Info: fmax restricted to clock pin edge rate 3.289 ns. Expand message to see actual delay path.
-        Info: + Longest register to register delay is 1.818 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X1_Y6_N4; Fanout = 4; REG Node = 'seller:inst|cur_state.st2'
-            Info: 2: + IC(1.014 ns) + CELL(0.804 ns) = 1.818 ns; Loc. = LC_X1_Y6_N5; Fanout = 1; REG Node = 'seller:inst|cur_state.st0'
-            Info: Total cell delay = 0.804 ns ( 44.22 % )
-            Info: Total interconnect delay = 1.014 ns ( 55.78 % )
+        Info: + Longest register to register delay is 2.249 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X4_Y7_N2; Fanout = 4; REG Node = 'seller:inst|cur_state.st1'
+            Info: 2: + IC(1.445 ns) + CELL(0.804 ns) = 2.249 ns; Loc. = LC_X4_Y7_N5; Fanout = 1; REG Node = 'seller:inst|output[0]'
+            Info: Total cell delay = 0.804 ns ( 35.75 % )
+            Info: Total interconnect delay = 1.445 ns ( 64.25 % )
         Info: - Smallest clock skew is 0.000 ns
             Info: + Shortest clock path from clock "CLK" to destination register is 3.681 ns
-                Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 3; CLK Node = 'CLK'
-                Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X1_Y6_N5; Fanout = 1; REG Node = 'seller:inst|cur_state.st0'
+                Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+                Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N5; Fanout = 1; REG Node = 'seller:inst|output[0]'
                 Info: Total cell delay = 2.081 ns ( 56.53 % )
                 Info: Total interconnect delay = 1.600 ns ( 43.47 % )
             Info: - Longest clock path from clock "CLK" to source register is 3.681 ns
-                Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 3; CLK Node = 'CLK'
-                Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X1_Y6_N4; Fanout = 4; REG Node = 'seller:inst|cur_state.st2'
+                Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+                Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N2; Fanout = 4; REG Node = 'seller:inst|cur_state.st1'
                 Info: Total cell delay = 2.081 ns ( 56.53 % )
                 Info: Total interconnect delay = 1.600 ns ( 43.47 % )
         Info: + Micro clock to output delay of source is 0.376 ns
         Info: + Micro setup delay of destination is 0.333 ns
-Info: tsu for register "seller:inst|cur_state.st0" (data pin = "Y", clock pin = "CLK") is 2.114 ns
-    Info: + Longest pin to register delay is 5.462 ns
+Info: tsu for register "seller:inst|cur_state.st0" (data pin = "Y", clock pin = "CLK") is 2.086 ns
+    Info: + Longest pin to register delay is 5.434 ns
         Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_4; Fanout = 5; PIN Node = 'Y'
-        Info: 2: + IC(3.269 ns) + CELL(1.061 ns) = 5.462 ns; Loc. = LC_X1_Y6_N5; Fanout = 1; REG Node = 'seller:inst|cur_state.st0'
-        Info: Total cell delay = 2.193 ns ( 40.15 % )
-        Info: Total interconnect delay = 3.269 ns ( 59.85 % )
+        Info: 2: + IC(3.119 ns) + CELL(1.183 ns) = 5.434 ns; Loc. = LC_X4_Y7_N9; Fanout = 1; REG Node = 'seller:inst|cur_state.st0'
+        Info: Total cell delay = 2.315 ns ( 42.60 % )
+        Info: Total interconnect delay = 3.119 ns ( 57.40 % )
     Info: + Micro setup delay of destination is 0.333 ns
     Info: - Shortest clock path from clock "CLK" to destination register is 3.681 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 3; CLK Node = 'CLK'
-        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X1_Y6_N5; Fanout = 1; REG Node = 'seller:inst|cur_state.st0'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N9; Fanout = 1; REG Node = 'seller:inst|cur_state.st0'
         Info: Total cell delay = 2.081 ns ( 56.53 % )
         Info: Total interconnect delay = 1.600 ns ( 43.47 % )
-Info: tco from clock "CLK" to destination pin "S" through register "seller:inst|cur_state.st2" is 11.152 ns
+Info: tco from clock "CLK" to destination pin "S" through register "seller:inst|output[0]" is 9.088 ns
     Info: + Longest clock path from clock "CLK" to source register is 3.681 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 3; CLK Node = 'CLK'
-        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X1_Y6_N4; Fanout = 4; REG Node = 'seller:inst|cur_state.st2'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N5; Fanout = 1; REG Node = 'seller:inst|output[0]'
         Info: Total cell delay = 2.081 ns ( 56.53 % )
         Info: Total interconnect delay = 1.600 ns ( 43.47 % )
     Info: + Micro clock to output delay of source is 0.376 ns
-    Info: + Longest register to pin delay is 7.095 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X1_Y6_N4; Fanout = 4; REG Node = 'seller:inst|cur_state.st2'
-        Info: 2: + IC(0.952 ns) + CELL(0.914 ns) = 1.866 ns; Loc. = LC_X1_Y6_N6; Fanout = 1; COMB Node = 'seller:inst|Selector0~0'
-        Info: 3: + IC(2.907 ns) + CELL(2.322 ns) = 7.095 ns; Loc. = PIN_43; Fanout = 0; PIN Node = 'S'
-        Info: Total cell delay = 3.236 ns ( 45.61 % )
-        Info: Total interconnect delay = 3.859 ns ( 54.39 % )
-Info: Longest tpd from source pin "X" to destination pin "S" is 9.633 ns
-    Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_95; Fanout = 5; PIN Node = 'X'
-    Info: 2: + IC(2.761 ns) + CELL(0.511 ns) = 4.404 ns; Loc. = LC_X1_Y6_N6; Fanout = 1; COMB Node = 'seller:inst|Selector0~0'
-    Info: 3: + IC(2.907 ns) + CELL(2.322 ns) = 9.633 ns; Loc. = PIN_43; Fanout = 0; PIN Node = 'S'
-    Info: Total cell delay = 3.965 ns ( 41.16 % )
-    Info: Total interconnect delay = 5.668 ns ( 58.84 % )
-Info: th for register "seller:inst|cur_state.st0" (data pin = "X", clock pin = "CLK") is -1.219 ns
+    Info: + Longest register to pin delay is 5.031 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X4_Y7_N5; Fanout = 1; REG Node = 'seller:inst|output[0]'
+        Info: 2: + IC(2.709 ns) + CELL(2.322 ns) = 5.031 ns; Loc. = PIN_43; Fanout = 0; PIN Node = 'S'
+        Info: Total cell delay = 2.322 ns ( 46.15 % )
+        Info: Total interconnect delay = 2.709 ns ( 53.85 % )
+Info: th for register "seller:inst|output[1]" (data pin = "X", clock pin = "CLK") is -1.327 ns
     Info: + Longest clock path from clock "CLK" to destination register is 3.681 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 3; CLK Node = 'CLK'
-        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X1_Y6_N5; Fanout = 1; REG Node = 'seller:inst|cur_state.st0'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N1; Fanout = 1; REG Node = 'seller:inst|output[1]'
         Info: Total cell delay = 2.081 ns ( 56.53 % )
         Info: Total interconnect delay = 1.600 ns ( 43.47 % )
     Info: + Micro hold delay of destination is 0.221 ns
-    Info: - Shortest pin to register delay is 5.121 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_95; Fanout = 5; PIN Node = 'X'
-        Info: 2: + IC(2.806 ns) + CELL(1.183 ns) = 5.121 ns; Loc. = LC_X1_Y6_N5; Fanout = 1; REG Node = 'seller:inst|cur_state.st0'
-        Info: Total cell delay = 2.315 ns ( 45.21 % )
-        Info: Total interconnect delay = 2.806 ns ( 54.79 % )
+    Info: - Shortest pin to register delay is 5.229 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_74; Fanout = 5; PIN Node = 'X'
+        Info: 2: + IC(3.036 ns) + CELL(1.061 ns) = 5.229 ns; Loc. = LC_X4_Y7_N1; Fanout = 1; REG Node = 'seller:inst|output[1]'
+        Info: Total cell delay = 2.193 ns ( 41.94 % )
+        Info: Total interconnect delay = 3.036 ns ( 58.06 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 199 megabytes
-    Info: Processing ended: Fri May 12 20:28:56 2017
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sun May 14 19:01:40 2017
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

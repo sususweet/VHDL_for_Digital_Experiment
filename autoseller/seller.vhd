@@ -46,7 +46,9 @@ END seller;
 ARCHITECTURE seller_architecture OF seller IS
 	TYPE state IS (st0,st1,st2);
 	SIGNAL cur_state, next_state : state;
-	
+	SIGNAL input:std_logic_vector(1 DOWNTO 0);
+	SIGNAL output:std_logic_vector(1 DOWNTO 0);
+	SIGNAL next_output:std_logic_vector(1 DOWNTO 0);
 BEGIN
 	PROCESS(CLK)
 	BEGIN
@@ -56,58 +58,62 @@ BEGIN
 	END PROCESS;
 
 	PROCESS(X,Y,cur_state)
-	VARIABLE input:std_logic_vector(1 DOWNTO 0);
-	VARIABLE output:std_logic_vector(1 DOWNTO 0);
 	BEGIN
-		input := X&Y;
+		input <= X&Y;
 		CASE cur_state IS 
 			WHEN st0 =>
 				IF input = "00" THEN
-					output := "00";
+					next_output <= "00";
 					next_state <= st0;
 				ELSIF input = "01" THEN
-					output := "00";
+					next_output <= "00";
 					next_state <= st2;
 				ELSIF input = "10" THEN
-					output := "00";
+					next_output <= "00";
 					next_state <= st1;
 				ELSE 
-					output := "00";
+					next_output <= "00";
 					next_state <= st0;
 				END IF;
 				
 			WHEN st1 =>
 				IF input = "00" THEN
-					output := "00";
+					next_output <= "00";
 					next_state <= st1;
 				ELSIF input = "01" THEN
-					output := "01";
+					next_output <= "01";
 					next_state <= st0;
 				ELSIF input = "10" THEN
-					output := "00";
+					next_output <= "00";
 					next_state <= st2;
 				ELSE 
-					output := "00";
+					next_output <= "00";
 					next_state <= st1;
 				END IF;
 				
 			WHEN st2 =>
 				IF input = "00" THEN
-					output := "00";
+					next_output <= "00";
 					next_state <= st2;
 				ELSIF input = "10" THEN
-					output := "01";
+					next_output <= "01";
 					next_state <= st0;
 				ELSIF input = "01" THEN
-					output := "11";
+					next_output <= "11";
 					next_state <= st0;
 				ELSE 
-					output := "00";
+					next_output <= "00";
 					next_state <= st2;
 				END IF;
 		END CASE;
 		P <= output(1);
 		S <= output(0);
 	END PROCESS;
-
+	
+	PROCESS(CLK)
+	BEGIN
+		IF(RISING_EDGE(CLK)) THEN
+			output <= next_output;
+        END IF;
+	END PROCESS;
 END seller_architecture;
