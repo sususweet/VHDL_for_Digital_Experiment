@@ -99,16 +99,6 @@ SIGNAL("Y")
 	PARENT = "";
 }
 
-GROUP("input")
-{
-	MEMBERS = "X", "Y";
-}
-
-GROUP("output")
-{
-	MEMBERS = "P", "S";
-}
-
 SIGNAL("seller:inst|cur_state")
 {
 	VALUE_TYPE = ENUM;
@@ -118,6 +108,16 @@ SIGNAL("seller:inst|cur_state")
 	DIRECTION = MACHINE;
 	PARENT = "";
 	ENUM_NAME = "__seller:inst|cur_state";
+}
+
+GROUP("input")
+{
+	MEMBERS = "X", "Y";
+}
+
+GROUP("output")
+{
+	MEMBERS = "P", "S";
 }
 
 TRANSITION_LIST("clk")

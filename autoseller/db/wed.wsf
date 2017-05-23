@@ -108,7 +108,7 @@ VECTOR("F:/quartus/autoseller/db/autoseller.sim.cvwf")
 	ZOOM{
 		ZBEGIN = 0;
 		ZEND = 70000000;
-		NUMERATOR = 1155;
+		NUMERATOR = 729;
 		DENOMINATOR = 70000000;
 		TOP_INDEX = 0;
 	}

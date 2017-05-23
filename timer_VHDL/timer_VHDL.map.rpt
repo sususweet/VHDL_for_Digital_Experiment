@@ -1,5 +1,5 @@
 Analysis & Synthesis report for timer_VHDL
-Tue May 16 16:18:52 2017
+Tue May 23 14:52:06 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -14,7 +14,8 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -40,13 +41,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue May 16 16:18:52 2017    ;
+; Analysis & Synthesis Status ; Successful - Tue May 23 14:52:06 2017    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; timer_VHDL                               ;
 ; Top-level Entity Name       ; timer_VHDL                               ;
 ; Family                      ; MAX II                                   ;
 ; Total logic elements        ; 44                                       ;
-; Total pins                  ; 25                                       ;
+; Total pins                  ; 27                                       ;
 ; Total virtual pins          ; 0                                        ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
 +-----------------------------+------------------------------------------+
@@ -157,9 +158,9 @@ applicable agreement for further details.
 ;     -- Combinational with a register        ; 21    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 23    ;
+;     -- 4 input functions                    ; 24    ;
 ;     -- 3 input functions                    ; 4     ;
-;     -- 2 input functions                    ; 9     ;
+;     -- 2 input functions                    ; 8     ;
 ;     -- 1 input functions                    ; 5     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
@@ -173,11 +174,11 @@ applicable agreement for further details.
 ;                                             ;       ;
 ; Total registers                             ; 24    ;
 ; Total logic cells in carry chains           ; 4     ;
-; I/O pins                                    ; 25    ;
+; I/O pins                                    ; 27    ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 24    ;
-; Total fan-out                               ; 195   ;
-; Average fan-out                             ; 2.83  ;
+; Total fan-out                               ; 197   ;
+; Average fan-out                             ; 2.77  ;
 +---------------------------------------------+-------+
 
 
@@ -186,7 +187,7 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name    ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------+--------------+
-; |timer_VHDL                ; 44 (0)      ; 24           ; 0          ; 25   ; 0            ; 20 (0)       ; 3 (0)             ; 21 (0)           ; 4 (0)           ; 0 (0)      ; |timer_VHDL            ; work         ;
+; |timer_VHDL                ; 44 (0)      ; 24           ; 0          ; 27   ; 0            ; 20 (0)       ; 3 (0)             ; 21 (0)           ; 4 (0)           ; 0 (0)      ; |timer_VHDL            ; work         ;
 ;    |timer:inst|            ; 44 (44)     ; 24           ; 0          ; 0    ; 0            ; 20 (20)      ; 3 (3)             ; 21 (21)          ; 4 (4)           ; 0 (0)      ; |timer_VHDL|timer:inst ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -207,13 +208,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_VHDL|timer:inst|HOUR1[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_VHDL|timer:inst|HOUR0[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_VHDL|timer:inst|MIN0[3]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_VHDL|timer:inst|MIN1[3]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Tue May 16 16:18:51 2017
+    Info: Processing started: Tue May 23 14:52:05 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off timer_VHDL -c timer_VHDL
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Found 1 design units, including 1 entities, in source file timer_vhdl.bdf
@@ -223,14 +236,14 @@ Info: Found 2 design units, including 1 entities, in source file timer.vhd
     Info: Found entity 1: timer
 Info: Elaborating entity "timer_VHDL" for the top level hierarchy
 Info: Elaborating entity "timer" for hierarchy "timer:inst"
-Info: Implemented 69 device resources after synthesis - the final resource count might be different
-    Info: Implemented 1 input pins
+Info: Implemented 71 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
     Info: Implemented 24 output pins
     Info: Implemented 44 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 259 megabytes
-    Info: Processing ended: Tue May 16 16:18:52 2017
+    Info: Peak virtual memory: 260 megabytes
+    Info: Processing ended: Tue May 23 14:52:06 2017
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

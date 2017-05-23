@@ -1,5 +1,5 @@
 Flow report for timer_BLK
-Tue May 16 15:04:44 2017
+Tue May 23 13:21:38 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Tue May 16 15:04:44 2017    ;
+; Flow Status             ; Successful - Tue May 23 13:21:38 2017    ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; timer_BLK                                ;
 ; Top-level Entity Name   ; timer_BLK                                ;
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/16/2017 15:04:40 ;
+; Start date & time ; 05/23/2017 13:21:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; timer_BLK           ;
 +-------------------+---------------------+
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +---------------------------------------+------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                              ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 115410752129008.149491828009972    ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 115410752129008.149551689308036    ; --            ; --          ; --             ;
 ; MAXII_OPTIMIZATION_TECHNIQUE          ; Speed                              ; Balanced      ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                                 ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                                  ; --            ; --          ; --             ;
@@ -84,11 +84,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 241 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:01     ; 1.0                     ; 268 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 202 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 187 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:02     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 242 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:01     ; 1.0                     ; 270 MB              ; 00:00:01                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 204 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 188 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

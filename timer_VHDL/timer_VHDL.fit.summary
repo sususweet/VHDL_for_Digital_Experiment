@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue May 16 16:18:54 2017
+Fitter Status : Successful - Tue May 23 14:52:07 2017
 Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
 Revision Name : timer_VHDL
 Top-level Entity Name : timer_VHDL
 Family : MAX II
 Device : EPM570T100C5
 Timing Models : Final
-Total logic elements : 43 / 570 ( 8 % )
-Total pins : 25 / 76 ( 33 % )
+Total logic elements : 42 / 570 ( 7 % )
+Total pins : 27 / 76 ( 36 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
