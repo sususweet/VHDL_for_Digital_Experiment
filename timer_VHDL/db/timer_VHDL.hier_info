@@ -1,11 +1,12 @@
 |timer_VHDL
+ALARM <= timer:inst.ALARM
+clk => timer:inst.CLK
+set_min => timer:inst.SET_MIN
+set_hour => timer:inst.SET_HOUR
 HOUR0[0] <= timer:inst.HOUR0[0]
 HOUR0[1] <= timer:inst.HOUR0[1]
 HOUR0[2] <= timer:inst.HOUR0[2]
 HOUR0[3] <= timer:inst.HOUR0[3]
-clk => timer:inst.CLK
-set_min => timer:inst.SET_MIN
-set_hour => timer:inst.SET_HOUR
 HOUR1[0] <= timer:inst.HOUR1[0]
 HOUR1[1] <= timer:inst.HOUR1[1]
 HOUR1[2] <= timer:inst.HOUR1[2]
@@ -53,6 +54,8 @@ CLK => SEC0[0]~reg0.CLK
 CLK => SEC0[1]~reg0.CLK
 CLK => SEC0[2]~reg0.CLK
 CLK => SEC0[3]~reg0.CLK
+CLK => process_6.IN1
+SET_MIN => process_6.IN0
 SET_MIN => MIN0.OUTPUTSELECT
 SET_MIN => MIN0.OUTPUTSELECT
 SET_MIN => MIN0.OUTPUTSELECT
@@ -61,6 +64,7 @@ SET_MIN => MIN1.OUTPUTSELECT
 SET_MIN => MIN1.OUTPUTSELECT
 SET_MIN => MIN1.OUTPUTSELECT
 SET_MIN => MIN1.OUTPUTSELECT
+SET_HOUR => process_6.IN1
 SET_HOUR => HOUR0.OUTPUTSELECT
 SET_HOUR => HOUR0.OUTPUTSELECT
 SET_HOUR => HOUR0.OUTPUTSELECT
@@ -93,5 +97,6 @@ HOUR1[0] <= HOUR1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HOUR1[1] <= HOUR1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HOUR1[2] <= HOUR1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HOUR1[3] <= HOUR1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ALARM <= ALARM.DB_MAX_OUTPUT_PORT_TYPE
 
 

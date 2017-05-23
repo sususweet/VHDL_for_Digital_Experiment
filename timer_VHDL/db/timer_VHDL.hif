@@ -27,7 +27,7 @@ db|timer_VHDL.(0).cnf
 # case_insensitive
 # source_file
 timer_vhdl.bdf
-6ed84d6fe8140a52c0aceaaef5f5fb
+2616a4decf9e9b1365faa9c8991cf4e
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -51,7 +51,7 @@ ON
 # case_insensitive
 # source_file
 timer.vhd
-2052496bc77b0b45c25efbef9cc999
+397b9fa18d731e4d9f734a0ac9f17c8
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

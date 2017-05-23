@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for timer_VHDL
-Tue May 23 14:52:09 2017
+Tue May 23 17:01:49 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -14,8 +14,9 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   6. Clock Setup: 'clk'
   7. tsu
   8. tco
-  9. th
- 10. Timing Analyzer Messages
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
 
 
 
@@ -43,10 +44,11 @@ applicable agreement for further details.
 +------------------------------+-------+---------------+----------------------------------+--------------------+---------------------+------------+----------+--------------+
 ; Type                         ; Slack ; Required Time ; Actual Time                      ; From               ; To                  ; From Clock ; To Clock ; Failed Paths ;
 +------------------------------+-------+---------------+----------------------------------+--------------------+---------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 3.709 ns                         ; set_min            ; timer:inst|MIN1[1]  ; --         ; clk      ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 10.323 ns                        ; timer:inst|SEC1[3] ; SEC1[3]             ; clk        ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; -2.167 ns                        ; set_min            ; timer:inst|MIN1[3]  ; --         ; clk      ; 0            ;
-; Clock Setup: 'clk'           ; N/A   ; None          ; 109.54 MHz ( period = 9.129 ns ) ; timer:inst|MIN0[1] ; timer:inst|HOUR1[0] ; clk        ; clk      ; 0            ;
+; Worst-case tsu               ; N/A   ; None          ; 4.686 ns                         ; set_min            ; timer:inst|MIN1[1]  ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 15.182 ns                        ; timer:inst|SEC0[3] ; ALARM               ; clk        ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 9.686 ns                         ; set_min            ; ALARM               ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.486 ns                        ; set_hour           ; timer:inst|HOUR1[3] ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 106.11 MHz ( period = 9.424 ns ) ; timer:inst|MIN0[2] ; timer:inst|HOUR0[0] ; clk        ; clk      ; 0            ;
 ; Total number of failed paths ;       ;               ;                                  ;                    ;                     ;            ;          ; 0            ;
 +------------------------------+-------+---------------+----------------------------------+--------------------+---------------------+------------+----------+--------------+
 
@@ -116,206 +118,206 @@ applicable agreement for further details.
 +-----------------------------------------+-----------------------------------------------------+---------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack                                   ; Actual fmax (period)                                ; From                ; To                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-----------------------------------------+-----------------------------------------------------+---------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A                                     ; 109.54 MHz ( period = 9.129 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.420 ns                ;
-; N/A                                     ; 109.54 MHz ( period = 9.129 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.420 ns                ;
-; N/A                                     ; 109.54 MHz ( period = 9.129 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.420 ns                ;
-; N/A                                     ; 109.54 MHz ( period = 9.129 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.420 ns                ;
-; N/A                                     ; 111.86 MHz ( period = 8.940 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.231 ns                ;
-; N/A                                     ; 111.86 MHz ( period = 8.940 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.231 ns                ;
-; N/A                                     ; 111.86 MHz ( period = 8.940 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.231 ns                ;
-; N/A                                     ; 111.86 MHz ( period = 8.940 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.231 ns                ;
-; N/A                                     ; 113.79 MHz ( period = 8.788 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.079 ns                ;
-; N/A                                     ; 113.79 MHz ( period = 8.788 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.079 ns                ;
-; N/A                                     ; 113.79 MHz ( period = 8.788 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.079 ns                ;
-; N/A                                     ; 113.79 MHz ( period = 8.788 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.079 ns                ;
-; N/A                                     ; 115.05 MHz ( period = 8.692 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.983 ns                ;
-; N/A                                     ; 115.05 MHz ( period = 8.692 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.983 ns                ;
-; N/A                                     ; 115.05 MHz ( period = 8.692 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.983 ns                ;
-; N/A                                     ; 115.05 MHz ( period = 8.692 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.983 ns                ;
-; N/A                                     ; 116.10 MHz ( period = 8.613 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.904 ns                ;
-; N/A                                     ; 116.10 MHz ( period = 8.613 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.904 ns                ;
-; N/A                                     ; 116.10 MHz ( period = 8.613 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.904 ns                ;
-; N/A                                     ; 116.10 MHz ( period = 8.613 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.904 ns                ;
-; N/A                                     ; 117.61 MHz ( period = 8.503 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.794 ns                ;
-; N/A                                     ; 117.61 MHz ( period = 8.503 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.794 ns                ;
-; N/A                                     ; 117.61 MHz ( period = 8.503 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.794 ns                ;
-; N/A                                     ; 117.61 MHz ( period = 8.503 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.794 ns                ;
-; N/A                                     ; 118.68 MHz ( period = 8.426 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.717 ns                ;
-; N/A                                     ; 118.68 MHz ( period = 8.426 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.717 ns                ;
-; N/A                                     ; 118.68 MHz ( period = 8.426 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.717 ns                ;
-; N/A                                     ; 118.68 MHz ( period = 8.426 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.717 ns                ;
-; N/A                                     ; 119.75 MHz ( period = 8.351 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.642 ns                ;
-; N/A                                     ; 119.75 MHz ( period = 8.351 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.642 ns                ;
-; N/A                                     ; 119.75 MHz ( period = 8.351 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.642 ns                ;
-; N/A                                     ; 119.75 MHz ( period = 8.351 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.642 ns                ;
-; N/A                                     ; 120.44 MHz ( period = 8.303 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.594 ns                ;
-; N/A                                     ; 120.44 MHz ( period = 8.303 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.594 ns                ;
-; N/A                                     ; 120.44 MHz ( period = 8.303 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.594 ns                ;
-; N/A                                     ; 120.44 MHz ( period = 8.303 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.594 ns                ;
-; N/A                                     ; 121.14 MHz ( period = 8.255 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.546 ns                ;
-; N/A                                     ; 121.14 MHz ( period = 8.255 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.546 ns                ;
-; N/A                                     ; 121.14 MHz ( period = 8.255 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.546 ns                ;
-; N/A                                     ; 121.14 MHz ( period = 8.255 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.546 ns                ;
-; N/A                                     ; 122.31 MHz ( period = 8.176 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.467 ns                ;
-; N/A                                     ; 122.31 MHz ( period = 8.176 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.467 ns                ;
-; N/A                                     ; 122.31 MHz ( period = 8.176 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.467 ns                ;
-; N/A                                     ; 122.31 MHz ( period = 8.176 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.467 ns                ;
-; N/A                                     ; 123.26 MHz ( period = 8.113 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.404 ns                ;
-; N/A                                     ; 123.26 MHz ( period = 8.113 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.404 ns                ;
-; N/A                                     ; 123.26 MHz ( period = 8.113 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.404 ns                ;
-; N/A                                     ; 123.26 MHz ( period = 8.113 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.404 ns                ;
-; N/A                                     ; 124.32 MHz ( period = 8.044 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.335 ns                ;
-; N/A                                     ; 124.32 MHz ( period = 8.044 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.335 ns                ;
-; N/A                                     ; 124.32 MHz ( period = 8.044 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.335 ns                ;
-; N/A                                     ; 124.32 MHz ( period = 8.044 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.335 ns                ;
-; N/A                                     ; 125.17 MHz ( period = 7.989 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.280 ns                ;
-; N/A                                     ; 125.17 MHz ( period = 7.989 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.280 ns                ;
-; N/A                                     ; 125.17 MHz ( period = 7.989 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.280 ns                ;
-; N/A                                     ; 125.17 MHz ( period = 7.989 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.280 ns                ;
-; N/A                                     ; 125.30 MHz ( period = 7.981 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.272 ns                ;
-; N/A                                     ; 125.30 MHz ( period = 7.981 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.272 ns                ;
-; N/A                                     ; 125.30 MHz ( period = 7.981 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.272 ns                ;
-; N/A                                     ; 125.50 MHz ( period = 7.968 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.259 ns                ;
-; N/A                                     ; 125.50 MHz ( period = 7.968 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.259 ns                ;
-; N/A                                     ; 125.50 MHz ( period = 7.968 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.259 ns                ;
-; N/A                                     ; 125.50 MHz ( period = 7.968 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.259 ns                ;
-; N/A                                     ; 125.77 MHz ( period = 7.951 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.242 ns                ;
-; N/A                                     ; 125.77 MHz ( period = 7.951 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.242 ns                ;
-; N/A                                     ; 125.77 MHz ( period = 7.951 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.242 ns                ;
-; N/A                                     ; 125.77 MHz ( period = 7.951 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.242 ns                ;
-; N/A                                     ; 125.79 MHz ( period = 7.950 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.241 ns                ;
-; N/A                                     ; 125.79 MHz ( period = 7.950 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.241 ns                ;
-; N/A                                     ; 125.79 MHz ( period = 7.950 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.241 ns                ;
-; N/A                                     ; 125.79 MHz ( period = 7.950 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.241 ns                ;
-; N/A                                     ; 126.10 MHz ( period = 7.930 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.221 ns                ;
-; N/A                                     ; 126.10 MHz ( period = 7.930 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.221 ns                ;
-; N/A                                     ; 126.10 MHz ( period = 7.930 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.221 ns                ;
-; N/A                                     ; 126.12 MHz ( period = 7.929 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.220 ns                ;
-; N/A                                     ; 126.12 MHz ( period = 7.929 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.220 ns                ;
-; N/A                                     ; 126.12 MHz ( period = 7.929 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.220 ns                ;
-; N/A                                     ; 127.13 MHz ( period = 7.866 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.157 ns                ;
-; N/A                                     ; 127.13 MHz ( period = 7.866 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.157 ns                ;
-; N/A                                     ; 127.13 MHz ( period = 7.866 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.157 ns                ;
-; N/A                                     ; 127.13 MHz ( period = 7.866 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.157 ns                ;
-; N/A                                     ; 127.62 MHz ( period = 7.836 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.127 ns                ;
-; N/A                                     ; 127.62 MHz ( period = 7.836 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.127 ns                ;
-; N/A                                     ; 127.62 MHz ( period = 7.836 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.127 ns                ;
-; N/A                                     ; 127.91 MHz ( period = 7.818 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.109 ns                ;
-; N/A                                     ; 127.91 MHz ( period = 7.818 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.109 ns                ;
-; N/A                                     ; 127.91 MHz ( period = 7.818 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.109 ns                ;
-; N/A                                     ; 127.91 MHz ( period = 7.818 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.109 ns                ;
-; N/A                                     ; 127.98 MHz ( period = 7.814 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.105 ns                ;
-; N/A                                     ; 127.98 MHz ( period = 7.814 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.105 ns                ;
-; N/A                                     ; 127.98 MHz ( period = 7.814 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.105 ns                ;
-; N/A                                     ; 127.98 MHz ( period = 7.814 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.105 ns                ;
-; N/A                                     ; 130.17 MHz ( period = 7.682 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 6.973 ns                ;
-; N/A                                     ; 130.17 MHz ( period = 7.682 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 6.973 ns                ;
-; N/A                                     ; 130.17 MHz ( period = 7.682 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 6.973 ns                ;
-; N/A                                     ; 130.28 MHz ( period = 7.676 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.967 ns                ;
-; N/A                                     ; 130.28 MHz ( period = 7.676 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.967 ns                ;
-; N/A                                     ; 130.28 MHz ( period = 7.676 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.967 ns                ;
-; N/A                                     ; 130.28 MHz ( period = 7.676 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.967 ns                ;
-; N/A                                     ; 131.46 MHz ( period = 7.607 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.898 ns                ;
-; N/A                                     ; 131.46 MHz ( period = 7.607 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.898 ns                ;
-; N/A                                     ; 131.46 MHz ( period = 7.607 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.898 ns                ;
-; N/A                                     ; 131.46 MHz ( period = 7.607 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.898 ns                ;
-; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.894 ns                ;
-; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.894 ns                ;
-; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.894 ns                ;
-; N/A                                     ; 132.29 MHz ( period = 7.559 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.850 ns                ;
-; N/A                                     ; 132.29 MHz ( period = 7.559 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.850 ns                ;
-; N/A                                     ; 132.29 MHz ( period = 7.559 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.850 ns                ;
-; N/A                                     ; 132.31 MHz ( period = 7.558 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.849 ns                ;
-; N/A                                     ; 132.31 MHz ( period = 7.558 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.849 ns                ;
-; N/A                                     ; 132.31 MHz ( period = 7.558 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.849 ns                ;
-; N/A                                     ; 132.78 MHz ( period = 7.531 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.822 ns                ;
-; N/A                                     ; 132.78 MHz ( period = 7.531 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.822 ns                ;
-; N/A                                     ; 132.78 MHz ( period = 7.531 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.822 ns                ;
-; N/A                                     ; 132.78 MHz ( period = 7.531 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.822 ns                ;
-; N/A                                     ; 133.08 MHz ( period = 7.514 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.805 ns                ;
-; N/A                                     ; 133.08 MHz ( period = 7.514 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.805 ns                ;
-; N/A                                     ; 133.08 MHz ( period = 7.514 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.805 ns                ;
-; N/A                                     ; 133.08 MHz ( period = 7.514 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.805 ns                ;
-; N/A                                     ; 133.10 MHz ( period = 7.513 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.804 ns                ;
-; N/A                                     ; 133.10 MHz ( period = 7.513 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.804 ns                ;
-; N/A                                     ; 133.10 MHz ( period = 7.513 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.804 ns                ;
-; N/A                                     ; 133.10 MHz ( period = 7.513 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.804 ns                ;
-; N/A                                     ; 133.49 MHz ( period = 7.491 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 6.782 ns                ;
-; N/A                                     ; 133.49 MHz ( period = 7.491 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 6.782 ns                ;
-; N/A                                     ; 133.49 MHz ( period = 7.491 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 6.782 ns                ;
-; N/A                                     ; 133.49 MHz ( period = 7.491 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 6.782 ns                ;
-; N/A                                     ; 133.87 MHz ( period = 7.470 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 6.761 ns                ;
-; N/A                                     ; 133.87 MHz ( period = 7.470 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 6.761 ns                ;
-; N/A                                     ; 133.87 MHz ( period = 7.470 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 6.761 ns                ;
-; N/A                                     ; 134.08 MHz ( period = 7.458 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.749 ns                ;
-; N/A                                     ; 134.08 MHz ( period = 7.458 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.749 ns                ;
-; N/A                                     ; 134.08 MHz ( period = 7.458 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.749 ns                ;
-; N/A                                     ; 135.48 MHz ( period = 7.381 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 6.672 ns                ;
-; N/A                                     ; 135.48 MHz ( period = 7.381 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 6.672 ns                ;
-; N/A                                     ; 135.48 MHz ( period = 7.381 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 6.672 ns                ;
-; N/A                                     ; 135.48 MHz ( period = 7.381 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 6.672 ns                ;
-; N/A                                     ; 135.56 MHz ( period = 7.377 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.668 ns                ;
-; N/A                                     ; 135.56 MHz ( period = 7.377 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.668 ns                ;
-; N/A                                     ; 135.56 MHz ( period = 7.377 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.668 ns                ;
-; N/A                                     ; 135.56 MHz ( period = 7.377 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.668 ns                ;
-; N/A                                     ; 136.91 MHz ( period = 7.304 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.595 ns                ;
-; N/A                                     ; 136.91 MHz ( period = 7.304 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.595 ns                ;
-; N/A                                     ; 136.91 MHz ( period = 7.304 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.595 ns                ;
-; N/A                                     ; 137.04 MHz ( period = 7.297 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 6.588 ns                ;
-; N/A                                     ; 137.04 MHz ( period = 7.297 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 6.588 ns                ;
-; N/A                                     ; 137.04 MHz ( period = 7.297 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 6.588 ns                ;
-; N/A                                     ; 137.04 MHz ( period = 7.297 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 6.588 ns                ;
-; N/A                                     ; 137.44 MHz ( period = 7.276 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 6.567 ns                ;
-; N/A                                     ; 137.44 MHz ( period = 7.276 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 6.567 ns                ;
-; N/A                                     ; 137.44 MHz ( period = 7.276 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 6.567 ns                ;
-; N/A                                     ; 137.95 MHz ( period = 7.249 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 6.540 ns                ;
-; N/A                                     ; 137.95 MHz ( period = 7.249 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 6.540 ns                ;
-; N/A                                     ; 137.95 MHz ( period = 7.249 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 6.540 ns                ;
-; N/A                                     ; 140.86 MHz ( period = 7.099 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.390 ns                ;
-; N/A                                     ; 140.86 MHz ( period = 7.099 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.390 ns                ;
-; N/A                                     ; 140.86 MHz ( period = 7.099 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.390 ns                ;
-; N/A                                     ; 141.76 MHz ( period = 7.054 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.345 ns                ;
-; N/A                                     ; 141.76 MHz ( period = 7.054 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.345 ns                ;
-; N/A                                     ; 141.76 MHz ( period = 7.054 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.345 ns                ;
-; N/A                                     ; 141.76 MHz ( period = 7.054 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.345 ns                ;
-; N/A                                     ; 142.84 MHz ( period = 7.001 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN0[2]  ; clk        ; clk      ; None                        ; None                      ; 6.292 ns                ;
-; N/A                                     ; 143.00 MHz ( period = 6.993 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.284 ns                ;
-; N/A                                     ; 143.74 MHz ( period = 6.957 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN0[2]  ; clk        ; clk      ; None                        ; None                      ; 6.248 ns                ;
-; N/A                                     ; 143.76 MHz ( period = 6.956 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN0[2]  ; clk        ; clk      ; None                        ; None                      ; 6.247 ns                ;
-; N/A                                     ; 143.84 MHz ( period = 6.952 ns )                    ; timer:inst|HOUR1[0] ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 6.243 ns                ;
-; N/A                                     ; 144.01 MHz ( period = 6.944 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.235 ns                ;
-; N/A                                     ; 144.01 MHz ( period = 6.944 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.235 ns                ;
-; N/A                                     ; 144.01 MHz ( period = 6.944 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.235 ns                ;
-; N/A                                     ; 144.01 MHz ( period = 6.944 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.235 ns                ;
-; N/A                                     ; 144.05 MHz ( period = 6.942 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.233 ns                ;
-; N/A                                     ; 144.07 MHz ( period = 6.941 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.232 ns                ;
-; N/A                                     ; 144.65 MHz ( period = 6.913 ns )                    ; timer:inst|HOUR0[0] ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 6.204 ns                ;
-; N/A                                     ; 144.82 MHz ( period = 6.905 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.196 ns                ;
-; N/A                                     ; 144.82 MHz ( period = 6.905 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.196 ns                ;
-; N/A                                     ; 144.82 MHz ( period = 6.905 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.196 ns                ;
+; N/A                                     ; 106.11 MHz ( period = 9.424 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.715 ns                ;
+; N/A                                     ; 106.11 MHz ( period = 9.424 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.715 ns                ;
+; N/A                                     ; 106.11 MHz ( period = 9.424 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.715 ns                ;
+; N/A                                     ; 106.11 MHz ( period = 9.424 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.715 ns                ;
+; N/A                                     ; 107.82 MHz ( period = 9.275 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.566 ns                ;
+; N/A                                     ; 107.82 MHz ( period = 9.275 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.566 ns                ;
+; N/A                                     ; 107.82 MHz ( period = 9.275 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.566 ns                ;
+; N/A                                     ; 107.82 MHz ( period = 9.275 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.566 ns                ;
+; N/A                                     ; 109.41 MHz ( period = 9.140 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.431 ns                ;
+; N/A                                     ; 109.41 MHz ( period = 9.140 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.431 ns                ;
+; N/A                                     ; 109.41 MHz ( period = 9.140 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.431 ns                ;
+; N/A                                     ; 109.41 MHz ( period = 9.140 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.431 ns                ;
+; N/A                                     ; 110.52 MHz ( period = 9.048 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 8.339 ns                ;
+; N/A                                     ; 110.52 MHz ( period = 9.048 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 8.339 ns                ;
+; N/A                                     ; 110.52 MHz ( period = 9.048 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 8.339 ns                ;
+; N/A                                     ; 110.52 MHz ( period = 9.048 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 8.339 ns                ;
+; N/A                                     ; 112.37 MHz ( period = 8.899 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 8.190 ns                ;
+; N/A                                     ; 112.37 MHz ( period = 8.899 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 8.190 ns                ;
+; N/A                                     ; 112.37 MHz ( period = 8.899 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 8.190 ns                ;
+; N/A                                     ; 112.37 MHz ( period = 8.899 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 8.190 ns                ;
+; N/A                                     ; 112.74 MHz ( period = 8.870 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.161 ns                ;
+; N/A                                     ; 112.74 MHz ( period = 8.870 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.161 ns                ;
+; N/A                                     ; 112.74 MHz ( period = 8.870 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.161 ns                ;
+; N/A                                     ; 112.74 MHz ( period = 8.870 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.161 ns                ;
+; N/A                                     ; 113.16 MHz ( period = 8.837 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.128 ns                ;
+; N/A                                     ; 113.16 MHz ( period = 8.837 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.128 ns                ;
+; N/A                                     ; 113.16 MHz ( period = 8.837 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.128 ns                ;
+; N/A                                     ; 113.16 MHz ( period = 8.837 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.128 ns                ;
+; N/A                                     ; 114.10 MHz ( period = 8.764 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 8.055 ns                ;
+; N/A                                     ; 114.10 MHz ( period = 8.764 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 8.055 ns                ;
+; N/A                                     ; 114.10 MHz ( period = 8.764 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 8.055 ns                ;
+; N/A                                     ; 114.10 MHz ( period = 8.764 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 8.055 ns                ;
+; N/A                                     ; 114.59 MHz ( period = 8.727 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.018 ns                ;
+; N/A                                     ; 114.59 MHz ( period = 8.727 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.018 ns                ;
+; N/A                                     ; 114.59 MHz ( period = 8.727 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.018 ns                ;
+; N/A                                     ; 114.59 MHz ( period = 8.727 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.018 ns                ;
+; N/A                                     ; 114.61 MHz ( period = 8.725 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 8.016 ns                ;
+; N/A                                     ; 114.61 MHz ( period = 8.725 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 8.016 ns                ;
+; N/A                                     ; 114.61 MHz ( period = 8.725 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 8.016 ns                ;
+; N/A                                     ; 114.61 MHz ( period = 8.725 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 8.016 ns                ;
+; N/A                                     ; 115.14 MHz ( period = 8.685 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.976 ns                ;
+; N/A                                     ; 115.14 MHz ( period = 8.685 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.976 ns                ;
+; N/A                                     ; 115.14 MHz ( period = 8.685 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.976 ns                ;
+; N/A                                     ; 115.14 MHz ( period = 8.685 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.976 ns                ;
+; N/A                                     ; 115.65 MHz ( period = 8.647 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.938 ns                ;
+; N/A                                     ; 115.65 MHz ( period = 8.647 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.938 ns                ;
+; N/A                                     ; 115.65 MHz ( period = 8.647 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.938 ns                ;
+; N/A                                     ; 116.29 MHz ( period = 8.599 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.890 ns                ;
+; N/A                                     ; 116.29 MHz ( period = 8.599 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.890 ns                ;
+; N/A                                     ; 116.29 MHz ( period = 8.599 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.890 ns                ;
+; N/A                                     ; 116.29 MHz ( period = 8.599 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.890 ns                ;
+; N/A                                     ; 117.72 MHz ( period = 8.495 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.786 ns                ;
+; N/A                                     ; 117.72 MHz ( period = 8.495 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.786 ns                ;
+; N/A                                     ; 117.72 MHz ( period = 8.495 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.786 ns                ;
+; N/A                                     ; 117.73 MHz ( period = 8.494 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.785 ns                ;
+; N/A                                     ; 117.73 MHz ( period = 8.494 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.785 ns                ;
+; N/A                                     ; 117.73 MHz ( period = 8.494 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.785 ns                ;
+; N/A                                     ; 117.73 MHz ( period = 8.494 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.785 ns                ;
+; N/A                                     ; 118.19 MHz ( period = 8.461 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.752 ns                ;
+; N/A                                     ; 118.19 MHz ( period = 8.461 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.752 ns                ;
+; N/A                                     ; 118.19 MHz ( period = 8.461 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.752 ns                ;
+; N/A                                     ; 118.19 MHz ( period = 8.461 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.752 ns                ;
+; N/A                                     ; 118.30 MHz ( period = 8.453 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.744 ns                ;
+; N/A                                     ; 118.30 MHz ( period = 8.453 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.744 ns                ;
+; N/A                                     ; 118.30 MHz ( period = 8.453 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.744 ns                ;
+; N/A                                     ; 118.30 MHz ( period = 8.453 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.744 ns                ;
+; N/A                                     ; 119.08 MHz ( period = 8.398 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.689 ns                ;
+; N/A                                     ; 119.08 MHz ( period = 8.398 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.689 ns                ;
+; N/A                                     ; 119.08 MHz ( period = 8.398 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.689 ns                ;
+; N/A                                     ; 119.08 MHz ( period = 8.398 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.689 ns                ;
+; N/A                                     ; 119.08 MHz ( period = 8.398 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.689 ns                ;
+; N/A                                     ; 119.08 MHz ( period = 8.398 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.689 ns                ;
+; N/A                                     ; 119.08 MHz ( period = 8.398 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.689 ns                ;
+; N/A                                     ; 119.75 MHz ( period = 8.351 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.642 ns                ;
+; N/A                                     ; 119.75 MHz ( period = 8.351 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.642 ns                ;
+; N/A                                     ; 119.75 MHz ( period = 8.351 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.642 ns                ;
+; N/A                                     ; 119.75 MHz ( period = 8.351 ns )                    ; timer:inst|MIN1[0]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.642 ns                ;
+; N/A                                     ; 119.77 MHz ( period = 8.349 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.640 ns                ;
+; N/A                                     ; 119.77 MHz ( period = 8.349 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.640 ns                ;
+; N/A                                     ; 119.77 MHz ( period = 8.349 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.640 ns                ;
+; N/A                                     ; 119.77 MHz ( period = 8.349 ns )                    ; timer:inst|MIN1[1]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.640 ns                ;
+; N/A                                     ; 120.35 MHz ( period = 8.309 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 120.35 MHz ( period = 8.309 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 120.35 MHz ( period = 8.309 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 120.35 MHz ( period = 8.309 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 120.35 MHz ( period = 8.309 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 120.35 MHz ( period = 8.309 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 120.35 MHz ( period = 8.309 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 120.35 MHz ( period = 8.309 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 121.05 MHz ( period = 8.261 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 121.05 MHz ( period = 8.261 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 121.05 MHz ( period = 8.261 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 121.05 MHz ( period = 8.261 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 121.09 MHz ( period = 8.258 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.549 ns                ;
+; N/A                                     ; 121.09 MHz ( period = 8.258 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.549 ns                ;
+; N/A                                     ; 121.09 MHz ( period = 8.258 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.549 ns                ;
+; N/A                                     ; 121.09 MHz ( period = 8.258 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.549 ns                ;
+; N/A                                     ; 121.23 MHz ( period = 8.249 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.540 ns                ;
+; N/A                                     ; 121.23 MHz ( period = 8.249 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.540 ns                ;
+; N/A                                     ; 121.23 MHz ( period = 8.249 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.540 ns                ;
+; N/A                                     ; 121.61 MHz ( period = 8.223 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.514 ns                ;
+; N/A                                     ; 121.61 MHz ( period = 8.223 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.514 ns                ;
+; N/A                                     ; 121.61 MHz ( period = 8.223 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.514 ns                ;
+; N/A                                     ; 121.61 MHz ( period = 8.223 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.514 ns                ;
+; N/A                                     ; 123.17 MHz ( period = 8.119 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.410 ns                ;
+; N/A                                     ; 123.17 MHz ( period = 8.119 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.410 ns                ;
+; N/A                                     ; 123.17 MHz ( period = 8.119 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.410 ns                ;
+; N/A                                     ; 123.24 MHz ( period = 8.114 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.405 ns                ;
+; N/A                                     ; 123.24 MHz ( period = 8.114 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.405 ns                ;
+; N/A                                     ; 123.24 MHz ( period = 8.114 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.405 ns                ;
+; N/A                                     ; 123.32 MHz ( period = 8.109 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 123.32 MHz ( period = 8.109 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 123.32 MHz ( period = 8.109 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 123.81 MHz ( period = 8.077 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.368 ns                ;
+; N/A                                     ; 123.81 MHz ( period = 8.077 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.368 ns                ;
+; N/A                                     ; 123.81 MHz ( period = 8.077 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.368 ns                ;
+; N/A                                     ; 123.81 MHz ( period = 8.077 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.368 ns                ;
+; N/A                                     ; 123.95 MHz ( period = 8.068 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.359 ns                ;
+; N/A                                     ; 123.95 MHz ( period = 8.068 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.359 ns                ;
+; N/A                                     ; 123.95 MHz ( period = 8.068 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.359 ns                ;
+; N/A                                     ; 124.66 MHz ( period = 8.022 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.313 ns                ;
+; N/A                                     ; 124.66 MHz ( period = 8.022 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.313 ns                ;
+; N/A                                     ; 124.66 MHz ( period = 8.022 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.313 ns                ;
+; N/A                                     ; 124.66 MHz ( period = 8.022 ns )                    ; timer:inst|MIN1[2]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.313 ns                ;
+; N/A                                     ; 125.55 MHz ( period = 7.965 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.256 ns                ;
+; N/A                                     ; 125.55 MHz ( period = 7.965 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.256 ns                ;
+; N/A                                     ; 125.55 MHz ( period = 7.965 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.256 ns                ;
+; N/A                                     ; 125.55 MHz ( period = 7.965 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.256 ns                ;
+; N/A                                     ; 125.58 MHz ( period = 7.963 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.254 ns                ;
+; N/A                                     ; 125.58 MHz ( period = 7.963 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.254 ns                ;
+; N/A                                     ; 125.58 MHz ( period = 7.963 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.254 ns                ;
+; N/A                                     ; 125.99 MHz ( period = 7.937 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR1[0] ; clk        ; clk      ; None                        ; None                      ; 7.228 ns                ;
+; N/A                                     ; 125.99 MHz ( period = 7.937 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 7.228 ns                ;
+; N/A                                     ; 125.99 MHz ( period = 7.937 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 7.228 ns                ;
+; N/A                                     ; 125.99 MHz ( period = 7.937 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR0[0] ; clk        ; clk      ; None                        ; None                      ; 7.228 ns                ;
+; N/A                                     ; 126.06 MHz ( period = 7.933 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.224 ns                ;
+; N/A                                     ; 126.06 MHz ( period = 7.933 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.224 ns                ;
+; N/A                                     ; 126.06 MHz ( period = 7.933 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.224 ns                ;
+; N/A                                     ; 126.06 MHz ( period = 7.933 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.224 ns                ;
+; N/A                                     ; 126.82 MHz ( period = 7.885 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.176 ns                ;
+; N/A                                     ; 126.82 MHz ( period = 7.885 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.176 ns                ;
+; N/A                                     ; 126.82 MHz ( period = 7.885 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.176 ns                ;
+; N/A                                     ; 126.82 MHz ( period = 7.885 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.176 ns                ;
+; N/A                                     ; 126.87 MHz ( period = 7.882 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 7.173 ns                ;
+; N/A                                     ; 126.87 MHz ( period = 7.882 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 7.173 ns                ;
+; N/A                                     ; 126.87 MHz ( period = 7.882 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 7.173 ns                ;
+; N/A                                     ; 126.87 MHz ( period = 7.882 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 7.173 ns                ;
+; N/A                                     ; 127.49 MHz ( period = 7.844 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.135 ns                ;
+; N/A                                     ; 127.49 MHz ( period = 7.844 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.135 ns                ;
+; N/A                                     ; 127.49 MHz ( period = 7.844 ns )                    ; timer:inst|MIN0[3]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.135 ns                ;
+; N/A                                     ; 127.94 MHz ( period = 7.816 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|SEC1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.107 ns                ;
+; N/A                                     ; 127.94 MHz ( period = 7.816 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|SEC1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.107 ns                ;
+; N/A                                     ; 127.94 MHz ( period = 7.816 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|SEC1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.107 ns                ;
+; N/A                                     ; 128.68 MHz ( period = 7.771 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 7.062 ns                ;
+; N/A                                     ; 128.68 MHz ( period = 7.771 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 7.062 ns                ;
+; N/A                                     ; 128.68 MHz ( period = 7.771 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 7.062 ns                ;
+; N/A                                     ; 130.38 MHz ( period = 7.670 ns )                    ; timer:inst|HOUR1[1] ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 6.961 ns                ;
+; N/A                                     ; 130.48 MHz ( period = 7.664 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|SEC1[0]  ; clk        ; clk      ; None                        ; None                      ; 6.955 ns                ;
+; N/A                                     ; 130.48 MHz ( period = 7.664 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|SEC1[2]  ; clk        ; clk      ; None                        ; None                      ; 6.955 ns                ;
+; N/A                                     ; 130.48 MHz ( period = 7.664 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|SEC1[1]  ; clk        ; clk      ; None                        ; None                      ; 6.955 ns                ;
+; N/A                                     ; 131.77 MHz ( period = 7.589 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.880 ns                ;
+; N/A                                     ; 131.77 MHz ( period = 7.589 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.880 ns                ;
+; N/A                                     ; 131.77 MHz ( period = 7.589 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.880 ns                ;
+; N/A                                     ; 131.77 MHz ( period = 7.589 ns )                    ; timer:inst|MIN1[3]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.880 ns                ;
+; N/A                                     ; 132.26 MHz ( period = 7.561 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.852 ns                ;
+; N/A                                     ; 132.26 MHz ( period = 7.561 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.852 ns                ;
+; N/A                                     ; 132.26 MHz ( period = 7.561 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.852 ns                ;
+; N/A                                     ; 132.26 MHz ( period = 7.561 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.852 ns                ;
+; N/A                                     ; 134.28 MHz ( period = 7.447 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 6.738 ns                ;
+; N/A                                     ; 134.28 MHz ( period = 7.447 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 6.738 ns                ;
+; N/A                                     ; 134.28 MHz ( period = 7.447 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 6.738 ns                ;
+; N/A                                     ; 136.95 MHz ( period = 7.302 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.593 ns                ;
+; N/A                                     ; 137.21 MHz ( period = 7.288 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|SEC1[0]  ; clk        ; clk      ; None                        ; None                      ; 6.579 ns                ;
+; N/A                                     ; 137.21 MHz ( period = 7.288 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|SEC1[2]  ; clk        ; clk      ; None                        ; None                      ; 6.579 ns                ;
+; N/A                                     ; 137.21 MHz ( period = 7.288 ns )                    ; timer:inst|SEC0[3]  ; timer:inst|SEC1[1]  ; clk        ; clk      ; None                        ; None                      ; 6.579 ns                ;
+; N/A                                     ; 138.18 MHz ( period = 7.237 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|SEC1[0]  ; clk        ; clk      ; None                        ; None                      ; 6.528 ns                ;
+; N/A                                     ; 138.18 MHz ( period = 7.237 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|SEC1[2]  ; clk        ; clk      ; None                        ; None                      ; 6.528 ns                ;
+; N/A                                     ; 138.18 MHz ( period = 7.237 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|SEC1[1]  ; clk        ; clk      ; None                        ; None                      ; 6.528 ns                ;
+; N/A                                     ; 138.72 MHz ( period = 7.209 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.500 ns                ;
+; N/A                                     ; 138.72 MHz ( period = 7.209 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.500 ns                ;
+; N/A                                     ; 138.72 MHz ( period = 7.209 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.500 ns                ;
+; N/A                                     ; 138.77 MHz ( period = 7.206 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|SEC1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.497 ns                ;
+; N/A                                     ; 139.33 MHz ( period = 7.177 ns )                    ; timer:inst|SEC1[0]  ; timer:inst|MIN0[2]  ; clk        ; clk      ; None                        ; None                      ; 6.468 ns                ;
+; N/A                                     ; 139.86 MHz ( period = 7.150 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|MIN1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.441 ns                ;
+; N/A                                     ; 141.40 MHz ( period = 7.072 ns )                    ; timer:inst|HOUR1[2] ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 6.363 ns                ;
+; N/A                                     ; 141.58 MHz ( period = 7.063 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.354 ns                ;
+; N/A                                     ; 141.58 MHz ( period = 7.063 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.354 ns                ;
+; N/A                                     ; 141.58 MHz ( period = 7.063 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.354 ns                ;
+; N/A                                     ; 141.62 MHz ( period = 7.061 ns )                    ; timer:inst|HOUR0[0] ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 141.76 MHz ( period = 7.054 ns )                    ; timer:inst|SEC0[0]  ; timer:inst|SEC1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.345 ns                ;
+; N/A                                     ; 141.78 MHz ( period = 7.053 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|MIN1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.344 ns                ;
+; N/A                                     ; 142.23 MHz ( period = 7.031 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN0[2]  ; clk        ; clk      ; None                        ; None                      ; 6.322 ns                ;
+; N/A                                     ; 143.72 MHz ( period = 6.958 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.249 ns                ;
+; N/A                                     ; 143.72 MHz ( period = 6.958 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.249 ns                ;
+; N/A                                     ; 143.72 MHz ( period = 6.958 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.249 ns                ;
+; N/A                                     ; 144.38 MHz ( period = 6.926 ns )                    ; timer:inst|SEC0[1]  ; timer:inst|MIN0[2]  ; clk        ; clk      ; None                        ; None                      ; 6.217 ns                ;
+; N/A                                     ; 144.84 MHz ( period = 6.904 ns )                    ; timer:inst|MIN0[0]  ; timer:inst|MIN1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.195 ns                ;
+; N/A                                     ; 145.54 MHz ( period = 6.871 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.162 ns                ;
 ; N/A                                     ; 145.54 MHz ( period = 6.871 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN0[3]  ; clk        ; clk      ; None                        ; None                      ; 6.162 ns                ;
 ; N/A                                     ; 145.54 MHz ( period = 6.871 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN0[1]  ; clk        ; clk      ; None                        ; None                      ; 6.162 ns                ;
-; N/A                                     ; 145.54 MHz ( period = 6.871 ns )                    ; timer:inst|SEC1[1]  ; timer:inst|MIN0[0]  ; clk        ; clk      ; None                        ; None                      ; 6.162 ns                ;
-; N/A                                     ; 145.77 MHz ( period = 6.860 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR0[3] ; clk        ; clk      ; None                        ; None                      ; 6.151 ns                ;
-; N/A                                     ; 145.77 MHz ( period = 6.860 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR0[2] ; clk        ; clk      ; None                        ; None                      ; 6.151 ns                ;
-; N/A                                     ; 145.77 MHz ( period = 6.860 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR0[1] ; clk        ; clk      ; None                        ; None                      ; 6.151 ns                ;
-; N/A                                     ; 145.77 MHz ( period = 6.860 ns )                    ; timer:inst|SEC0[2]  ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.151 ns                ;
-; N/A                                     ; 145.86 MHz ( period = 6.856 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN0[2]  ; clk        ; clk      ; None                        ; None                      ; 6.147 ns                ;
-; N/A                                     ; 146.03 MHz ( period = 6.848 ns )                    ; timer:inst|SEC1[2]  ; timer:inst|MIN1[3]  ; clk        ; clk      ; None                        ; None                      ; 6.139 ns                ;
-; N/A                                     ; 146.67 MHz ( period = 6.818 ns )                    ; timer:inst|HOUR1[0] ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 6.109 ns                ;
-; N/A                                     ; 147.51 MHz ( period = 6.779 ns )                    ; timer:inst|HOUR0[0] ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 6.070 ns                ;
-; N/A                                     ; 148.02 MHz ( period = 6.756 ns )                    ; timer:inst|HOUR0[3] ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 6.047 ns                ;
-; N/A                                     ; 148.13 MHz ( period = 6.751 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 6.042 ns                ;
-; N/A                                     ; 148.13 MHz ( period = 6.751 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 6.042 ns                ;
-; N/A                                     ; 148.13 MHz ( period = 6.751 ns )                    ; timer:inst|MIN0[1]  ; timer:inst|MIN1[1]  ; clk        ; clk      ; None                        ; None                      ; 6.042 ns                ;
-; N/A                                     ; 148.15 MHz ( period = 6.750 ns )                    ; timer:inst|HOUR1[0] ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.041 ns                ;
-; N/A                                     ; 149.01 MHz ( period = 6.711 ns )                    ; timer:inst|HOUR0[0] ; timer:inst|HOUR1[3] ; clk        ; clk      ; None                        ; None                      ; 6.002 ns                ;
-; N/A                                     ; 149.21 MHz ( period = 6.702 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN0[2]  ; clk        ; clk      ; None                        ; None                      ; 5.993 ns                ;
-; N/A                                     ; 149.39 MHz ( period = 6.694 ns )                    ; timer:inst|SEC1[3]  ; timer:inst|MIN1[3]  ; clk        ; clk      ; None                        ; None                      ; 5.985 ns                ;
-; N/A                                     ; 150.90 MHz ( period = 6.627 ns )                    ; timer:inst|HOUR0[1] ; timer:inst|HOUR1[2] ; clk        ; clk      ; None                        ; None                      ; 5.918 ns                ;
-; N/A                                     ; 151.01 MHz ( period = 6.622 ns )                    ; timer:inst|HOUR0[3] ; timer:inst|HOUR1[1] ; clk        ; clk      ; None                        ; None                      ; 5.913 ns                ;
-; N/A                                     ; 152.39 MHz ( period = 6.562 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|MIN1[2]  ; clk        ; clk      ; None                        ; None                      ; 5.853 ns                ;
-; N/A                                     ; 152.39 MHz ( period = 6.562 ns )                    ; timer:inst|MIN0[2]  ; timer:inst|MIN1[0]  ; clk        ; clk      ; None                        ; None                      ; 5.853 ns                ;
 ; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                     ;                     ;            ;          ;                             ;                           ;                         ;
 +-----------------------------------------+-----------------------------------------------------+---------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
@@ -325,22 +327,22 @@ applicable agreement for further details.
 +-------+--------------+------------+----------+---------------------+----------+
 ; Slack ; Required tsu ; Actual tsu ; From     ; To                  ; To Clock ;
 +-------+--------------+------------+----------+---------------------+----------+
-; N/A   ; None         ; 3.709 ns   ; set_min  ; timer:inst|MIN1[2]  ; clk      ;
-; N/A   ; None         ; 3.709 ns   ; set_min  ; timer:inst|MIN1[0]  ; clk      ;
-; N/A   ; None         ; 3.709 ns   ; set_min  ; timer:inst|MIN1[1]  ; clk      ;
-; N/A   ; None         ; 3.464 ns   ; set_hour ; timer:inst|HOUR0[0] ; clk      ;
-; N/A   ; None         ; 3.464 ns   ; set_hour ; timer:inst|HOUR1[2] ; clk      ;
-; N/A   ; None         ; 3.464 ns   ; set_hour ; timer:inst|HOUR1[1] ; clk      ;
-; N/A   ; None         ; 3.464 ns   ; set_hour ; timer:inst|HOUR1[0] ; clk      ;
-; N/A   ; None         ; 3.325 ns   ; set_min  ; timer:inst|MIN0[3]  ; clk      ;
-; N/A   ; None         ; 3.325 ns   ; set_min  ; timer:inst|MIN0[1]  ; clk      ;
-; N/A   ; None         ; 3.325 ns   ; set_min  ; timer:inst|MIN0[0]  ; clk      ;
-; N/A   ; None         ; 3.027 ns   ; set_hour ; timer:inst|HOUR0[3] ; clk      ;
-; N/A   ; None         ; 3.027 ns   ; set_hour ; timer:inst|HOUR0[2] ; clk      ;
-; N/A   ; None         ; 3.027 ns   ; set_hour ; timer:inst|HOUR0[1] ; clk      ;
-; N/A   ; None         ; 3.027 ns   ; set_hour ; timer:inst|HOUR1[3] ; clk      ;
-; N/A   ; None         ; 2.723 ns   ; set_min  ; timer:inst|MIN0[2]  ; clk      ;
-; N/A   ; None         ; 2.721 ns   ; set_min  ; timer:inst|MIN1[3]  ; clk      ;
+; N/A   ; None         ; 4.686 ns   ; set_min  ; timer:inst|MIN1[0]  ; clk      ;
+; N/A   ; None         ; 4.686 ns   ; set_min  ; timer:inst|MIN1[2]  ; clk      ;
+; N/A   ; None         ; 4.686 ns   ; set_min  ; timer:inst|MIN1[1]  ; clk      ;
+; N/A   ; None         ; 3.682 ns   ; set_min  ; timer:inst|MIN0[0]  ; clk      ;
+; N/A   ; None         ; 3.682 ns   ; set_min  ; timer:inst|MIN0[3]  ; clk      ;
+; N/A   ; None         ; 3.682 ns   ; set_min  ; timer:inst|MIN0[1]  ; clk      ;
+; N/A   ; None         ; 3.650 ns   ; set_min  ; timer:inst|MIN0[2]  ; clk      ;
+; N/A   ; None         ; 3.416 ns   ; set_hour ; timer:inst|HOUR1[0] ; clk      ;
+; N/A   ; None         ; 3.416 ns   ; set_hour ; timer:inst|HOUR1[1] ; clk      ;
+; N/A   ; None         ; 3.416 ns   ; set_hour ; timer:inst|HOUR1[2] ; clk      ;
+; N/A   ; None         ; 3.416 ns   ; set_hour ; timer:inst|HOUR0[0] ; clk      ;
+; N/A   ; None         ; 3.341 ns   ; set_min  ; timer:inst|MIN1[3]  ; clk      ;
+; N/A   ; None         ; 3.040 ns   ; set_hour ; timer:inst|HOUR0[3] ; clk      ;
+; N/A   ; None         ; 3.040 ns   ; set_hour ; timer:inst|HOUR0[2] ; clk      ;
+; N/A   ; None         ; 3.040 ns   ; set_hour ; timer:inst|HOUR0[1] ; clk      ;
+; N/A   ; None         ; 3.040 ns   ; set_hour ; timer:inst|HOUR1[3] ; clk      ;
 +-------+--------------+------------+----------+---------------------+----------+
 
 
@@ -349,31 +351,58 @@ applicable agreement for further details.
 +-------+--------------+------------+---------------------+----------+------------+
 ; Slack ; Required tco ; Actual tco ; From                ; To       ; From Clock ;
 +-------+--------------+------------+---------------------+----------+------------+
-; N/A   ; None         ; 10.323 ns  ; timer:inst|SEC1[3]  ; SEC1[3]  ; clk        ;
-; N/A   ; None         ; 10.319 ns  ; timer:inst|SEC0[2]  ; SEC0[2]  ; clk        ;
-; N/A   ; None         ; 9.707 ns   ; timer:inst|HOUR0[1] ; HOUR0[1] ; clk        ;
-; N/A   ; None         ; 9.663 ns   ; timer:inst|HOUR1[3] ; HOUR1[3] ; clk        ;
-; N/A   ; None         ; 9.594 ns   ; timer:inst|SEC0[3]  ; SEC0[3]  ; clk        ;
-; N/A   ; None         ; 9.580 ns   ; timer:inst|HOUR1[1] ; HOUR1[1] ; clk        ;
-; N/A   ; None         ; 9.047 ns   ; timer:inst|MIN0[1]  ; MIN0[1]  ; clk        ;
-; N/A   ; None         ; 9.038 ns   ; timer:inst|SEC0[1]  ; SEC0[1]  ; clk        ;
-; N/A   ; None         ; 9.014 ns   ; timer:inst|MIN0[3]  ; MIN0[3]  ; clk        ;
-; N/A   ; None         ; 8.996 ns   ; timer:inst|MIN0[2]  ; MIN0[2]  ; clk        ;
-; N/A   ; None         ; 8.909 ns   ; timer:inst|HOUR0[2] ; HOUR0[2] ; clk        ;
-; N/A   ; None         ; 8.896 ns   ; timer:inst|MIN0[0]  ; MIN0[0]  ; clk        ;
-; N/A   ; None         ; 8.852 ns   ; timer:inst|HOUR0[3] ; HOUR0[3] ; clk        ;
-; N/A   ; None         ; 8.798 ns   ; timer:inst|HOUR1[2] ; HOUR1[2] ; clk        ;
-; N/A   ; None         ; 8.782 ns   ; timer:inst|SEC1[0]  ; SEC1[0]  ; clk        ;
-; N/A   ; None         ; 8.539 ns   ; timer:inst|HOUR1[0] ; HOUR1[0] ; clk        ;
-; N/A   ; None         ; 8.532 ns   ; timer:inst|SEC1[2]  ; SEC1[2]  ; clk        ;
-; N/A   ; None         ; 8.416 ns   ; timer:inst|SEC0[0]  ; SEC0[0]  ; clk        ;
-; N/A   ; None         ; 8.378 ns   ; timer:inst|SEC1[1]  ; SEC1[1]  ; clk        ;
-; N/A   ; None         ; 8.350 ns   ; timer:inst|MIN1[2]  ; MIN1[2]  ; clk        ;
-; N/A   ; None         ; 8.329 ns   ; timer:inst|MIN1[1]  ; MIN1[1]  ; clk        ;
-; N/A   ; None         ; 8.279 ns   ; timer:inst|MIN1[3]  ; MIN1[3]  ; clk        ;
-; N/A   ; None         ; 8.246 ns   ; timer:inst|HOUR0[0] ; HOUR0[0] ; clk        ;
-; N/A   ; None         ; 7.803 ns   ; timer:inst|MIN1[0]  ; MIN1[0]  ; clk        ;
+; N/A   ; None         ; 15.182 ns  ; timer:inst|SEC0[3]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 14.985 ns  ; timer:inst|SEC0[1]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 14.665 ns  ; timer:inst|MIN0[2]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 14.516 ns  ; timer:inst|MIN0[0]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 14.381 ns  ; timer:inst|MIN0[1]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 14.136 ns  ; timer:inst|SEC0[0]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 14.111 ns  ; timer:inst|MIN0[3]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 13.968 ns  ; timer:inst|MIN1[0]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 13.966 ns  ; timer:inst|MIN1[1]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 13.840 ns  ; timer:inst|SEC1[0]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 13.791 ns  ; timer:inst|SEC0[2]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 13.694 ns  ; timer:inst|SEC1[2]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 13.639 ns  ; timer:inst|MIN1[2]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 13.502 ns  ; timer:inst|SEC1[1]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 13.206 ns  ; timer:inst|MIN1[3]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 13.178 ns  ; timer:inst|SEC1[3]  ; ALARM    ; clk        ;
+; N/A   ; None         ; 10.117 ns  ; timer:inst|MIN0[3]  ; MIN0[3]  ; clk        ;
+; N/A   ; None         ; 9.599 ns   ; timer:inst|MIN0[1]  ; MIN0[1]  ; clk        ;
+; N/A   ; None         ; 9.596 ns   ; timer:inst|MIN0[0]  ; MIN0[0]  ; clk        ;
+; N/A   ; None         ; 9.537 ns   ; timer:inst|MIN0[2]  ; MIN0[2]  ; clk        ;
+; N/A   ; None         ; 9.290 ns   ; timer:inst|SEC0[0]  ; SEC0[0]  ; clk        ;
+; N/A   ; None         ; 9.258 ns   ; timer:inst|SEC0[2]  ; SEC0[2]  ; clk        ;
+; N/A   ; None         ; 9.175 ns   ; timer:inst|SEC0[1]  ; SEC0[1]  ; clk        ;
+; N/A   ; None         ; 9.090 ns   ; timer:inst|SEC1[3]  ; SEC1[3]  ; clk        ;
+; N/A   ; None         ; 8.987 ns   ; timer:inst|MIN1[1]  ; MIN1[1]  ; clk        ;
+; N/A   ; None         ; 8.979 ns   ; timer:inst|SEC0[3]  ; SEC0[3]  ; clk        ;
+; N/A   ; None         ; 8.568 ns   ; timer:inst|MIN1[3]  ; MIN1[3]  ; clk        ;
+; N/A   ; None         ; 8.526 ns   ; timer:inst|HOUR0[2] ; HOUR0[2] ; clk        ;
+; N/A   ; None         ; 8.504 ns   ; timer:inst|HOUR0[1] ; HOUR0[1] ; clk        ;
+; N/A   ; None         ; 8.452 ns   ; timer:inst|HOUR1[0] ; HOUR1[0] ; clk        ;
+; N/A   ; None         ; 8.448 ns   ; timer:inst|SEC1[2]  ; SEC1[2]  ; clk        ;
+; N/A   ; None         ; 8.420 ns   ; timer:inst|SEC1[1]  ; SEC1[1]  ; clk        ;
+; N/A   ; None         ; 8.399 ns   ; timer:inst|MIN1[2]  ; MIN1[2]  ; clk        ;
+; N/A   ; None         ; 8.391 ns   ; timer:inst|HOUR1[3] ; HOUR1[3] ; clk        ;
+; N/A   ; None         ; 8.387 ns   ; timer:inst|MIN1[0]  ; MIN1[0]  ; clk        ;
+; N/A   ; None         ; 8.382 ns   ; timer:inst|SEC1[0]  ; SEC1[0]  ; clk        ;
+; N/A   ; None         ; 8.380 ns   ; timer:inst|HOUR0[3] ; HOUR0[3] ; clk        ;
+; N/A   ; None         ; 8.337 ns   ; timer:inst|HOUR1[2] ; HOUR1[2] ; clk        ;
+; N/A   ; None         ; 8.301 ns   ; timer:inst|HOUR0[0] ; HOUR0[0] ; clk        ;
+; N/A   ; None         ; 7.167 ns   ; timer:inst|HOUR1[1] ; HOUR1[1] ; clk        ;
 +-------+--------------+------------+---------------------+----------+------------+
+
+
++----------------------------------------------------------------+
+; tpd                                                            ;
++-------+-------------------+-----------------+----------+-------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From     ; To    ;
++-------+-------------------+-----------------+----------+-------+
+; N/A   ; None              ; 9.686 ns        ; set_min  ; ALARM ;
+; N/A   ; None              ; 9.284 ns        ; set_hour ; ALARM ;
+; N/A   ; None              ; 9.166 ns        ; clk      ; ALARM ;
++-------+-------------------+-----------------+----------+-------+
 
 
 +-------------------------------------------------------------------------------------+
@@ -381,22 +410,22 @@ applicable agreement for further details.
 +---------------+-------------+-----------+----------+---------------------+----------+
 ; Minimum Slack ; Required th ; Actual th ; From     ; To                  ; To Clock ;
 +---------------+-------------+-----------+----------+---------------------+----------+
-; N/A           ; None        ; -2.167 ns ; set_min  ; timer:inst|MIN1[3]  ; clk      ;
-; N/A           ; None        ; -2.169 ns ; set_min  ; timer:inst|MIN0[2]  ; clk      ;
-; N/A           ; None        ; -2.473 ns ; set_hour ; timer:inst|HOUR0[3] ; clk      ;
-; N/A           ; None        ; -2.473 ns ; set_hour ; timer:inst|HOUR0[2] ; clk      ;
-; N/A           ; None        ; -2.473 ns ; set_hour ; timer:inst|HOUR0[1] ; clk      ;
-; N/A           ; None        ; -2.473 ns ; set_hour ; timer:inst|HOUR1[3] ; clk      ;
-; N/A           ; None        ; -2.771 ns ; set_min  ; timer:inst|MIN0[3]  ; clk      ;
-; N/A           ; None        ; -2.771 ns ; set_min  ; timer:inst|MIN0[1]  ; clk      ;
-; N/A           ; None        ; -2.771 ns ; set_min  ; timer:inst|MIN0[0]  ; clk      ;
-; N/A           ; None        ; -2.910 ns ; set_hour ; timer:inst|HOUR0[0] ; clk      ;
-; N/A           ; None        ; -2.910 ns ; set_hour ; timer:inst|HOUR1[2] ; clk      ;
-; N/A           ; None        ; -2.910 ns ; set_hour ; timer:inst|HOUR1[1] ; clk      ;
-; N/A           ; None        ; -2.910 ns ; set_hour ; timer:inst|HOUR1[0] ; clk      ;
-; N/A           ; None        ; -3.155 ns ; set_min  ; timer:inst|MIN1[2]  ; clk      ;
-; N/A           ; None        ; -3.155 ns ; set_min  ; timer:inst|MIN1[0]  ; clk      ;
-; N/A           ; None        ; -3.155 ns ; set_min  ; timer:inst|MIN1[1]  ; clk      ;
+; N/A           ; None        ; -2.486 ns ; set_hour ; timer:inst|HOUR0[3] ; clk      ;
+; N/A           ; None        ; -2.486 ns ; set_hour ; timer:inst|HOUR0[2] ; clk      ;
+; N/A           ; None        ; -2.486 ns ; set_hour ; timer:inst|HOUR0[1] ; clk      ;
+; N/A           ; None        ; -2.486 ns ; set_hour ; timer:inst|HOUR1[3] ; clk      ;
+; N/A           ; None        ; -2.787 ns ; set_min  ; timer:inst|MIN1[3]  ; clk      ;
+; N/A           ; None        ; -2.862 ns ; set_hour ; timer:inst|HOUR1[0] ; clk      ;
+; N/A           ; None        ; -2.862 ns ; set_hour ; timer:inst|HOUR1[1] ; clk      ;
+; N/A           ; None        ; -2.862 ns ; set_hour ; timer:inst|HOUR1[2] ; clk      ;
+; N/A           ; None        ; -2.862 ns ; set_hour ; timer:inst|HOUR0[0] ; clk      ;
+; N/A           ; None        ; -3.096 ns ; set_min  ; timer:inst|MIN0[2]  ; clk      ;
+; N/A           ; None        ; -3.128 ns ; set_min  ; timer:inst|MIN0[0]  ; clk      ;
+; N/A           ; None        ; -3.128 ns ; set_min  ; timer:inst|MIN0[3]  ; clk      ;
+; N/A           ; None        ; -3.128 ns ; set_min  ; timer:inst|MIN0[1]  ; clk      ;
+; N/A           ; None        ; -4.132 ns ; set_min  ; timer:inst|MIN1[0]  ; clk      ;
+; N/A           ; None        ; -4.132 ns ; set_min  ; timer:inst|MIN1[2]  ; clk      ;
+; N/A           ; None        ; -4.132 ns ; set_min  ; timer:inst|MIN1[1]  ; clk      ;
 +---------------+-------------+-----------+----------+---------------------+----------+
 
 
@@ -406,76 +435,85 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Tue May 23 14:52:09 2017
+    Info: Processing started: Tue May 23 17:01:49 2017
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off timer_VHDL -c timer_VHDL
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "clk" is an undefined clock
-Info: Clock "clk" has Internal fmax of 109.54 MHz between source register "timer:inst|MIN0[1]" and destination register "timer:inst|HOUR0[0]" (period= 9.129 ns)
-    Info: + Longest register to register delay is 8.420 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X2_Y5_N8; Fanout = 5; REG Node = 'timer:inst|MIN0[1]'
-        Info: 2: + IC(0.945 ns) + CELL(0.914 ns) = 1.859 ns; Loc. = LC_X2_Y5_N6; Fanout = 2; COMB Node = 'timer:inst|Equal2~0'
-        Info: 3: + IC(0.754 ns) + CELL(0.511 ns) = 3.124 ns; Loc. = LC_X2_Y5_N5; Fanout = 1; COMB Node = 'timer:inst|HOUR0~1'
-        Info: 4: + IC(2.444 ns) + CELL(0.511 ns) = 6.079 ns; Loc. = LC_X9_Y4_N3; Fanout = 8; COMB Node = 'timer:inst|HOUR0~2'
-        Info: 5: + IC(1.098 ns) + CELL(1.243 ns) = 8.420 ns; Loc. = LC_X8_Y4_N6; Fanout = 7; REG Node = 'timer:inst|HOUR0[0]'
-        Info: Total cell delay = 3.179 ns ( 37.76 % )
-        Info: Total interconnect delay = 5.241 ns ( 62.24 % )
+Info: Clock "clk" has Internal fmax of 106.11 MHz between source register "timer:inst|MIN0[2]" and destination register "timer:inst|HOUR1[0]" (period= 9.424 ns)
+    Info: + Longest register to register delay is 8.715 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X6_Y6_N6; Fanout = 5; REG Node = 'timer:inst|MIN0[2]'
+        Info: 2: + IC(1.897 ns) + CELL(0.914 ns) = 2.811 ns; Loc. = LC_X5_Y5_N5; Fanout = 2; COMB Node = 'timer:inst|Equal2~0'
+        Info: 3: + IC(0.770 ns) + CELL(0.511 ns) = 4.092 ns; Loc. = LC_X5_Y5_N4; Fanout = 2; COMB Node = 'timer:inst|ALARM~2'
+        Info: 4: + IC(1.783 ns) + CELL(0.511 ns) = 6.386 ns; Loc. = LC_X4_Y7_N7; Fanout = 8; COMB Node = 'timer:inst|HOUR0~1'
+        Info: 5: + IC(1.086 ns) + CELL(1.243 ns) = 8.715 ns; Loc. = LC_X3_Y7_N0; Fanout = 5; REG Node = 'timer:inst|HOUR1[0]'
+        Info: Total cell delay = 3.179 ns ( 36.48 % )
+        Info: Total interconnect delay = 5.536 ns ( 63.52 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "clk" to destination register is 3.681 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 24; CLK Node = 'clk'
-            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X8_Y4_N6; Fanout = 7; REG Node = 'timer:inst|HOUR0[0]'
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 25; CLK Node = 'clk'
+            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X3_Y7_N0; Fanout = 5; REG Node = 'timer:inst|HOUR1[0]'
             Info: Total cell delay = 2.081 ns ( 56.53 % )
             Info: Total interconnect delay = 1.600 ns ( 43.47 % )
         Info: - Longest clock path from clock "clk" to source register is 3.681 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 24; CLK Node = 'clk'
-            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X2_Y5_N8; Fanout = 5; REG Node = 'timer:inst|MIN0[1]'
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 25; CLK Node = 'clk'
+            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X6_Y6_N6; Fanout = 5; REG Node = 'timer:inst|MIN0[2]'
             Info: Total cell delay = 2.081 ns ( 56.53 % )
             Info: Total interconnect delay = 1.600 ns ( 43.47 % )
     Info: + Micro clock to output delay of source is 0.376 ns
     Info: + Micro setup delay of destination is 0.333 ns
-Info: tsu for register "timer:inst|MIN1[2]" (data pin = "set_min", clock pin = "clk") is 3.709 ns
-    Info: + Longest pin to register delay is 7.057 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_26; Fanout = 2; PIN Node = 'set_min'
-        Info: 2: + IC(2.700 ns) + CELL(0.914 ns) = 4.746 ns; Loc. = LC_X2_Y5_N9; Fanout = 4; COMB Node = 'timer:inst|MIN1[0]~0'
-        Info: 3: + IC(1.068 ns) + CELL(1.243 ns) = 7.057 ns; Loc. = LC_X1_Y5_N7; Fanout = 5; REG Node = 'timer:inst|MIN1[2]'
-        Info: Total cell delay = 3.289 ns ( 46.61 % )
-        Info: Total interconnect delay = 3.768 ns ( 53.39 % )
+Info: tsu for register "timer:inst|MIN1[0]" (data pin = "set_min", clock pin = "clk") is 4.686 ns
+    Info: + Longest pin to register delay is 8.034 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_20; Fanout = 3; PIN Node = 'set_min'
+        Info: 2: + IC(3.441 ns) + CELL(0.511 ns) = 5.084 ns; Loc. = LC_X6_Y6_N5; Fanout = 4; COMB Node = 'timer:inst|MIN1[0]~0'
+        Info: 3: + IC(1.707 ns) + CELL(1.243 ns) = 8.034 ns; Loc. = LC_X6_Y4_N5; Fanout = 6; REG Node = 'timer:inst|MIN1[0]'
+        Info: Total cell delay = 2.886 ns ( 35.92 % )
+        Info: Total interconnect delay = 5.148 ns ( 64.08 % )
     Info: + Micro setup delay of destination is 0.333 ns
     Info: - Shortest clock path from clock "clk" to destination register is 3.681 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 24; CLK Node = 'clk'
-        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X1_Y5_N7; Fanout = 5; REG Node = 'timer:inst|MIN1[2]'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 25; CLK Node = 'clk'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X6_Y4_N5; Fanout = 6; REG Node = 'timer:inst|MIN1[0]'
         Info: Total cell delay = 2.081 ns ( 56.53 % )
         Info: Total interconnect delay = 1.600 ns ( 43.47 % )
-Info: tco from clock "clk" to destination pin "SEC1[3]" through register "timer:inst|SEC1[3]" is 10.323 ns
+Info: tco from clock "clk" to destination pin "ALARM" through register "timer:inst|SEC0[3]" is 15.182 ns
     Info: + Longest clock path from clock "clk" to source register is 3.681 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 24; CLK Node = 'clk'
-        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N5; Fanout = 5; REG Node = 'timer:inst|SEC1[3]'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 25; CLK Node = 'clk'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X6_Y6_N0; Fanout = 5; REG Node = 'timer:inst|SEC0[3]'
         Info: Total cell delay = 2.081 ns ( 56.53 % )
         Info: Total interconnect delay = 1.600 ns ( 43.47 % )
     Info: + Micro clock to output delay of source is 0.376 ns
-    Info: + Longest register to pin delay is 6.266 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X4_Y7_N5; Fanout = 5; REG Node = 'timer:inst|SEC1[3]'
-        Info: 2: + IC(3.944 ns) + CELL(2.322 ns) = 6.266 ns; Loc. = PIN_58; Fanout = 0; PIN Node = 'SEC1[3]'
-        Info: Total cell delay = 2.322 ns ( 37.06 % )
-        Info: Total interconnect delay = 3.944 ns ( 62.94 % )
-Info: th for register "timer:inst|MIN1[3]" (data pin = "set_min", clock pin = "clk") is -2.167 ns
+    Info: + Longest register to pin delay is 11.125 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X6_Y6_N0; Fanout = 5; REG Node = 'timer:inst|SEC0[3]'
+        Info: 2: + IC(2.663 ns) + CELL(0.200 ns) = 2.863 ns; Loc. = LC_X11_Y7_N6; Fanout = 1; COMB Node = 'timer:inst|ALARM~1'
+        Info: 3: + IC(3.091 ns) + CELL(0.511 ns) = 6.465 ns; Loc. = LC_X5_Y5_N9; Fanout = 1; COMB Node = 'timer:inst|ALARM~3'
+        Info: 4: + IC(2.338 ns) + CELL(2.322 ns) = 11.125 ns; Loc. = PIN_38; Fanout = 0; PIN Node = 'ALARM'
+        Info: Total cell delay = 3.033 ns ( 27.26 % )
+        Info: Total interconnect delay = 8.092 ns ( 72.74 % )
+Info: Longest tpd from source pin "set_min" to destination pin "ALARM" is 9.686 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_20; Fanout = 3; PIN Node = 'set_min'
+    Info: 2: + IC(3.189 ns) + CELL(0.200 ns) = 4.521 ns; Loc. = LC_X5_Y5_N8; Fanout = 1; COMB Node = 'timer:inst|ALARM~0'
+    Info: 3: + IC(0.305 ns) + CELL(0.200 ns) = 5.026 ns; Loc. = LC_X5_Y5_N9; Fanout = 1; COMB Node = 'timer:inst|ALARM~3'
+    Info: 4: + IC(2.338 ns) + CELL(2.322 ns) = 9.686 ns; Loc. = PIN_38; Fanout = 0; PIN Node = 'ALARM'
+    Info: Total cell delay = 3.854 ns ( 39.79 % )
+    Info: Total interconnect delay = 5.832 ns ( 60.21 % )
+Info: th for register "timer:inst|HOUR0[3]" (data pin = "set_hour", clock pin = "clk") is -2.486 ns
     Info: + Longest clock path from clock "clk" to destination register is 3.681 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 24; CLK Node = 'clk'
-        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X2_Y5_N2; Fanout = 5; REG Node = 'timer:inst|MIN1[3]'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 25; CLK Node = 'clk'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N5; Fanout = 4; REG Node = 'timer:inst|HOUR0[3]'
         Info: Total cell delay = 2.081 ns ( 56.53 % )
         Info: Total interconnect delay = 1.600 ns ( 43.47 % )
     Info: + Micro hold delay of destination is 0.221 ns
-    Info: - Shortest pin to register delay is 6.069 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_26; Fanout = 2; PIN Node = 'set_min'
-        Info: 2: + IC(2.700 ns) + CELL(0.914 ns) = 4.746 ns; Loc. = LC_X2_Y5_N9; Fanout = 4; COMB Node = 'timer:inst|MIN1[0]~0'
-        Info: 3: + IC(0.732 ns) + CELL(0.591 ns) = 6.069 ns; Loc. = LC_X2_Y5_N2; Fanout = 5; REG Node = 'timer:inst|MIN1[3]'
-        Info: Total cell delay = 2.637 ns ( 43.45 % )
-        Info: Total interconnect delay = 3.432 ns ( 56.55 % )
+    Info: - Shortest pin to register delay is 6.388 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_15; Fanout = 2; PIN Node = 'set_hour'
+        Info: 2: + IC(2.563 ns) + CELL(0.740 ns) = 4.435 ns; Loc. = LC_X4_Y7_N7; Fanout = 8; COMB Node = 'timer:inst|HOUR0~1'
+        Info: 3: + IC(0.710 ns) + CELL(1.243 ns) = 6.388 ns; Loc. = LC_X4_Y7_N5; Fanout = 4; REG Node = 'timer:inst|HOUR0[3]'
+        Info: Total cell delay = 3.115 ns ( 48.76 % )
+        Info: Total interconnect delay = 3.273 ns ( 51.24 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 200 megabytes
-    Info: Processing ended: Tue May 23 14:52:09 2017
+    Info: Processing ended: Tue May 23 17:01:49 2017
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

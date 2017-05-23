@@ -66,56 +66,56 @@ CHIP  "timer_VHDL"  ASSIGNED TO AN: EPM570T100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-SEC1[1]                      : 1         : output : 3.3-V LVTTL       :         : 2         : N              
+HOUR0[3]                     : 1         : output : 3.3-V LVTTL       :         : 2         : N              
 RESERVED_INPUT               : 2         :        :                   :         : 1         :                
 RESERVED_INPUT               : 3         :        :                   :         : 1         :                
-MIN0[2]                      : 4         : output : 3.3-V LVTTL       :         : 1         : N              
-RESERVED_INPUT               : 5         :        :                   :         : 1         :                
-RESERVED_INPUT               : 6         :        :                   :         : 1         :                
-MIN0[0]                      : 7         : output : 3.3-V LVTTL       :         : 1         : N              
-MIN0[3]                      : 8         : output : 3.3-V LVTTL       :         : 1         : N              
+HOUR1[2]                     : 4         : output : 3.3-V LVTTL       :         : 1         : N              
+HOUR0[0]                     : 5         : output : 3.3-V LVTTL       :         : 1         : N              
+HOUR1[3]                     : 6         : output : 3.3-V LVTTL       :         : 1         : N              
+HOUR1[0]                     : 7         : output : 3.3-V LVTTL       :         : 1         : N              
+MIN0[2]                      : 8         : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
 clk                          : 12        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
-HOUR1[1]                     : 14        : output : 3.3-V LVTTL       :         : 1         : N              
-MIN1[3]                      : 15        : output : 3.3-V LVTTL       :         : 1         : N              
-HOUR0[1]                     : 16        : output : 3.3-V LVTTL       :         : 1         : N              
-RESERVED_INPUT               : 17        :        :                   :         : 1         :                
-MIN1[0]                      : 18        : output : 3.3-V LVTTL       :         : 1         : N              
-HOUR1[3]                     : 19        : output : 3.3-V LVTTL       :         : 1         : N              
-MIN1[1]                      : 20        : output : 3.3-V LVTTL       :         : 1         : N              
-MIN1[2]                      : 21        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 14        :        :                   :         : 1         :                
+set_hour                     : 15        : input  : 3.3-V LVTTL       :         : 1         : N              
+SEC1[1]                      : 16        : output : 3.3-V LVTTL       :         : 1         : N              
+MIN0[0]                      : 17        : output : 3.3-V LVTTL       :         : 1         : N              
+MIN0[1]                      : 18        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 19        :        :                   :         : 1         :                
+set_min                      : 20        : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 21        :        :                   :         : 1         :                
 TMS                          : 22        : input  :                   :         : 1         :                
 TDI                          : 23        : input  :                   :         : 1         :                
 TCK                          : 24        : input  :                   :         : 1         :                
 TDO                          : 25        : output :                   :         : 1         :                
-set_min                      : 26        : input  : 3.3-V LVTTL       :         : 1         : N              
+HOUR0[2]                     : 26        : output : 3.3-V LVTTL       :         : 1         : N              
 RESERVED_INPUT               : 27        :        :                   :         : 1         :                
-RESERVED_INPUT               : 28        :        :                   :         : 1         :                
-HOUR0[2]                     : 29        : output : 3.3-V LVTTL       :         : 1         : N              
-SEC1[2]                      : 30        : output : 3.3-V LVTTL       :         : 1         : N              
+SEC1[0]                      : 28        : output : 3.3-V LVTTL       :         : 1         : N              
+HOUR0[1]                     : 29        : output : 3.3-V LVTTL       :         : 1         : N              
+MIN1[1]                      : 30        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 32        : gnd    :                   :         :           :                
-RESERVED_INPUT               : 33        :        :                   :         : 1         :                
-RESERVED_INPUT               : 34        :        :                   :         : 1         :                
-HOUR1[2]                     : 35        : output : 3.3-V LVTTL       :         : 1         : N              
-RESERVED_INPUT               : 36        :        :                   :         : 1         :                
+MIN1[0]                      : 33        : output : 3.3-V LVTTL       :         : 1         : N              
+MIN1[2]                      : 34        : output : 3.3-V LVTTL       :         : 1         : N              
+MIN1[3]                      : 35        : output : 3.3-V LVTTL       :         : 1         : N              
+SEC1[2]                      : 36        : output : 3.3-V LVTTL       :         : 1         : N              
 GNDINT                       : 37        : gnd    :                   :         :           :                
-HOUR0[0]                     : 38        : output : 3.3-V LVTTL       :         : 1         : N              
+ALARM                        : 38        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 39        : power  :                   : 2.5V/3.3V :           :                
-RESERVED_INPUT               : 40        :        :                   :         : 1         :                
-set_hour                     : 41        : input  : 3.3-V LVTTL       :         : 1         : N              
-HOUR0[3]                     : 42        : output : 3.3-V LVTTL       :         : 1         : N              
-RESERVED_INPUT               : 43        :        :                   :         : 1         :                
-SEC0[1]                      : 44        : output : 3.3-V LVTTL       :         : 1         : N              
+SEC0[1]                      : 40        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 41        :        :                   :         : 1         :                
+RESERVED_INPUT               : 42        :        :                   :         : 1         :                
+SEC0[2]                      : 43        : output : 3.3-V LVTTL       :         : 1         : N              
+SEC0[0]                      : 44        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
 RESERVED_INPUT               : 47        :        :                   :         : 1         :                
 RESERVED_INPUT               : 48        :        :                   :         : 1         :                
 RESERVED_INPUT               : 49        :        :                   :         : 1         :                
-SEC0[2]                      : 50        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 50        :        :                   :         : 1         :                
 RESERVED_INPUT               : 51        :        :                   :         : 1         :                
 RESERVED_INPUT               : 52        :        :                   :         : 2         :                
 RESERVED_INPUT               : 53        :        :                   :         : 2         :                
@@ -123,7 +123,7 @@ RESERVED_INPUT               : 54        :        :                   :         
 RESERVED_INPUT               : 55        :        :                   :         : 2         :                
 RESERVED_INPUT               : 56        :        :                   :         : 2         :                
 RESERVED_INPUT               : 57        :        :                   :         : 2         :                
-SEC1[3]                      : 58        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : 58        :        :                   :         : 2         :                
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 60        : gnd    :                   :         :           :                
 RESERVED_INPUT               : 61        :        :                   :         : 2         :                
@@ -138,7 +138,7 @@ RESERVED_INPUT               : 69        :        :                   :         
 RESERVED_INPUT               : 70        :        :                   :         : 2         :                
 RESERVED_INPUT               : 71        :        :                   :         : 2         :                
 RESERVED_INPUT               : 72        :        :                   :         : 2         :                
-SEC0[3]                      : 73        : output : 3.3-V LVTTL       :         : 2         : N              
+MIN0[3]                      : 73        : output : 3.3-V LVTTL       :         : 2         : N              
 RESERVED_INPUT               : 74        :        :                   :         : 2         :                
 RESERVED_INPUT               : 75        :        :                   :         : 2         :                
 RESERVED_INPUT               : 76        :        :                   :         : 2         :                
@@ -148,10 +148,10 @@ GNDIO                        : 79        : gnd    :                   :         
 VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
 RESERVED_INPUT               : 81        :        :                   :         : 2         :                
 RESERVED_INPUT               : 82        :        :                   :         : 2         :                
-RESERVED_INPUT               : 83        :        :                   :         : 2         :                
-HOUR1[0]                     : 84        : output : 3.3-V LVTTL       :         : 2         : N              
-RESERVED_INPUT               : 85        :        :                   :         : 2         :                
-SEC1[0]                      : 86        : output : 3.3-V LVTTL       :         : 2         : N              
+SEC0[3]                      : 83        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : 84        :        :                   :         : 2         :                
+SEC1[3]                      : 85        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : 86        :        :                   :         : 2         :                
 RESERVED_INPUT               : 87        :        :                   :         : 2         :                
 VCCINT                       : 88        : power  :                   : 2.5V/3.3V :           :                
 RESERVED_INPUT               : 89        :        :                   :         : 2         :                
@@ -164,5 +164,5 @@ RESERVED_INPUT               : 95        :        :                   :         
 RESERVED_INPUT               : 96        :        :                   :         : 2         :                
 RESERVED_INPUT               : 97        :        :                   :         : 2         :                
 RESERVED_INPUT               : 98        :        :                   :         : 2         :                
-SEC0[0]                      : 99        : output : 3.3-V LVTTL       :         : 2         : N              
-MIN0[1]                      : 100       : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : 99        :        :                   :         : 2         :                
+HOUR1[1]                     : 100       : output : 3.3-V LVTTL       :         : 2         : N              

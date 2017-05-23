@@ -1,5 +1,5 @@
 Simulator report for timer_VHDL
-Tue May 23 14:57:13 2017
+Tue May 23 17:01:54 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 18.19 ms     ;
-; Simulation Netlist Size     ; 69 nodes     ;
-; Simulation Coverage         ;      87.50 % ;
-; Total Number of Transitions ; 120217       ;
+; Simulation Netlist Size     ; 74 nodes     ;
+; Simulation Coverage         ;      80.82 % ;
+; Total Number of Transitions ; 134163       ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; MAX II       ;
 ; Device                      ; EPM570T100C5 ;
@@ -94,122 +94,128 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      87.50 % ;
-; Total nodes checked                                 ; 69           ;
-; Total output ports checked                          ; 72           ;
-; Total output ports with complete 1/0-value coverage ; 63           ;
-; Total output ports with no 1/0-value coverage       ; 9            ;
-; Total output ports with no 1-value coverage         ; 9            ;
-; Total output ports with no 0-value coverage         ; 9            ;
+; Total coverage as a percentage                      ;      80.82 % ;
+; Total nodes checked                                 ; 74           ;
+; Total output ports checked                          ; 73           ;
+; Total output ports with complete 1/0-value coverage ; 59           ;
+; Total output ports with no 1/0-value coverage       ; 14           ;
+; Total output ports with no 1-value coverage         ; 14           ;
+; Total output ports with no 0-value coverage         ; 14           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+----------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                  ;
-+----------------------------------+----------------------------------------+------------------+
-; Node Name                        ; Output Port Name                       ; Output Port Type ;
-+----------------------------------+----------------------------------------+------------------+
-; |timer_VHDL|timer:inst|HOUR0[3]  ; |timer_VHDL|timer:inst|HOUR0[3]        ; regout           ;
-; |timer_VHDL|timer:inst|HOUR0[2]  ; |timer_VHDL|timer:inst|HOUR0[2]        ; regout           ;
-; |timer_VHDL|timer:inst|HOUR0[1]  ; |timer_VHDL|timer:inst|HOUR0[1]        ; regout           ;
-; |timer_VHDL|timer:inst|HOUR1[1]  ; |timer_VHDL|timer:inst|HOUR1[1]        ; regout           ;
-; |timer_VHDL|timer:inst|MIN0[2]   ; |timer_VHDL|timer:inst|MIN0[2]         ; regout           ;
-; |timer_VHDL|timer:inst|MIN0[1]   ; |timer_VHDL|timer:inst|MIN0[1]         ; regout           ;
-; |timer_VHDL|timer:inst|MIN0[0]   ; |timer_VHDL|timer:inst|MIN0[0]         ; regout           ;
-; |timer_VHDL|timer:inst|MIN1[2]   ; |timer_VHDL|timer:inst|MIN1[2]         ; regout           ;
-; |timer_VHDL|timer:inst|MIN1[1]   ; |timer_VHDL|timer:inst|MIN1[1]         ; regout           ;
-; |timer_VHDL|timer:inst|MIN1[0]   ; |timer_VHDL|timer:inst|MIN1[0]         ; regout           ;
-; |timer_VHDL|timer:inst|SEC0[2]   ; |timer_VHDL|timer:inst|SEC0[2]         ; regout           ;
-; |timer_VHDL|timer:inst|SEC0[1]   ; |timer_VHDL|timer:inst|SEC0[1]         ; regout           ;
-; |timer_VHDL|timer:inst|SEC0[0]   ; |timer_VHDL|timer:inst|SEC0[0]         ; regout           ;
-; |timer_VHDL|timer:inst|SEC1[2]   ; |timer_VHDL|timer:inst|SEC1[2]         ; regout           ;
-; |timer_VHDL|timer:inst|SEC1[1]   ; |timer_VHDL|timer:inst|SEC1[1]         ; regout           ;
-; |timer_VHDL|timer:inst|SEC1[0]   ; |timer_VHDL|timer:inst|SEC1[0]         ; regout           ;
-; |timer_VHDL|timer:inst|Add4~0    ; |timer_VHDL|timer:inst|Add4~0          ; combout          ;
-; |timer_VHDL|timer:inst|HOUR1[3]  ; |timer_VHDL|timer:inst|process_4~0     ; combout          ;
-; |timer_VHDL|timer:inst|HOUR1[0]  ; |timer_VHDL|timer:inst|process_4~1     ; combout          ;
-; |timer_VHDL|timer:inst|HOUR1[0]  ; |timer_VHDL|timer:inst|HOUR1[0]        ; regout           ;
-; |timer_VHDL|timer:inst|Equal4~0  ; |timer_VHDL|timer:inst|Equal4~0        ; combout          ;
-; |timer_VHDL|timer:inst|Equal0~0  ; |timer_VHDL|timer:inst|Equal0~0        ; combout          ;
-; |timer_VHDL|timer:inst|Equal1~0  ; |timer_VHDL|timer:inst|Equal1~0        ; combout          ;
-; |timer_VHDL|timer:inst|Equal2~0  ; |timer_VHDL|timer:inst|Equal2~0        ; combout          ;
-; |timer_VHDL|timer:inst|Equal3~0  ; |timer_VHDL|timer:inst|Equal3~0        ; combout          ;
-; |timer_VHDL|timer:inst|HOUR0~1   ; |timer_VHDL|timer:inst|HOUR0~1         ; combout          ;
-; |timer_VHDL|timer:inst|HOUR0~2   ; |timer_VHDL|timer:inst|HOUR0~2         ; combout          ;
-; |timer_VHDL|timer:inst|Add4~1    ; |timer_VHDL|timer:inst|Add4~1          ; combout          ;
-; |timer_VHDL|timer:inst|Add4~2    ; |timer_VHDL|timer:inst|Add4~2          ; combout          ;
-; |timer_VHDL|timer:inst|Add5~5    ; |timer_VHDL|timer:inst|Add5~5          ; combout          ;
-; |timer_VHDL|timer:inst|Add5~10   ; |timer_VHDL|timer:inst|Add5~10         ; combout          ;
-; |timer_VHDL|timer:inst|Add5~10   ; |timer_VHDL|timer:inst|Add5~12         ; cout0            ;
-; |timer_VHDL|timer:inst|Add5~10   ; |timer_VHDL|timer:inst|Add5~12COUT1_27 ; cout1            ;
-; |timer_VHDL|timer:inst|Add5~15   ; |timer_VHDL|timer:inst|Add5~15         ; combout          ;
-; |timer_VHDL|timer:inst|Add5~15   ; |timer_VHDL|timer:inst|Add5~17         ; cout0            ;
-; |timer_VHDL|timer:inst|Add5~15   ; |timer_VHDL|timer:inst|Add5~17COUT1_25 ; cout1            ;
-; |timer_VHDL|timer:inst|MIN0~1    ; |timer_VHDL|timer:inst|MIN0~1          ; combout          ;
-; |timer_VHDL|timer:inst|MIN1[0]~0 ; |timer_VHDL|timer:inst|MIN1[0]~0       ; combout          ;
-; |timer_VHDL|timer:inst|Add3~0    ; |timer_VHDL|timer:inst|Add3~0          ; combout          ;
-; |timer_VHDL|timer:inst|Add1~0    ; |timer_VHDL|timer:inst|Add1~0          ; combout          ;
-; |timer_VHDL|clk                  ; |timer_VHDL|clk~corein                 ; combout          ;
-; |timer_VHDL|set_hour             ; |timer_VHDL|set_hour~corein            ; combout          ;
-; |timer_VHDL|set_min              ; |timer_VHDL|set_min~corein             ; combout          ;
-; |timer_VHDL|HOUR0[3]             ; |timer_VHDL|HOUR0[3]                   ; padio            ;
-; |timer_VHDL|HOUR0[2]             ; |timer_VHDL|HOUR0[2]                   ; padio            ;
-; |timer_VHDL|HOUR0[1]             ; |timer_VHDL|HOUR0[1]                   ; padio            ;
-; |timer_VHDL|HOUR0[0]             ; |timer_VHDL|HOUR0[0]                   ; padio            ;
-; |timer_VHDL|HOUR1[1]             ; |timer_VHDL|HOUR1[1]                   ; padio            ;
-; |timer_VHDL|HOUR1[0]             ; |timer_VHDL|HOUR1[0]                   ; padio            ;
-; |timer_VHDL|MIN0[3]              ; |timer_VHDL|MIN0[3]                    ; padio            ;
-; |timer_VHDL|MIN0[2]              ; |timer_VHDL|MIN0[2]                    ; padio            ;
-; |timer_VHDL|MIN0[1]              ; |timer_VHDL|MIN0[1]                    ; padio            ;
-; |timer_VHDL|MIN0[0]              ; |timer_VHDL|MIN0[0]                    ; padio            ;
-; |timer_VHDL|MIN1[2]              ; |timer_VHDL|MIN1[2]                    ; padio            ;
-; |timer_VHDL|MIN1[1]              ; |timer_VHDL|MIN1[1]                    ; padio            ;
-; |timer_VHDL|MIN1[0]              ; |timer_VHDL|MIN1[0]                    ; padio            ;
-; |timer_VHDL|SEC0[3]              ; |timer_VHDL|SEC0[3]                    ; padio            ;
-; |timer_VHDL|SEC0[2]              ; |timer_VHDL|SEC0[2]                    ; padio            ;
-; |timer_VHDL|SEC0[1]              ; |timer_VHDL|SEC0[1]                    ; padio            ;
-; |timer_VHDL|SEC0[0]              ; |timer_VHDL|SEC0[0]                    ; padio            ;
-; |timer_VHDL|SEC1[2]              ; |timer_VHDL|SEC1[2]                    ; padio            ;
-; |timer_VHDL|SEC1[1]              ; |timer_VHDL|SEC1[1]                    ; padio            ;
-; |timer_VHDL|SEC1[0]              ; |timer_VHDL|SEC1[0]                    ; padio            ;
-+----------------------------------+----------------------------------------+------------------+
++------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                    ;
++------------------------------------+----------------------------------------+------------------+
+; Node Name                          ; Output Port Name                       ; Output Port Type ;
++------------------------------------+----------------------------------------+------------------+
+; |timer_VHDL|timer:inst|ALARM~0     ; |timer_VHDL|timer:inst|ALARM~0         ; combout          ;
+; |timer_VHDL|timer:inst|SEC0[2]     ; |timer_VHDL|timer:inst|SEC0[2]         ; regout           ;
+; |timer_VHDL|timer:inst|SEC0[0]     ; |timer_VHDL|timer:inst|SEC0[0]         ; regout           ;
+; |timer_VHDL|timer:inst|SEC0[1]     ; |timer_VHDL|timer:inst|SEC0[1]         ; regout           ;
+; |timer_VHDL|timer:inst|ALARM~1     ; |timer_VHDL|timer:inst|ALARM~1         ; combout          ;
+; |timer_VHDL|timer:inst|SEC1[1]     ; |timer_VHDL|timer:inst|SEC1[1]         ; regout           ;
+; |timer_VHDL|timer:inst|Equal1~0    ; |timer_VHDL|timer:inst|Equal1~0        ; combout          ;
+; |timer_VHDL|timer:inst|MIN0[2]     ; |timer_VHDL|timer:inst|MIN0[2]         ; regout           ;
+; |timer_VHDL|timer:inst|MIN0[1]     ; |timer_VHDL|timer:inst|MIN0[1]         ; regout           ;
+; |timer_VHDL|timer:inst|Equal2~0    ; |timer_VHDL|timer:inst|Equal2~0        ; combout          ;
+; |timer_VHDL|timer:inst|MIN1[1]     ; |timer_VHDL|timer:inst|MIN1[1]         ; regout           ;
+; |timer_VHDL|timer:inst|Equal3~0    ; |timer_VHDL|timer:inst|Equal3~0        ; combout          ;
+; |timer_VHDL|timer:inst|ALARM~2     ; |timer_VHDL|timer:inst|ALARM~2         ; combout          ;
+; |timer_VHDL|timer:inst|ALARM~3     ; |timer_VHDL|timer:inst|ALARM~3         ; combout          ;
+; |timer_VHDL|timer:inst|HOUR0[3]    ; |timer_VHDL|timer:inst|HOUR0[3]        ; regout           ;
+; |timer_VHDL|timer:inst|HOUR0[2]    ; |timer_VHDL|timer:inst|HOUR0[2]        ; regout           ;
+; |timer_VHDL|timer:inst|HOUR0[1]    ; |timer_VHDL|timer:inst|HOUR0[1]        ; regout           ;
+; |timer_VHDL|timer:inst|HOUR1[1]    ; |timer_VHDL|timer:inst|HOUR1[1]        ; regout           ;
+; |timer_VHDL|timer:inst|HOUR1[0]    ; |timer_VHDL|timer:inst|HOUR1[0]        ; regout           ;
+; |timer_VHDL|timer:inst|Equal0~0    ; |timer_VHDL|timer:inst|Equal0~0        ; combout          ;
+; |timer_VHDL|timer:inst|Add1~0      ; |timer_VHDL|timer:inst|Add1~0          ; combout          ;
+; |timer_VHDL|timer:inst|MIN0~0      ; |timer_VHDL|timer:inst|MIN0~0          ; combout          ;
+; |timer_VHDL|timer:inst|MIN1[0]~0   ; |timer_VHDL|timer:inst|MIN1[0]~0       ; combout          ;
+; |timer_VHDL|timer:inst|Add3~0      ; |timer_VHDL|timer:inst|Add3~0          ; combout          ;
+; |timer_VHDL|timer:inst|Add4~0      ; |timer_VHDL|timer:inst|Add4~0          ; combout          ;
+; |timer_VHDL|timer:inst|process_4~0 ; |timer_VHDL|timer:inst|process_4~0     ; combout          ;
+; |timer_VHDL|timer:inst|HOUR1[3]    ; |timer_VHDL|timer:inst|process_4~1     ; combout          ;
+; |timer_VHDL|timer:inst|Equal4~0    ; |timer_VHDL|timer:inst|Equal4~0        ; combout          ;
+; |timer_VHDL|timer:inst|HOUR0~1     ; |timer_VHDL|timer:inst|HOUR0~1         ; combout          ;
+; |timer_VHDL|timer:inst|Add4~1      ; |timer_VHDL|timer:inst|Add4~1          ; combout          ;
+; |timer_VHDL|timer:inst|Add4~2      ; |timer_VHDL|timer:inst|Add4~2          ; combout          ;
+; |timer_VHDL|timer:inst|Add5~10     ; |timer_VHDL|timer:inst|Add5~10         ; combout          ;
+; |timer_VHDL|timer:inst|Add5~15     ; |timer_VHDL|timer:inst|Add5~15         ; combout          ;
+; |timer_VHDL|timer:inst|Add5~15     ; |timer_VHDL|timer:inst|Add5~17         ; cout0            ;
+; |timer_VHDL|timer:inst|Add5~15     ; |timer_VHDL|timer:inst|Add5~17COUT1_25 ; cout1            ;
+; |timer_VHDL|set_min                ; |timer_VHDL|set_min~corein             ; combout          ;
+; |timer_VHDL|set_hour               ; |timer_VHDL|set_hour~corein            ; combout          ;
+; |timer_VHDL|clk                    ; |timer_VHDL|clk~corein                 ; combout          ;
+; |timer_VHDL|ALARM                  ; |timer_VHDL|ALARM                      ; padio            ;
+; |timer_VHDL|HOUR0[3]               ; |timer_VHDL|HOUR0[3]                   ; padio            ;
+; |timer_VHDL|HOUR0[2]               ; |timer_VHDL|HOUR0[2]                   ; padio            ;
+; |timer_VHDL|HOUR0[1]               ; |timer_VHDL|HOUR0[1]                   ; padio            ;
+; |timer_VHDL|HOUR0[0]               ; |timer_VHDL|HOUR0[0]                   ; padio            ;
+; |timer_VHDL|HOUR1[1]               ; |timer_VHDL|HOUR1[1]                   ; padio            ;
+; |timer_VHDL|HOUR1[0]               ; |timer_VHDL|HOUR1[0]                   ; padio            ;
+; |timer_VHDL|MIN0[3]                ; |timer_VHDL|MIN0[3]                    ; padio            ;
+; |timer_VHDL|MIN0[2]                ; |timer_VHDL|MIN0[2]                    ; padio            ;
+; |timer_VHDL|MIN0[1]                ; |timer_VHDL|MIN0[1]                    ; padio            ;
+; |timer_VHDL|MIN0[0]                ; |timer_VHDL|MIN0[0]                    ; padio            ;
+; |timer_VHDL|MIN1[2]                ; |timer_VHDL|MIN1[2]                    ; padio            ;
+; |timer_VHDL|MIN1[1]                ; |timer_VHDL|MIN1[1]                    ; padio            ;
+; |timer_VHDL|MIN1[0]                ; |timer_VHDL|MIN1[0]                    ; padio            ;
+; |timer_VHDL|SEC0[3]                ; |timer_VHDL|SEC0[3]                    ; padio            ;
+; |timer_VHDL|SEC0[2]                ; |timer_VHDL|SEC0[2]                    ; padio            ;
+; |timer_VHDL|SEC0[1]                ; |timer_VHDL|SEC0[1]                    ; padio            ;
+; |timer_VHDL|SEC0[0]                ; |timer_VHDL|SEC0[0]                    ; padio            ;
+; |timer_VHDL|SEC1[2]                ; |timer_VHDL|SEC1[2]                    ; padio            ;
+; |timer_VHDL|SEC1[1]                ; |timer_VHDL|SEC1[1]                    ; padio            ;
+; |timer_VHDL|SEC1[0]                ; |timer_VHDL|SEC1[0]                    ; padio            ;
++------------------------------------+----------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                   ;
-+---------------------------------+---------------------------------------+------------------+
-; Node Name                       ; Output Port Name                      ; Output Port Type ;
-+---------------------------------+---------------------------------------+------------------+
-; |timer_VHDL|timer:inst|HOUR1[2] ; |timer_VHDL|timer:inst|HOUR1[2]       ; regout           ;
-; |timer_VHDL|timer:inst|HOUR1[3] ; |timer_VHDL|timer:inst|HOUR1[3]       ; regout           ;
-; |timer_VHDL|timer:inst|Add5~0   ; |timer_VHDL|timer:inst|Add5~0         ; combout          ;
-; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~7         ; cout0            ;
-; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~7COUT1_29 ; cout1            ;
-; |timer_VHDL|HOUR1[3]            ; |timer_VHDL|HOUR1[3]                  ; padio            ;
-; |timer_VHDL|HOUR1[2]            ; |timer_VHDL|HOUR1[2]                  ; padio            ;
-; |timer_VHDL|MIN1[3]             ; |timer_VHDL|MIN1[3]                   ; padio            ;
-; |timer_VHDL|SEC1[3]             ; |timer_VHDL|SEC1[3]                   ; padio            ;
-+---------------------------------+---------------------------------------+------------------+
++---------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                    ;
++---------------------------------+----------------------------------------+------------------+
+; Node Name                       ; Output Port Name                       ; Output Port Type ;
++---------------------------------+----------------------------------------+------------------+
+; |timer_VHDL|timer:inst|SEC1[3]  ; |timer_VHDL|timer:inst|SEC1[3]         ; regout           ;
+; |timer_VHDL|timer:inst|MIN1[3]  ; |timer_VHDL|timer:inst|MIN1[3]         ; regout           ;
+; |timer_VHDL|timer:inst|HOUR1[2] ; |timer_VHDL|timer:inst|HOUR1[2]        ; regout           ;
+; |timer_VHDL|timer:inst|HOUR1[3] ; |timer_VHDL|timer:inst|HOUR1[3]        ; regout           ;
+; |timer_VHDL|timer:inst|Add5~0   ; |timer_VHDL|timer:inst|Add5~0          ; combout          ;
+; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~5          ; combout          ;
+; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~7          ; cout0            ;
+; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~7COUT1_29  ; cout1            ;
+; |timer_VHDL|timer:inst|Add5~10  ; |timer_VHDL|timer:inst|Add5~12         ; cout0            ;
+; |timer_VHDL|timer:inst|Add5~10  ; |timer_VHDL|timer:inst|Add5~12COUT1_27 ; cout1            ;
+; |timer_VHDL|HOUR1[3]            ; |timer_VHDL|HOUR1[3]                   ; padio            ;
+; |timer_VHDL|HOUR1[2]            ; |timer_VHDL|HOUR1[2]                   ; padio            ;
+; |timer_VHDL|MIN1[3]             ; |timer_VHDL|MIN1[3]                    ; padio            ;
+; |timer_VHDL|SEC1[3]             ; |timer_VHDL|SEC1[3]                    ; padio            ;
++---------------------------------+----------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+--------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                   ;
-+---------------------------------+---------------------------------------+------------------+
-; Node Name                       ; Output Port Name                      ; Output Port Type ;
-+---------------------------------+---------------------------------------+------------------+
-; |timer_VHDL|timer:inst|HOUR1[2] ; |timer_VHDL|timer:inst|HOUR1[2]       ; regout           ;
-; |timer_VHDL|timer:inst|HOUR1[3] ; |timer_VHDL|timer:inst|HOUR1[3]       ; regout           ;
-; |timer_VHDL|timer:inst|Add5~0   ; |timer_VHDL|timer:inst|Add5~0         ; combout          ;
-; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~7         ; cout0            ;
-; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~7COUT1_29 ; cout1            ;
-; |timer_VHDL|HOUR1[3]            ; |timer_VHDL|HOUR1[3]                  ; padio            ;
-; |timer_VHDL|HOUR1[2]            ; |timer_VHDL|HOUR1[2]                  ; padio            ;
-; |timer_VHDL|MIN1[3]             ; |timer_VHDL|MIN1[3]                   ; padio            ;
-; |timer_VHDL|SEC1[3]             ; |timer_VHDL|SEC1[3]                   ; padio            ;
-+---------------------------------+---------------------------------------+------------------+
++---------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                    ;
++---------------------------------+----------------------------------------+------------------+
+; Node Name                       ; Output Port Name                       ; Output Port Type ;
++---------------------------------+----------------------------------------+------------------+
+; |timer_VHDL|timer:inst|SEC1[3]  ; |timer_VHDL|timer:inst|SEC1[3]         ; regout           ;
+; |timer_VHDL|timer:inst|MIN1[3]  ; |timer_VHDL|timer:inst|MIN1[3]         ; regout           ;
+; |timer_VHDL|timer:inst|HOUR1[2] ; |timer_VHDL|timer:inst|HOUR1[2]        ; regout           ;
+; |timer_VHDL|timer:inst|HOUR1[3] ; |timer_VHDL|timer:inst|HOUR1[3]        ; regout           ;
+; |timer_VHDL|timer:inst|Add5~0   ; |timer_VHDL|timer:inst|Add5~0          ; combout          ;
+; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~5          ; combout          ;
+; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~7          ; cout0            ;
+; |timer_VHDL|timer:inst|Add5~5   ; |timer_VHDL|timer:inst|Add5~7COUT1_29  ; cout1            ;
+; |timer_VHDL|timer:inst|Add5~10  ; |timer_VHDL|timer:inst|Add5~12         ; cout0            ;
+; |timer_VHDL|timer:inst|Add5~10  ; |timer_VHDL|timer:inst|Add5~12COUT1_27 ; cout1            ;
+; |timer_VHDL|HOUR1[3]            ; |timer_VHDL|HOUR1[3]                   ; padio            ;
+; |timer_VHDL|HOUR1[2]            ; |timer_VHDL|HOUR1[2]                   ; padio            ;
+; |timer_VHDL|MIN1[3]             ; |timer_VHDL|MIN1[3]                    ; padio            ;
+; |timer_VHDL|SEC1[3]             ; |timer_VHDL|SEC1[3]                    ; padio            ;
++---------------------------------+----------------------------------------+------------------+
 
 
 +---------------------+
@@ -225,17 +231,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Tue May 23 14:57:11 2017
+    Info: Processing started: Tue May 23 17:01:52 2017
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off timer_VHDL -c timer_VHDL
 Info: Using vector source file "F:/quartus/timer_VHDL/timer_VHDL.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      87.50 %
-Info: Number of transitions in simulation is 120217
+Info: Simulation coverage is      80.82 %
+Info: Number of transitions in simulation is 134163
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 173 megabytes
-    Info: Processing ended: Tue May 23 14:57:13 2017
+    Info: Processing ended: Tue May 23 17:01:54 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

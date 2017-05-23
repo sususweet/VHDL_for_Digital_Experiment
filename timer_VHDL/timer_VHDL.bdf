@@ -164,9 +164,25 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
 )
+(pin
+	(output)
+	(rect 584 280 760 296)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "ALARM" (rect 90 0 126 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
 (block
-	(rect 296 8 488 288)
-	(text "timer" (rect 5 5 32 19)(font "Arial" (font_size 8)))	(text "inst" (rect 5 266 22 278)(font "Arial" ))	(block_io "CLK" (input))
+	(rect 296 8 488 352)
+	(text "timer" (rect 5 5 32 19)(font "Arial" (font_size 8)))	(text "inst" (rect 5 330 22 342)(font "Arial" ))	(block_io "CLK" (input))
 	(block_io "SET_MIN" (input))
 	(block_io "SET_HOUR" (input))
 	(block_io "SEC0[3..0]" (output))
@@ -175,6 +191,7 @@ applicable agreement for further details.
 	(block_io "MIN1[3..0]" (output))
 	(block_io "HOUR0[3..0]" (output))
 	(block_io "HOUR1[3..0]" (output))
+	(block_io "ALARM" (output))
 	(mapper
 		(pt 0 56)
 		(input)
@@ -229,6 +246,12 @@ applicable agreement for further details.
 		(mapping "HOUR0[3..0]" "hour0[3..0]" )
 		(annotation_block (mapping)(rect 504 272 632 304))
 	)
+	(mapper
+		(pt 192 280)
+		(output)
+		(mapping "ALARM" "alarm" )
+		(annotation_block (mapping)(rect 504 304 584 336))
+	)
 )
 (connector
 	(text "clk" (rect 226 48 240 60)(font "Arial" ))
@@ -272,12 +295,17 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "set_min" (rect 226 88 259 100)(font "Arial" ))
+	(text "set_min" (rect 226 88 264 100)(font "Arial" ))
 	(pt 216 104)
 	(pt 296 104)
 )
 (connector
-	(text "set_hour" (rect 226 128 262 140)(font "Arial" ))
+	(text "set_hour" (rect 226 128 268 140)(font "Arial" ))
 	(pt 216 144)
 	(pt 296 144)
+)
+(connector
+	(text "alarm" (rect 498 272 521 284)(font "Arial" ))
+	(pt 584 288)
+	(pt 488 288)
 )
