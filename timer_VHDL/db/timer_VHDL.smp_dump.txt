@@ -1,0 +1,9 @@
+
+State Machine - |timer_VHDL|timer:inst|cur_state
+Name cur_state.setalarmminute cur_state.setalarmhour cur_state.alarmtime cur_state.setminute cur_state.sethour cur_state.nowtime 
+cur_state.nowtime 0 0 0 0 0 0 
+cur_state.sethour 0 0 0 0 1 1 
+cur_state.setminute 0 0 0 1 0 1 
+cur_state.alarmtime 0 0 1 0 0 1 
+cur_state.setalarmhour 0 1 0 0 0 1 
+cur_state.setalarmminute 1 0 0 0 0 1 

@@ -23,7 +23,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_unsigned.all;
-
+USE ieee.std_logic_arith.all;
 --  Entity Declaration
 
 ENTITY timer IS
@@ -31,8 +31,10 @@ ENTITY timer IS
 	PORT
 	(
 		CLK : IN STD_LOGIC;
-		SET_MIN : IN STD_LOGIC;
-		SET_HOUR : IN STD_LOGIC;
+		SET_TYPE : IN STD_LOGIC;
+		SET_ITEM : IN STD_LOGIC;
+		EN_ALARM : IN STD_LOGIC;
+		EN_REPORT : IN STD_LOGIC;
 		SEC0 : BUFFER STD_LOGIC_VECTOR(3 downto 0);
 		SEC1 : BUFFER STD_LOGIC_VECTOR(3 downto 0);
 		MIN0 : BUFFER STD_LOGIC_VECTOR(3 downto 0);
@@ -49,146 +51,212 @@ END timer;
 --  Architecture Body
 
 ARCHITECTURE timer_architecture OF timer IS
-
+	TYPE state IS (nowtime,sethour,setminute,alarmtime,setalarmhour,setalarmminute);
+	SIGNAL cur_state : state;
+	SIGNAL TIME_SEC: INTEGER RANGE 0 TO 59 := 0;
+	SIGNAL TIME_MIN: INTEGER RANGE 0 TO 59 := 0;
+	SIGNAL TIME_HOUR: INTEGER RANGE 0 TO 23 := 0;
+	SIGNAL ALARM_MIN: INTEGER RANGE 0 TO 59 := 0;
+	SIGNAL ALARM_HOUR: INTEGER RANGE 0 TO 23 := 0;
 BEGIN
-	--Second--
-	PROCESS(CLK)
+	--Setting mode--
+	PROCESS(SET_TYPE)
 	BEGIN
-		IF(RISING_EDGE(CLK)) THEN
-		  IF(SEC0="1001") THEN
-			SEC0<="0000";
-		  ELSE
-			SEC0<=SEC0+1;
-		  END IF;
+		IF(RISING_EDGE(SET_TYPE)) THEN
+			CASE cur_state IS 
+				WHEN nowtime =>
+					cur_state <= sethour;
+				WHEN sethour =>
+					cur_state <= setminute;
+				WHEN setminute =>
+					cur_state <= setalarmhour;
+				WHEN setalarmhour =>
+					cur_state <= setalarmminute;	
+				WHEN setalarmminute =>
+					cur_state <= alarmtime;
+				WHEN alarmtime =>
+					cur_state <= nowtime;
+			END CASE;
 		END IF;
 	END PROCESS;
-	
-	PROCESS(CLK)
-	BEGIN
-		IF(RISING_EDGE(CLK)) THEN
-		  IF(SEC0="1001") THEN
-			IF(SEC1="0101") THEN
-			  SEC1<="0000";
-			ELSE
-			  SEC1<=SEC1+1;
-			END IF;
-		  END IF;
-		END IF;
-	END PROCESS;
-	--Second end--
+	--Setting mode end--
 
-	--Minute--
-	PROCESS(CLK,SET_MIN)
+	PROCESS(CLK,SET_ITEM)
 	BEGIN
 		IF(RISING_EDGE(CLK)) THEN
-			IF (SET_MIN = '0') THEN
-				IF(MIN0="1001") THEN
-					MIN0<="0000";
-				ELSE
-					MIN0<=MIN0+1;
-				END IF;
-			ELSE
-			  IF(SEC0="1001" AND SEC1="0101") THEN
-				IF(MIN0="1001") THEN
-					MIN0<="0000";
-				ELSE
-					MIN0<=MIN0+1;
-				END IF;
-			  END IF;
-			END IF;
-		END IF;
-	
-	END PROCESS;
-	
-	PROCESS(CLK, SET_MIN)
-	BEGIN
-		IF(RISING_EDGE(CLK)) THEN
-		IF (MIN0="1001") THEN
-			IF (SET_MIN = '0') THEN
-				IF(MIN1="0101") THEN
-					MIN1<="0000";
-				ELSE
-					MIN1<=MIN1+1;
-				END IF;
-			ELSE
-			  IF(SEC0="1001" AND SEC1="0101") THEN
-				IF(MIN1="0101") THEN
-					MIN1<="0000";
-					--IF (CLK='1')THEN
-						
-					--ELSE
-					--	ALARM <= '0';
-					--END IF;
-				ELSE
-					MIN1<=MIN1+1;
-				END IF;
-			  END IF;
-			END IF;
-		END IF;
-		END IF;
-	END PROCESS;
-	--Minute End--
-	
-	--Hour--
-	PROCESS(CLK, SET_HOUR)
-	BEGIN
-		IF(RISING_EDGE(CLK)) THEN
-			IF (SET_HOUR = '0') THEN
-				IF(HOUR0="1001" OR (HOUR0="0011" AND HOUR1="0010")) THEN
-					HOUR0<="0000";
-				ELSE
-					HOUR0<=HOUR0+1;
-				END IF;
-			ELSE
-			  IF(SEC0="1001" AND SEC1="0101" AND MIN0="1001" AND MIN1="0101") THEN
-				IF(HOUR0="1001" OR (HOUR0="0011" AND HOUR1="0010")) THEN
-					HOUR0<="0000";
-				ELSE
-					HOUR0<=HOUR0+1;
-				END IF;
-			  END IF;
-			END IF;
-		END IF;
-	END PROCESS;
-	
-	PROCESS(CLK, SET_HOUR)
-	BEGIN
-		IF(RISING_EDGE(CLK)) THEN
-			IF (SET_HOUR = '0') THEN
-				IF(HOUR1="0010" AND HOUR0="0011") THEN
-					HOUR1<="0000";
-				ELSIF (HOUR0="1001") THEN
-					HOUR1<=HOUR1+1;
-				END IF;
-			ELSE
-				IF(SEC0="1001" AND SEC1="0101" AND MIN0="1001" AND MIN1="0101") THEN
-					IF(HOUR1="0010" AND HOUR0="0011") THEN
-						HOUR1<="0000";
-					ELSIF (HOUR0="1001") THEN
-						HOUR1<=HOUR1+1;
+			CASE cur_state IS 
+				WHEN sethour =>
+					IF (SET_ITEM = '0') THEN
+						TIME_HOUR <= TIME_HOUR + 1;
+						IF (TIME_HOUR = 24) THEN
+							TIME_HOUR <= 0;
+						END IF;
 					END IF;
-				END IF;
-			END IF;
+				WHEN setminute =>
+					IF (SET_ITEM = '0') THEN
+						TIME_MIN <= TIME_MIN + 1;
+						IF (TIME_MIN = 60) THEN
+							TIME_MIN <= 0;
+						END IF;
+					END IF;
+				WHEN setalarmhour =>
+					IF (SET_ITEM = '0') THEN
+						ALARM_HOUR <= ALARM_HOUR + 1;
+						IF (ALARM_HOUR = 24) THEN
+							ALARM_HOUR <= 0;
+						END IF;
+					END IF;
+				WHEN setalarmminute =>
+					IF (SET_ITEM = '0') THEN
+						ALARM_MIN <= ALARM_MIN + 1;
+						IF (ALARM_MIN = 60) THEN
+							ALARM_MIN <= 0;
+						END IF;
+					END IF;
+				WHEN OTHERS => NULL;
+			END CASE;
+			IF (cur_state /= sethour AND cur_state /= setminute) THEN
+				IF (TIME_SEC = 59) THEN
+					TIME_SEC <= 0;
+					TIME_MIN <= TIME_MIN + 1;
+					IF (TIME_MIN = 59) THEN
+						TIME_MIN <= 0;
+						TIME_HOUR <= TIME_HOUR + 1;
+						IF (TIME_HOUR = 23) THEN
+							TIME_HOUR <= 0;
+						ELSE
+							TIME_HOUR <= TIME_HOUR + 1;
+						END IF;
+					ELSE
+						TIME_MIN <= TIME_MIN + 1;
+					END IF;
+				ELSE 
+					TIME_SEC <= TIME_SEC+1;
+				END IF;		
+			END IF;	
 		END IF;
 	END PROCESS;
-	--Hour End--
-	
-	PROCESS(CLK,SEC0,SEC1,MIN0,MIN1,SET_HOUR,SET_MIN)
-	VARIABLE MIN0_CACHE,MIN1_CACHE,SEC0_CACHE,SEC1_CACHE:INTEGER;
+
+	PROCESS(CLK)
+	VARIABLE TWINKLE: Boolean := FALSE;
 	BEGIN
-		MIN0_CACHE := conv_integer(MIN0);
-		MIN1_CACHE := conv_integer(MIN1);
-		SEC0_CACHE := conv_integer(SEC0);
-		SEC1_CACHE := conv_integer(SEC1);
-		IF (MIN0_CACHE = 9 AND MIN1_CACHE=5 AND SEC0_CACHE>=5 AND SEC1_CACHE=5 AND CLK='0')THEN
-	
-			IF (SET_HOUR = '1' AND SET_MIN = '1') THEN
+		IF(RISING_EDGE(CLK)) THEN
+			CASE cur_state IS 
+				WHEN nowtime =>
+					SEC0 <= conv_std_logic_vector(TIME_SEC rem 10,4);
+					SEC1 <= conv_std_logic_vector(TIME_SEC/10 rem 10,4);
+					MIN0 <= conv_std_logic_vector(TIME_MIN rem 10,4);
+					MIN1 <= conv_std_logic_vector(TIME_MIN/10 rem 10,4);
+					HOUR0 <= conv_std_logic_vector(TIME_HOUR rem 10,4);
+					HOUR1 <= conv_std_logic_vector(TIME_HOUR/10 rem 10,4);
+				WHEN sethour =>
+					SEC0 <= conv_std_logic_vector(TIME_SEC rem 10,4);
+					SEC1 <= conv_std_logic_vector(TIME_SEC/10 rem 10,4);
+					MIN0 <= conv_std_logic_vector(TIME_MIN rem 10,4);
+					MIN1 <= conv_std_logic_vector(TIME_MIN/10 rem 10,4);
+					IF (TWINKLE = FALSE) THEN
+						HOUR0 <= "1111";
+						HOUR1 <= "1111";
+						TWINKLE := TRUE;
+					ELSE 
+						HOUR0 <= conv_std_logic_vector(TIME_HOUR rem 10,4);
+						HOUR1 <= conv_std_logic_vector(TIME_HOUR/10 rem 10,4);
+						TWINKLE := FALSE;
+					END IF;
+					
+				WHEN setminute =>
+					SEC0 <= conv_std_logic_vector(TIME_SEC rem 10,4);
+					SEC1 <= conv_std_logic_vector(TIME_SEC/10 rem 10,4);
+					HOUR0 <= conv_std_logic_vector(TIME_HOUR rem 10,4);
+					HOUR1 <= conv_std_logic_vector(TIME_HOUR/10 rem 10,4);
+					IF (TWINKLE = FALSE) THEN
+						MIN0 <= "1111";
+						MIN1 <= "1111";
+						TWINKLE := TRUE;
+					ELSE 
+						MIN0 <= conv_std_logic_vector(TIME_MIN rem 10,4);
+						MIN1 <= conv_std_logic_vector(TIME_MIN/10 rem 10,4);
+						TWINKLE := FALSE;
+					END IF;
+				
+				WHEN alarmtime =>
+					IF (EN_ALARM = '0') THEN
+						SEC0 <= "1111";
+						SEC1 <= "1111";
+					ELSE 
+						SEC0 <= "1010";
+						SEC1 <= "1010";
+					END IF;
+					MIN0 <= conv_std_logic_vector(ALARM_MIN rem 10,4);
+					MIN1 <= conv_std_logic_vector(ALARM_MIN/10 rem 10,4);
+					HOUR0 <= conv_std_logic_vector(ALARM_HOUR rem 10,4);
+					HOUR1 <= conv_std_logic_vector(ALARM_HOUR/10 rem 10,4);
+					
+				WHEN setalarmhour =>
+					IF (EN_ALARM = '0') THEN
+						SEC0 <= "1111";
+						SEC1 <= "1111";
+					ELSE 
+						SEC0 <= "1010";
+						SEC1 <= "1010";
+					END IF;
+					MIN0 <= conv_std_logic_vector(ALARM_MIN rem 10,4);
+					MIN1 <= conv_std_logic_vector(ALARM_MIN/10 rem 10,4);
+					
+					IF (TWINKLE = FALSE) THEN
+						HOUR0 <= "1111";
+						HOUR1 <= "1111";
+						TWINKLE := TRUE;
+					ELSE 
+						HOUR0 <= conv_std_logic_vector(ALARM_HOUR rem 10,4);
+						HOUR1 <= conv_std_logic_vector(ALARM_HOUR/10 rem 10,4);
+						TWINKLE := FALSE;
+					END IF;
+					
+				WHEN setalarmminute =>
+					IF (EN_ALARM = '0') THEN
+						SEC0 <= "1111";
+						SEC1 <= "1111";
+					ELSE 
+						SEC0 <= "1010";
+						SEC1 <= "1010";
+					END IF;
+					HOUR0 <= conv_std_logic_vector(ALARM_HOUR rem 10,4);
+					HOUR1 <= conv_std_logic_vector(ALARM_HOUR/10 rem 10,4);
+					
+					IF (TWINKLE = FALSE) THEN
+						MIN0 <= "1111";
+						MIN1 <= "1111";
+						TWINKLE := TRUE;
+					ELSE 
+						MIN0 <= conv_std_logic_vector(ALARM_MIN rem 10,4);
+						MIN1 <= conv_std_logic_vector(ALARM_MIN/10 rem 10,4);
+						TWINKLE := FALSE;
+					END IF;
+			END CASE;
+		END IF;
+	END PROCESS;
+
+	PROCESS(CLK,TIME_SEC,TIME_MIN,TIME_HOUR,ALARM_MIN,ALARM_HOUR,EN_ALARM,EN_REPORT)
+	BEGIN
+		IF (TIME_MIN = 59 AND TIME_SEC>=56 AND CLK='0' AND EN_REPORT = '0')THEN
+			--IF (SET_HOUR = '1' AND SET_MIN = '1') THEN
 				ALARM <= '1';
-			ELSE 
+			--ELSE 
+				--ALARM <= '0';
+			--END IF;
+		ELSIF (TIME_MIN = 0 AND TIME_SEC =0 AND CLK='0' AND EN_REPORT = '0')THEN
+			ALARM <= '1';
+		ELSE
+			IF (EN_ALARM = '0') THEN
+				IF (TIME_MIN = ALARM_MIN AND TIME_HOUR = ALARM_HOUR AND CLK='0')THEN
+					ALARM <= '0';
+				ELSE
+					ALARM <= '1';
+				END IF;
+			ELSE
 				ALARM <= '0';
 			END IF;
-		ELSE 
-			ALARM <= '0';
 		END IF;
 	END PROCESS;
 END timer_architecture;

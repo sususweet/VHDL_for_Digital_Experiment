@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Jun 07 12:21:33 2017
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : debounce
+Top-level Entity Name : debounce
+Family : MAX II
+Device : EPM570T100C5
+Timing Models : Final
+Total logic elements : 3 / 570 ( < 1 % )
+Total pins : 3 / 76 ( 4 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

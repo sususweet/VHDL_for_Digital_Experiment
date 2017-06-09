@@ -1,5 +1,5 @@
 Analysis & Synthesis report for timer_VHDL
-Tue May 23 17:01:46 2017
+Wed Jun 07 02:11:49 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -13,9 +13,25 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (No Restructuring Performed)
- 10. Analysis & Synthesis Messages
+  8. State Machine - |timer_VHDL|timer:inst|cur_state
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod8
+ 12. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod4
+ 13. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div4
+ 14. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod9
+ 15. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div2
+ 16. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod5
+ 17. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod6
+ 18. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod2
+ 19. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div3
+ 20. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod7
+ 21. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div1
+ 22. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod3
+ 23. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod0
+ 24. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div0
+ 25. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod1
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -41,13 +57,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue May 23 17:01:46 2017    ;
+; Analysis & Synthesis Status ; Successful - Wed Jun 07 02:11:49 2017    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; timer_VHDL                               ;
 ; Top-level Entity Name       ; timer_VHDL                               ;
 ; Family                      ; MAX II                                   ;
-; Total logic elements        ; 47                                       ;
-; Total pins                  ; 28                                       ;
+; Total logic elements        ; 431                                      ;
+; Total pins                  ; 30                                       ;
 ; Total virtual pins          ; 0                                        ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
 +-----------------------------+------------------------------------------+
@@ -137,14 +153,33 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------+
-; timer_VHDL.bdf                   ; yes             ; User Block Diagram/Schematic File  ; F:/quartus/timer_VHDL/timer_VHDL.bdf ;
-; timer.vhd                        ; yes             ; User VHDL File                     ; F:/quartus/timer_VHDL/timer.vhd      ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+; timer_VHDL.bdf                   ; yes             ; User Block Diagram/Schematic File  ; F:/quartus/timer_VHDL/timer_VHDL.bdf                        ;
+; timer.vhd                        ; yes             ; User VHDL File                     ; F:/quartus/timer_VHDL/timer.vhd                             ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/megafunctions/lpm_divide.tdf ;
+; db/lpm_divide_vnl.tdf            ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/lpm_divide_vnl.tdf                 ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/sign_div_unsign_ekh.tdf            ;
+; db/alt_u_div_iie.tdf             ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/alt_u_div_iie.tdf                  ;
+; db/add_sub_e7c.tdf               ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/add_sub_e7c.tdf                    ;
+; db/add_sub_f7c.tdf               ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/add_sub_f7c.tdf                    ;
+; db/add_sub_g7c.tdf               ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/add_sub_g7c.tdf                    ;
+; db/add_sub_h7c.tdf               ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/add_sub_h7c.tdf                    ;
+; db/add_sub_i7c.tdf               ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/add_sub_i7c.tdf                    ;
+; db/lpm_divide_rvl.tdf            ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/lpm_divide_rvl.tdf                 ;
+; db/sign_div_unsign_ckh.tdf       ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/sign_div_unsign_ckh.tdf            ;
+; db/alt_u_div_fie.tdf             ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/alt_u_div_fie.tdf                  ;
+; db/lpm_divide_1ol.tdf            ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/lpm_divide_1ol.tdf                 ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/sign_div_unsign_fkh.tdf            ;
+; db/alt_u_div_lie.tdf             ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/alt_u_div_lie.tdf                  ;
+; db/add_sub_j7c.tdf               ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/add_sub_j7c.tdf                    ;
+; db/lpm_divide_svl.tdf            ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/lpm_divide_svl.tdf                 ;
+; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/sign_div_unsign_dkh.tdf            ;
+; db/alt_u_div_hie.tdf             ; yes             ; Auto-Generated Megafunction        ; F:/quartus/timer_VHDL/db/alt_u_div_hie.tdf                  ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -152,45 +187,126 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 47    ;
-;     -- Combinational with no register       ; 23    ;
-;     -- Register only                        ; 3     ;
-;     -- Combinational with a register        ; 21    ;
+; Total logic elements                        ; 431   ;
+;     -- Combinational with no register       ; 372   ;
+;     -- Register only                        ; 9     ;
+;     -- Combinational with a register        ; 50    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 25    ;
-;     -- 3 input functions                    ; 6     ;
-;     -- 2 input functions                    ; 8     ;
-;     -- 1 input functions                    ; 5     ;
+;     -- 4 input functions                    ; 98    ;
+;     -- 3 input functions                    ; 82    ;
+;     -- 2 input functions                    ; 159   ;
+;     -- 1 input functions                    ; 83    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 44    ;
-;     -- arithmetic mode                      ; 3     ;
+;     -- normal mode                          ; 299   ;
+;     -- arithmetic mode                      ; 132   ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
+;     -- synchronous clear/load mode          ; 12    ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 24    ;
-; Total logic cells in carry chains           ; 4     ;
-; I/O pins                                    ; 28    ;
+; Total registers                             ; 59    ;
+; Total logic cells in carry chains           ; 182   ;
+; I/O pins                                    ; 30    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 25    ;
-; Total fan-out                               ; 208   ;
-; Average fan-out                             ; 2.77  ;
+; Maximum fan-out                             ; 55    ;
+; Total fan-out                               ; 1161  ;
+; Average fan-out                             ; 2.52  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name    ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------+--------------+
-; |timer_VHDL                ; 47 (0)      ; 24           ; 0          ; 28   ; 0            ; 23 (0)       ; 3 (0)             ; 21 (0)           ; 4 (0)           ; 0 (0)      ; |timer_VHDL            ; work         ;
-;    |timer:inst|            ; 47 (47)     ; 24           ; 0          ; 0    ; 0            ; 23 (23)      ; 3 (3)             ; 21 (21)          ; 4 (4)           ; 0 (0)      ; |timer_VHDL|timer:inst ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                          ; Library Name ;
++-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |timer_VHDL                               ; 431 (0)     ; 59           ; 0          ; 30   ; 0            ; 372 (0)      ; 9 (0)             ; 50 (0)           ; 182 (0)         ; 0 (0)      ; |timer_VHDL                                                                                                                                  ; work         ;
+;    |timer:inst|                           ; 431 (156)   ; 59           ; 0          ; 0    ; 0            ; 372 (97)     ; 9 (9)             ; 50 (50)          ; 182 (28)        ; 0 (0)      ; |timer_VHDL|timer:inst                                                                                                                       ; work         ;
+;       |lpm_divide:Div0|                   ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0                                                                                                       ; work         ;
+;          |lpm_divide_svl:auto_generated|  ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0|lpm_divide_svl:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_dkh:divider| ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider                                             ; work         ;
+;                |alt_u_div_hie:divider|    ; 32 (14)     ; 0            ; 0          ; 0    ; 0            ; 32 (14)      ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                   |add_sub_i7c:add_sub_5| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_5 ; work         ;
+;       |lpm_divide:Div1|                   ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div1                                                                                                       ; work         ;
+;          |lpm_divide_svl:auto_generated|  ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div1|lpm_divide_svl:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_dkh:divider| ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div1|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider                                             ; work         ;
+;                |alt_u_div_hie:divider|    ; 32 (14)     ; 0            ; 0          ; 0    ; 0            ; 32 (14)      ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div1|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div1|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div1|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                   |add_sub_i7c:add_sub_5| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div1|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_5 ; work         ;
+;       |lpm_divide:Div2|                   ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div2                                                                                                       ; work         ;
+;          |lpm_divide_rvl:auto_generated|  ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div2|lpm_divide_rvl:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_ckh:divider| ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div2|lpm_divide_rvl:auto_generated|sign_div_unsign_ckh:divider                                             ; work         ;
+;                |alt_u_div_fie:divider|    ; 19 (8)      ; 0            ; 0          ; 0    ; 0            ; 19 (8)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div2|lpm_divide_rvl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_fie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div2|lpm_divide_rvl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_fie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div2|lpm_divide_rvl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_fie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;       |lpm_divide:Div3|                   ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div3                                                                                                       ; work         ;
+;          |lpm_divide_svl:auto_generated|  ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div3|lpm_divide_svl:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_dkh:divider| ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div3|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider                                             ; work         ;
+;                |alt_u_div_hie:divider|    ; 32 (14)     ; 0            ; 0          ; 0    ; 0            ; 32 (14)      ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div3|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div3|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div3|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                   |add_sub_i7c:add_sub_5| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div3|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_5 ; work         ;
+;       |lpm_divide:Div4|                   ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div4                                                                                                       ; work         ;
+;          |lpm_divide_rvl:auto_generated|  ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div4|lpm_divide_rvl:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_ckh:divider| ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div4|lpm_divide_rvl:auto_generated|sign_div_unsign_ckh:divider                                             ; work         ;
+;                |alt_u_div_fie:divider|    ; 19 (8)      ; 0            ; 0          ; 0    ; 0            ; 19 (8)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div4|lpm_divide_rvl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_fie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div4|lpm_divide_rvl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_fie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div4|lpm_divide_rvl:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_fie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;       |lpm_divide:Mod0|                   ; 33 (0)      ; 0            ; 0          ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod0                                                                                                       ; work         ;
+;          |lpm_divide_1ol:auto_generated|  ; 33 (0)      ; 0            ; 0          ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod0|lpm_divide_1ol:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 33 (0)      ; 0            ; 0          ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod0|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider                                             ; work         ;
+;                |alt_u_div_lie:divider|    ; 33 (15)     ; 0            ; 0          ; 0    ; 0            ; 33 (15)      ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod0|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod0|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod0|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                   |add_sub_j7c:add_sub_5| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod0|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;       |lpm_divide:Mod2|                   ; 36 (0)      ; 0            ; 0          ; 0    ; 0            ; 36 (0)       ; 0 (0)             ; 0 (0)            ; 20 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod2                                                                                                       ; work         ;
+;          |lpm_divide_1ol:auto_generated|  ; 36 (0)      ; 0            ; 0          ; 0    ; 0            ; 36 (0)       ; 0 (0)             ; 0 (0)            ; 20 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod2|lpm_divide_1ol:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 36 (0)      ; 0            ; 0          ; 0    ; 0            ; 36 (0)       ; 0 (0)             ; 0 (0)            ; 20 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod2|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider                                             ; work         ;
+;                |alt_u_div_lie:divider|    ; 36 (16)     ; 0            ; 0          ; 0    ; 0            ; 36 (16)      ; 0 (0)             ; 0 (0)            ; 20 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod2|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod2|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod2|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                   |add_sub_j7c:add_sub_5| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod2|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;       |lpm_divide:Mod4|                   ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod4                                                                                                       ; work         ;
+;          |lpm_divide_vnl:auto_generated|  ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod4|lpm_divide_vnl:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_ekh:divider| ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod4|lpm_divide_vnl:auto_generated|sign_div_unsign_ekh:divider                                             ; work         ;
+;                |alt_u_div_iie:divider|    ; 19 (8)      ; 0            ; 0          ; 0    ; 0            ; 19 (8)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod4|lpm_divide_vnl:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_iie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod4|lpm_divide_vnl:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_iie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod4|lpm_divide_vnl:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_iie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;       |lpm_divide:Mod6|                   ; 34 (0)      ; 0            ; 0          ; 0    ; 0            ; 34 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod6                                                                                                       ; work         ;
+;          |lpm_divide_1ol:auto_generated|  ; 34 (0)      ; 0            ; 0          ; 0    ; 0            ; 34 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod6|lpm_divide_1ol:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 34 (0)      ; 0            ; 0          ; 0    ; 0            ; 34 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod6|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider                                             ; work         ;
+;                |alt_u_div_lie:divider|    ; 34 (16)     ; 0            ; 0          ; 0    ; 0            ; 34 (16)      ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod6|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod6|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod6|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                   |add_sub_j7c:add_sub_5| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod6|lpm_divide_1ol:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_lie:divider|add_sub_j7c:add_sub_5 ; work         ;
+;       |lpm_divide:Mod8|                   ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod8                                                                                                       ; work         ;
+;          |lpm_divide_vnl:auto_generated|  ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod8|lpm_divide_vnl:auto_generated                                                                         ; work         ;
+;             |sign_div_unsign_ekh:divider| ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod8|lpm_divide_vnl:auto_generated|sign_div_unsign_ekh:divider                                             ; work         ;
+;                |alt_u_div_iie:divider|    ; 19 (8)      ; 0            ; 0          ; 0    ; 0            ; 19 (8)       ; 0 (0)             ; 0 (0)            ; 11 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod8|lpm_divide_vnl:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_iie:divider                       ; work         ;
+;                   |add_sub_h7c:add_sub_3| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod8|lpm_divide_vnl:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_iie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                   |add_sub_i7c:add_sub_4| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Mod8|lpm_divide_vnl:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_iie:divider|add_sub_i7c:add_sub_4 ; work         ;
++-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |timer_VHDL|timer:inst|cur_state                                                                                                                 ;
++--------------------------+--------------------------+------------------------+---------------------+---------------------+-------------------+-------------------+
+; Name                     ; cur_state.setalarmminute ; cur_state.setalarmhour ; cur_state.alarmtime ; cur_state.setminute ; cur_state.sethour ; cur_state.nowtime ;
++--------------------------+--------------------------+------------------------+---------------------+---------------------+-------------------+-------------------+
+; cur_state.nowtime        ; 0                        ; 0                      ; 0                   ; 0                   ; 0                 ; 0                 ;
+; cur_state.sethour        ; 0                        ; 0                      ; 0                   ; 0                   ; 1                 ; 1                 ;
+; cur_state.setminute      ; 0                        ; 0                      ; 0                   ; 1                   ; 0                 ; 1                 ;
+; cur_state.alarmtime      ; 0                        ; 0                      ; 1                   ; 0                   ; 0                 ; 1                 ;
+; cur_state.setalarmhour   ; 0                        ; 1                      ; 0                   ; 0                   ; 0                 ; 1                 ;
+; cur_state.setalarmminute ; 1                        ; 0                      ; 0                   ; 0                   ; 0                 ; 1                 ;
++--------------------------+--------------------------+------------------------+---------------------+---------------------+-------------------+-------------------+
 
 
 +------------------------------------------------------+
@@ -198,9 +314,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 24    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 59    ;
+; Number of registers using Synchronous Clear  ; 4     ;
+; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 17    ;
@@ -208,16 +324,362 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_VHDL|timer:inst|MIN0[0]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_VHDL|timer:inst|MIN1[0]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_VHDL|timer:inst|HOUR1[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_VHDL|timer:inst|HOUR0[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |timer_VHDL|timer:inst|SEC0[0]      ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |timer_VHDL|timer:inst|TIME_MIN[3]  ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |timer_VHDL|timer:inst|TIME_HOUR[2] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |timer_VHDL|timer:inst|MIN0[2]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |timer_VHDL|timer:inst|HOUR0[3]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod8 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                           ;
+; LPM_WIDTHD             ; 5              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_vnl ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod4 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                           ;
+; LPM_WIDTHD             ; 5              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_vnl ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div4 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                           ;
+; LPM_WIDTHD             ; 4              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_rvl ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod9 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                           ;
+; LPM_WIDTHD             ; 5              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_vnl ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div2 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                           ;
+; LPM_WIDTHD             ; 4              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_rvl ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod5 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                           ;
+; LPM_WIDTHD             ; 5              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_vnl ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod6 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                           ;
+; LPM_WIDTHD             ; 6              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_1ol ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod2 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                           ;
+; LPM_WIDTHD             ; 6              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_1ol ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div3 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                           ;
+; LPM_WIDTHD             ; 4              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_svl ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod7 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                           ;
+; LPM_WIDTHD             ; 6              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_1ol ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div1 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                           ;
+; LPM_WIDTHD             ; 4              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_svl ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod3 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                           ;
+; LPM_WIDTHD             ; 6              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_1ol ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                           ;
+; LPM_WIDTHD             ; 6              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_1ol ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                           ;
+; LPM_WIDTHD             ; 4              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_svl ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod1 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                           ;
+; LPM_WIDTHD             ; 6              ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_1ol ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -226,7 +688,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Tue May 23 17:01:45 2017
+    Info: Processing started: Wed Jun 07 02:11:47 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off timer_VHDL -c timer_VHDL
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Found 1 design units, including 1 entities, in source file timer_vhdl.bdf
@@ -236,14 +698,90 @@ Info: Found 2 design units, including 1 entities, in source file timer.vhd
     Info: Found entity 1: timer
 Info: Elaborating entity "timer_VHDL" for the top level hierarchy
 Info: Elaborating entity "timer" for hierarchy "timer:inst"
-Info: Implemented 75 device resources after synthesis - the final resource count might be different
-    Info: Implemented 3 input pins
+Info: Inferred 15 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod8"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod4"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Div4"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod9"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Div2"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod5"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod6"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod2"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Div3"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod7"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Div1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod3"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Div0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst|Mod1"
+Info: Elaborated megafunction instantiation "timer:inst|lpm_divide:Mod8"
+Info: Instantiated megafunction "timer:inst|lpm_divide:Mod8" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "5"
+    Info: Parameter "LPM_WIDTHD" = "5"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_vnl.tdf
+    Info: Found entity 1: lpm_divide_vnl
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
+    Info: Found entity 1: sign_div_unsign_ekh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_iie.tdf
+    Info: Found entity 1: alt_u_div_iie
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_e7c.tdf
+    Info: Found entity 1: add_sub_e7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_f7c.tdf
+    Info: Found entity 1: add_sub_f7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_g7c.tdf
+    Info: Found entity 1: add_sub_g7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_h7c.tdf
+    Info: Found entity 1: add_sub_h7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_i7c.tdf
+    Info: Found entity 1: add_sub_i7c
+Info: Elaborated megafunction instantiation "timer:inst|lpm_divide:Div4"
+Info: Instantiated megafunction "timer:inst|lpm_divide:Div4" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "5"
+    Info: Parameter "LPM_WIDTHD" = "4"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_rvl.tdf
+    Info: Found entity 1: lpm_divide_rvl
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ckh.tdf
+    Info: Found entity 1: sign_div_unsign_ckh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_fie.tdf
+    Info: Found entity 1: alt_u_div_fie
+Info: Elaborated megafunction instantiation "timer:inst|lpm_divide:Mod6"
+Info: Instantiated megafunction "timer:inst|lpm_divide:Mod6" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "6"
+    Info: Parameter "LPM_WIDTHD" = "6"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_1ol.tdf
+    Info: Found entity 1: lpm_divide_1ol
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
+    Info: Found entity 1: sign_div_unsign_fkh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_lie.tdf
+    Info: Found entity 1: alt_u_div_lie
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_j7c.tdf
+    Info: Found entity 1: add_sub_j7c
+Info: Elaborated megafunction instantiation "timer:inst|lpm_divide:Div3"
+Info: Instantiated megafunction "timer:inst|lpm_divide:Div3" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "6"
+    Info: Parameter "LPM_WIDTHD" = "4"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_svl.tdf
+    Info: Found entity 1: lpm_divide_svl
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
+    Info: Found entity 1: sign_div_unsign_dkh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_hie.tdf
+    Info: Found entity 1: alt_u_div_hie
+Info: Implemented 461 device resources after synthesis - the final resource count might be different
+    Info: Implemented 5 input pins
     Info: Implemented 25 output pins
-    Info: Implemented 47 logic cells
+    Info: Implemented 431 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 261 megabytes
-    Info: Processing ended: Tue May 23 17:01:46 2017
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 267 megabytes
+    Info: Processing ended: Wed Jun 07 02:11:49 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 

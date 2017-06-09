@@ -1,0 +1,8 @@
+|debounce
+CLK => d3.CLK
+CLK => d2.CLK
+CLK => d1.CLK
+key_input => d1.DATAIN
+key_output <= key_output.DB_MAX_OUTPUT_PORT_TYPE
+
+

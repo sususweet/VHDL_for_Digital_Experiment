@@ -1,5 +1,5 @@
 Flow report for timer_VHDL
-Tue May 23 17:01:49 2017
+Wed Jun 07 02:11:54 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Tue May 23 17:01:49 2017    ;
+; Flow Status             ; Successful - Wed Jun 07 02:11:54 2017    ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; timer_VHDL                               ;
 ; Top-level Entity Name   ; timer_VHDL                               ;
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Device                  ; EPM570T100C5                             ;
 ; Timing Models           ; Final                                    ;
 ; Met timing requirements ; Yes                                      ;
-; Total logic elements    ; 46 / 570 ( 8 % )                         ;
-; Total pins              ; 28 / 76 ( 37 % )                         ;
+; Total logic elements    ; 423 / 570 ( 74 % )                       ;
+; Total pins              ; 30 / 76 ( 39 % )                         ;
 ; Total virtual pins      ; 0                                        ;
 ; UFM blocks              ; 0 / 1 ( 0 % )                            ;
 +-------------------------+------------------------------------------+
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/23/2017 17:01:45 ;
+; Start date & time ; 06/07/2017 02:11:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; timer_VHDL          ;
 +-------------------+---------------------+
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +---------------------------------------+--------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                                ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+--------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 115410752129008.149553010512244      ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 115410752129008.149677270703900      ; --            ; --          ; --             ;
 ; MAXII_OPTIMIZATION_TECHNIQUE          ; Speed                                ; Balanced      ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                                   ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                                    ; --            ; --          ; --             ;
@@ -84,11 +84,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 261 MB              ; 00:00:02                           ;
-; Fitter                  ; 00:00:00     ; 1.0                     ; 270 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 203 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 188 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:01     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 267 MB              ; 00:00:03                           ;
+; Fitter                  ; 00:00:02     ; 1.0                     ; 271 MB              ; 00:00:02                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 204 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 189 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:04     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

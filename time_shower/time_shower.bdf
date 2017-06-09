@@ -1,0 +1,285 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+//#pragma file_not_in_maxplusii_format
+(header "graphic" (version "1.3"))
+(pin
+	(input)
+	(rect 272 176 440 192)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "clk" (rect 5 0 19 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 272 216 440 232)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "q1[3..0]" (rect 5 0 42 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 272 256 440 272)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "q2[3..0]" (rect 5 0 42 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 272 296 440 312)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "q3[3..0]" (rect 5 0 42 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 272 336 440 352)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "q4[3..0]" (rect 5 0 42 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 272 376 440 392)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "q5[3..0]" (rect 5 0 42 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 272 416 440 432)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "q6[3..0]" (rect 5 0 42 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 784 216 960 232)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "w[5..0]" (rect 90 0 123 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(output)
+	(rect 784 256 960 272)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "d[6..0]" (rect 90 0 121 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(block
+	(rect 528 168 728 456)
+	(text "led_shower" (rect 5 5 73 19)(font "Arial" (font_size 8)))	(text "inst" (rect 5 274 22 286)(font "Arial" ))	(block_io "CLK" (input))
+	(block_io "Q1[3..0]" (input))
+	(block_io "Q2[3..0]" (input))
+	(block_io "Q3[3..0]" (input))
+	(block_io "Q4[3..0]" (input))
+	(block_io "Q5[3..0]" (input))
+	(block_io "Q6[3..0]" (input))
+	(block_io "WLED[5..0]" (output))
+	(block_io "DLED[6..0]" (output))
+	(mapper
+		(pt 0 16)
+		(input)
+		(mapping "CLK" "clk" )
+		(annotation_block (mapping)(rect 456 200 512 232))
+	)
+	(mapper
+		(pt 0 56)
+		(input)
+		(mapping "Q1[3..0]" "q1[3..0]" )
+		(annotation_block (mapping)(rect 424 240 512 272))
+	)
+	(mapper
+		(pt 0 96)
+		(input)
+		(mapping "Q2[3..0]" "q2[3..0]" )
+		(annotation_block (mapping)(rect 424 280 512 312))
+	)
+	(mapper
+		(pt 0 136)
+		(input)
+		(mapping "Q3[3..0]" "q3[3..0]" )
+		(annotation_block (mapping)(rect 424 320 512 352))
+	)
+	(mapper
+		(pt 0 176)
+		(input)
+		(mapping "Q4[3..0]" "q4[3..0]" )
+		(annotation_block (mapping)(rect 424 360 512 392))
+	)
+	(mapper
+		(pt 0 216)
+		(input)
+		(mapping "Q5[3..0]" "q5[3..0]" )
+		(annotation_block (mapping)(rect 424 400 512 432))
+	)
+	(mapper
+		(pt 0 256)
+		(input)
+		(mapping "Q6[3..0]" "q6[3..0]" )
+		(annotation_block (mapping)(rect 424 440 512 472))
+	)
+	(mapper
+		(pt 200 56)
+		(output)
+		(mapping "WLED[5..0]" "WLED[5..0]" )
+		(annotation_block (mapping)(rect 744 240 864 272))
+	)
+	(mapper
+		(pt 200 96)
+		(output)
+		(mapping "DLED[6..0]" "DLED[6..0]" )
+		(annotation_block (mapping)(rect 744 280 856 312))
+	)
+)
+(connector
+	(text "clk" (rect 450 168 462 180)(font "Arial" ))
+	(pt 440 184)
+	(pt 528 184)
+)
+(connector
+	(text "q1[3..0]" (rect 450 208 482 220)(font "Arial" ))
+	(pt 440 224)
+	(pt 528 224)
+	(bus)
+)
+(connector
+	(text "q2[3..0]" (rect 450 248 482 260)(font "Arial" ))
+	(pt 440 264)
+	(pt 528 264)
+	(bus)
+)
+(connector
+	(text "q3[3..0]" (rect 450 288 482 300)(font "Arial" ))
+	(pt 440 304)
+	(pt 528 304)
+	(bus)
+)
+(connector
+	(text "q4[3..0]" (rect 450 328 482 340)(font "Arial" ))
+	(pt 528 344)
+	(pt 440 344)
+	(bus)
+)
+(connector
+	(text "q5[3..0]" (rect 450 368 482 380)(font "Arial" ))
+	(pt 528 384)
+	(pt 440 384)
+	(bus)
+)
+(connector
+	(text "q6[3..0]" (rect 450 408 482 420)(font "Arial" ))
+	(pt 440 424)
+	(pt 528 424)
+	(bus)
+)
+(connector
+	(text "WLED[5..0]" (rect 738 208 787 220)(font "Arial" ))
+	(pt 784 224)
+	(pt 728 224)
+	(bus)
+)
+(connector
+	(text "DLED[6..0]" (rect 738 248 793 260)(font "Arial" ))
+	(pt 784 264)
+	(pt 728 264)
+	(bus)
+)

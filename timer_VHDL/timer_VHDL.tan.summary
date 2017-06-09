@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 4.686 ns
-From           : set_min
-To             : timer:inst|MIN1[1]
+Actual Time    : 6.832 ns
+From           : set_item
+To             : timer:inst|TIME_HOUR[4]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,8 +15,8 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 15.182 ns
-From           : timer:inst|SEC0[3]
+Actual Time    : 18.055 ns
+From           : timer:inst|TIME_MIN[5]
 To             : ALARM
 From Clock     : clk
 To Clock       : --
@@ -25,8 +25,8 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 9.686 ns
-From           : set_min
+Actual Time    : 15.137 ns
+From           : clk
 To             : ALARM
 From Clock     : --
 To Clock       : --
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -2.486 ns
-From           : set_hour
-To             : timer:inst|HOUR1[3]
+Actual Time    : -1.196 ns
+From           : EN_ALM
+To             : timer:inst|SEC1[0]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -45,11 +45,21 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 106.11 MHz ( period = 9.424 ns )
-From           : timer:inst|MIN0[2]
-To             : timer:inst|HOUR0[0]
+Actual Time    : 46.53 MHz ( period = 21.490 ns )
+From           : timer:inst|ALARM_MIN[3]
+To             : timer:inst|MIN1[0]
 From Clock     : clk
 To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'set_type'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 304.04 MHz ( period = 3.289 ns )
+From           : timer:inst|cur_state.setminute
+To             : timer:inst|cur_state.setalarmhour
+From Clock     : set_type
+To Clock       : set_type
 Failed Paths   : 0
 
 Type           : Total number of failed paths

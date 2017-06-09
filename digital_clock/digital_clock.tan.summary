@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.273 ns
+From           : EN_ALM
+To             : timer:inst|SEC1[0]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.335 ns
+From           : timer:inst|ALARM
+To             : ALARM
+From Clock     : scan_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.556 ns
+From           : CLK_HIGH
+To             : timer:inst|ALARM
+From Clock     : --
+To Clock       : scan_clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 42.37 MHz ( period = 23.599 ns )
+From           : timer:inst|TIME_MIN[3]
+To             : timer:inst|MIN1[0]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'scan_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 193.50 MHz ( period = 5.168 ns )
+From           : led_shower:inst1|CNT6[0]
+To             : led_shower:inst1|SHUJU[3]
+From Clock     : scan_clk
+To Clock       : scan_clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

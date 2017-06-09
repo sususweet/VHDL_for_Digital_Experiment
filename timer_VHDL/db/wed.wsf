@@ -23,10 +23,10 @@ applicable agreement for further details.
 VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 18190000000;
+		ZBEGIN = 45924597;
+		ZEND = 96951933;
 		NUMERATOR = 865;
-		DENOMINATOR = 18190000000;
+		DENOMINATOR = 51027336;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -46,24 +46,8 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "set_hour";
-		INDEX = 1;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "set_min";
-		INDEX = 2;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "HOUR1";
-		INDEX = 3;
+		INDEX = 1;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -71,7 +55,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "HOUR1[3]";
-		INDEX = 4;
+		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -79,7 +63,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "HOUR1[2]";
-		INDEX = 5;
+		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -87,7 +71,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "HOUR1[1]";
-		INDEX = 6;
+		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -95,7 +79,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "HOUR1[0]";
-		INDEX = 7;
+		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -103,7 +87,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0";
-		INDEX = 8;
+		INDEX = 6;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -111,7 +95,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0[3]";
-		INDEX = 9;
+		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -119,7 +103,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0[2]";
-		INDEX = 10;
+		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -127,7 +111,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0[1]";
-		INDEX = 11;
+		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -135,7 +119,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0[0]";
-		INDEX = 12;
+		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -143,7 +127,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN1";
-		INDEX = 13;
+		INDEX = 11;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -151,7 +135,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN1[3]";
-		INDEX = 14;
+		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -159,7 +143,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN1[2]";
-		INDEX = 15;
+		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -167,7 +151,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN1[1]";
-		INDEX = 16;
+		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -175,7 +159,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN1[0]";
-		INDEX = 17;
+		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -183,7 +167,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN0";
-		INDEX = 18;
+		INDEX = 16;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -191,7 +175,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN0[3]";
-		INDEX = 19;
+		INDEX = 17;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -199,7 +183,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN0[2]";
-		INDEX = 20;
+		INDEX = 18;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -207,7 +191,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN0[1]";
-		INDEX = 21;
+		INDEX = 19;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -215,7 +199,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "MIN0[0]";
-		INDEX = 22;
+		INDEX = 20;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -223,7 +207,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC1";
-		INDEX = 23;
+		INDEX = 21;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -231,7 +215,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC1[3]";
-		INDEX = 24;
+		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -239,7 +223,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC1[2]";
-		INDEX = 25;
+		INDEX = 23;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -247,7 +231,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC1[1]";
-		INDEX = 26;
+		INDEX = 24;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -255,7 +239,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC1[0]";
-		INDEX = 27;
+		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -263,7 +247,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC0";
-		INDEX = 28;
+		INDEX = 26;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -271,7 +255,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC0[3]";
-		INDEX = 29;
+		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -279,7 +263,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC0[2]";
-		INDEX = 30;
+		INDEX = 28;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -287,7 +271,7 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC0[1]";
-		INDEX = 31;
+		INDEX = 29;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -295,7 +279,55 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 	}
 	LINE{
 		SIGNAL = "SEC0[0]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "EN_ALM";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "EN_REPORT";
 		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "set_item";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "set_type";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ALARM";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "timer:inst|cur_state";
+		INDEX = 36;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -306,11 +338,11 @@ VECTOR("F:/quartus/timer_VHDL/timer_VHDL.vwf")
 VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 3773301066;
-		ZEND = 3808828408;
-		NUMERATOR = 729;
-		DENOMINATOR = 35527342;
-		TOP_INDEX = 0;
+		ZBEGIN = 3439729841;
+		ZEND = 3770555569;
+		NUMERATOR = 712;
+		DENOMINATOR = 330825728;
+		TOP_INDEX = 6;
 	}
 	CLOCK{
 		PERIOD = 10000;
@@ -329,24 +361,8 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "set_hour";
-		INDEX = 1;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "set_min";
-		INDEX = 2;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "HOUR1";
-		INDEX = 3;
+		INDEX = 1;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -354,7 +370,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "HOUR1[3]";
-		INDEX = 4;
+		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -362,7 +378,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "HOUR1[2]";
-		INDEX = 5;
+		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -370,7 +386,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "HOUR1[1]";
-		INDEX = 6;
+		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -378,7 +394,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "HOUR1[0]";
-		INDEX = 7;
+		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -386,7 +402,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0";
-		INDEX = 8;
+		INDEX = 6;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -394,7 +410,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0[3]";
-		INDEX = 9;
+		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -402,7 +418,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0[2]";
-		INDEX = 10;
+		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -410,7 +426,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0[1]";
-		INDEX = 11;
+		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -418,15 +434,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "HOUR0[0]";
-		INDEX = 12;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "ALARM";
-		INDEX = 13;
+		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -434,7 +442,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN1";
-		INDEX = 14;
+		INDEX = 11;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -442,7 +450,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN1[3]";
-		INDEX = 15;
+		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -450,7 +458,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN1[2]";
-		INDEX = 16;
+		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -458,7 +466,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN1[1]";
-		INDEX = 17;
+		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -466,7 +474,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN1[0]";
-		INDEX = 18;
+		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -474,7 +482,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN0";
-		INDEX = 19;
+		INDEX = 16;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -482,7 +490,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN0[3]";
-		INDEX = 20;
+		INDEX = 17;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -490,7 +498,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN0[2]";
-		INDEX = 21;
+		INDEX = 18;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -498,7 +506,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN0[1]";
-		INDEX = 22;
+		INDEX = 19;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -506,7 +514,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "MIN0[0]";
-		INDEX = 23;
+		INDEX = 20;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -514,7 +522,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC1";
-		INDEX = 24;
+		INDEX = 21;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -522,7 +530,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC1[3]";
-		INDEX = 25;
+		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -530,7 +538,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC1[2]";
-		INDEX = 26;
+		INDEX = 23;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -538,7 +546,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC1[1]";
-		INDEX = 27;
+		INDEX = 24;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -546,7 +554,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC1[0]";
-		INDEX = 28;
+		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -554,7 +562,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC0";
-		INDEX = 29;
+		INDEX = 26;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -562,7 +570,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC0[3]";
-		INDEX = 30;
+		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -570,7 +578,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC0[2]";
-		INDEX = 31;
+		INDEX = 28;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -578,7 +586,7 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC0[1]";
-		INDEX = 32;
+		INDEX = 29;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -586,7 +594,55 @@ VECTOR("F:/quartus/timer_VHDL/db/timer_VHDL.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "SEC0[0]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "EN_ALM";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "EN_REPORT";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "set_item";
 		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "set_type";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ALARM";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "timer:inst|cur_state";
+		INDEX = 36;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
