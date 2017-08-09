@@ -31,14 +31,24 @@ ENTITY led_shower IS
 	PORT
 	(
 		CLK : IN STD_LOGIC;
+		TWINKLE_CLK : IN STD_LOGIC;
 		Q1 : IN STD_LOGIC_VECTOR(3 downto 0);
 		Q2 : IN STD_LOGIC_VECTOR(3 downto 0);
 		Q3 : IN STD_LOGIC_VECTOR(3 downto 0);
 		Q4 : IN STD_LOGIC_VECTOR(3 downto 0);
 		Q5 : IN STD_LOGIC_VECTOR(3 downto 0);
 		Q6 : IN STD_LOGIC_VECTOR(3 downto 0);
+		
+		D1 : IN STD_LOGIC;
+		D2 : IN STD_LOGIC;
+		D3 : IN STD_LOGIC;
+		D4 : IN STD_LOGIC;
+		D5 : IN STD_LOGIC;
+		D6 : IN STD_LOGIC;
+		
 		WLED : OUT STD_LOGIC_VECTOR(5 downto 0);
-		DLED : OUT STD_LOGIC_VECTOR(6 downto 0)
+		DLED : OUT STD_LOGIC_VECTOR(6 downto 0);
+		DOT : OUT STD_LOGIC
 	);
 	-- {{ALTERA_IO_END}} DO NOT REMOVE THIS LINE!
 	
@@ -56,12 +66,25 @@ BEGIN
 		IF RISING_EDGE(CLK) THEN
 			CNT6 <= CNT6 + 1;
 			CASE CNT6 IS
-				WHEN 0 => WLED <= "000001"; SHUJU <= Q1;
-				WHEN 1 => WLED <= "000010"; SHUJU <= Q2; 
-				WHEN 2 => WLED <= "000100"; SHUJU <= Q3;
-				WHEN 3 => WLED <= "001000"; SHUJU <= Q4;
-				WHEN 4 => WLED <= "010000"; SHUJU <= Q5;
-				WHEN 5 => WLED <= "100000"; SHUJU <= Q6;
+				WHEN 0 => 
+					WLED <= "111110"; SHUJU <= Q1;
+					DOT <= D1;
+				WHEN 1 => 
+					WLED <= "111101"; SHUJU <= Q2;
+					DOT <= D2; 
+				WHEN 2 => 
+					WLED <= "111011"; SHUJU <= Q3;
+					DOT <= D3;
+				WHEN 3 => 
+					WLED <= "110111"; SHUJU <= Q4;
+					DOT <= D4;
+				WHEN 4 => 
+					WLED <= "101111"; SHUJU <= Q5;
+					DOT <= D5;
+				WHEN 5 => 
+					WLED <= "011111"; SHUJU <= Q6;
+					DOT <= D6;
+					CNT6 <= 0;
 				WHEN OTHERS => NULL;
 			END CASE;
 		END IF;
@@ -70,16 +93,17 @@ BEGIN
 	PROCESS(SHUJU)
 	BEGIN
 		CASE SHUJU IS
-			WHEN "0000" => DLED <= "0000001" ; --- 0
-			WHEN "0001" => DLED <= "1001111" ; --- 1    
-			WHEN "0010" => DLED <= "0010010" ; --- 2   
-			WHEN "0011" => DLED <= "0000110" ; --- 3   
-			WHEN "0100" => DLED <= "1001100" ; --- 4  
-			WHEN "0101" => DLED <= "0100100" ; --- 5     
-			WHEN "0110" => DLED <= "0100000" ; --- 6   
-			WHEN "0111" => DLED <= "0001111" ; --- 7   
+			WHEN "0000" => DLED <= "1000000" ; --- 0
+			WHEN "0001" => DLED <= "1111001" ; --- 1    
+			WHEN "0010" => DLED <= "0100100" ; --- 2   
+			WHEN "0011" => DLED <= "0110000" ; --- 3   
+			WHEN "0100" => DLED <= "0011001" ; --- 4  
+			WHEN "0101" => DLED <= "0010010" ; --- 5     
+			WHEN "0110" => DLED <= "0000010" ; --- 6   
+			WHEN "0111" => DLED <= "1111000" ; --- 7   
 			WHEN "1000" => DLED <= "0000000" ; --- 8    
-			WHEN "1001" => DLED <= "0000100" ; --- 9   
+			WHEN "1001" => DLED <= "0010000" ; --- 9 
+			WHEN "1010" => DLED <= "0111111" ; --- - 
 			WHEN others => DLED <= "1111111" ; 
 		END CASE;
 	END PROCESS;

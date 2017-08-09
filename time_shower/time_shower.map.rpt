@@ -1,5 +1,5 @@
 Analysis & Synthesis report for time_shower
-Thu Jun 01 21:43:55 2017
+Mon Jun 12 15:06:34 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Jun 01 21:43:55 2017    ;
+; Analysis & Synthesis Status ; Successful - Mon Jun 12 15:06:34 2017    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; time_shower                              ;
 ; Top-level Entity Name       ; time_shower                              ;
@@ -159,8 +159,8 @@ applicable agreement for further details.
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
 ;     -- 4 input functions                    ; 19                      ;
-;     -- 3 input functions                    ; 7                       ;
-;     -- 2 input functions                    ; 5                       ;
+;     -- 3 input functions                    ; 8                       ;
+;     -- 2 input functions                    ; 4                       ;
 ;     -- 1 input functions                    ; 1                       ;
 ;     -- 0 input functions                    ; 0                       ;
 ;                                             ;                         ;
@@ -176,8 +176,8 @@ applicable agreement for further details.
 ; I/O pins                                    ; 38                      ;
 ; Maximum fan-out node                        ; led_shower:inst|CNT6[1] ;
 ; Maximum fan-out                             ; 18                      ;
-; Total fan-out                               ; 134                     ;
-; Average fan-out                             ; 1.91                    ;
+; Total fan-out                               ; 135                     ;
+; Average fan-out                             ; 1.93                    ;
 +---------------------------------------------+-------------------------+
 
 
@@ -222,7 +222,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Jun 01 21:43:54 2017
+    Info: Processing started: Mon Jun 12 15:06:32 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off time_shower -c time_shower
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Found 2 design units, including 1 entities, in source file led_shower.vhd
@@ -238,8 +238,8 @@ Info: Implemented 70 device resources after synthesis - the final resource count
     Info: Implemented 32 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 260 megabytes
-    Info: Processing ended: Thu Jun 01 21:43:55 2017
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Mon Jun 12 15:06:34 2017
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

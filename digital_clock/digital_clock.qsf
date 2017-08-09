@@ -86,3 +86,7 @@ set_global_assignment -name BDF_FILE clk_divider.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE digital_clock.vwf
 set_global_assignment -name VHDL_FILE debounce.vhd
 set_location_assignment PIN_57 -to CLK_HIGH
+set_global_assignment -name VHDL_FILE music.vhd
+set_location_assignment PIN_33 -to EN_MUSIC
+set_location_assignment PIN_66 -to clk_quad
+set_location_assignment PIN_56 -to CLK_32768

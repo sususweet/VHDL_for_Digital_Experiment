@@ -1,5 +1,5 @@
 Analysis & Synthesis report for timer_VHDL
-Wed Jun 07 02:11:49 2017
+Mon Jun 12 21:20:58 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -15,23 +15,24 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |timer_VHDL|timer:inst|cur_state
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (No Restructuring Performed)
- 11. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod8
- 12. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod4
- 13. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div4
- 14. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod9
- 15. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div2
- 16. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod5
- 17. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod6
- 18. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod2
- 19. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div3
- 20. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod7
- 21. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div1
- 22. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod3
- 23. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod0
- 24. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div0
- 25. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod1
- 26. Analysis & Synthesis Messages
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 12. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod8
+ 13. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod4
+ 14. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div4
+ 15. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod9
+ 16. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div2
+ 17. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod5
+ 18. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod6
+ 19. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod2
+ 20. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div3
+ 21. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod7
+ 22. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod3
+ 24. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod0
+ 25. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Div0
+ 26. Parameter Settings for Inferred Entity Instance: timer:inst|lpm_divide:Mod1
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -57,12 +58,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jun 07 02:11:49 2017    ;
+; Analysis & Synthesis Status ; Successful - Mon Jun 12 21:20:58 2017    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; timer_VHDL                               ;
 ; Top-level Entity Name       ; timer_VHDL                               ;
 ; Family                      ; MAX II                                   ;
-; Total logic elements        ; 431                                      ;
+; Total logic elements        ; 429                                      ;
 ; Total pins                  ; 30                                       ;
 ; Total virtual pins          ; 0                                        ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
@@ -187,20 +188,20 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 431   ;
-;     -- Combinational with no register       ; 372   ;
+; Total logic elements                        ; 429   ;
+;     -- Combinational with no register       ; 370   ;
 ;     -- Register only                        ; 9     ;
 ;     -- Combinational with a register        ; 50    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 98    ;
-;     -- 3 input functions                    ; 82    ;
-;     -- 2 input functions                    ; 159   ;
+;     -- 4 input functions                    ; 99    ;
+;     -- 3 input functions                    ; 80    ;
+;     -- 2 input functions                    ; 158   ;
 ;     -- 1 input functions                    ; 83    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 299   ;
+;     -- normal mode                          ; 297   ;
 ;     -- arithmetic mode                      ; 132   ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -211,8 +212,8 @@ applicable agreement for further details.
 ; Total logic cells in carry chains           ; 182   ;
 ; I/O pins                                    ; 30    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 55    ;
-; Total fan-out                               ; 1161  ;
+; Maximum fan-out                             ; 54    ;
+; Total fan-out                               ; 1157  ;
 ; Average fan-out                             ; 2.52  ;
 +---------------------------------------------+-------+
 
@@ -222,8 +223,8 @@ applicable agreement for further details.
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                          ; Library Name ;
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |timer_VHDL                               ; 431 (0)     ; 59           ; 0          ; 30   ; 0            ; 372 (0)      ; 9 (0)             ; 50 (0)           ; 182 (0)         ; 0 (0)      ; |timer_VHDL                                                                                                                                  ; work         ;
-;    |timer:inst|                           ; 431 (156)   ; 59           ; 0          ; 0    ; 0            ; 372 (97)     ; 9 (9)             ; 50 (50)          ; 182 (28)        ; 0 (0)      ; |timer_VHDL|timer:inst                                                                                                                       ; work         ;
+; |timer_VHDL                               ; 429 (0)     ; 59           ; 0          ; 30   ; 0            ; 370 (0)      ; 9 (0)             ; 50 (0)           ; 182 (0)         ; 0 (0)      ; |timer_VHDL                                                                                                                                  ; work         ;
+;    |timer:inst|                           ; 429 (154)   ; 59           ; 0          ; 0    ; 0            ; 370 (95)     ; 9 (9)             ; 50 (50)          ; 182 (28)        ; 0 (0)      ; |timer_VHDL|timer:inst                                                                                                                       ; work         ;
 ;       |lpm_divide:Div0|                   ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0                                                                                                       ; work         ;
 ;          |lpm_divide_svl:auto_generated|  ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0|lpm_divide_svl:auto_generated                                                                         ; work         ;
 ;             |sign_div_unsign_dkh:divider| ; 32 (0)      ; 0            ; 0          ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; 18 (0)          ; 0 (0)      ; |timer_VHDL|timer:inst|lpm_divide:Div0|lpm_divide_svl:auto_generated|sign_div_unsign_dkh:divider                                             ; work         ;
@@ -324,14 +325,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; timer:inst|ALARM_MIN[1]                ; 10      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |timer_VHDL|timer:inst|SEC0[0]      ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |timer_VHDL|timer:inst|TIME_MIN[3]  ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |timer_VHDL|timer:inst|TIME_HOUR[2] ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |timer_VHDL|timer:inst|SEC1[2]      ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |timer_VHDL|timer:inst|TIME_MIN[4]  ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |timer_VHDL|timer:inst|TIME_HOUR[1] ;
 ; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |timer_VHDL|timer:inst|MIN0[2]      ;
 ; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |timer_VHDL|timer:inst|HOUR0[3]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
@@ -688,7 +699,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Wed Jun 07 02:11:47 2017
+    Info: Processing started: Mon Jun 12 21:20:56 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off timer_VHDL -c timer_VHDL
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Found 1 design units, including 1 entities, in source file timer_vhdl.bdf
@@ -774,13 +785,13 @@ Info: Found 1 design units, including 1 entities, in source file db/sign_div_uns
     Info: Found entity 1: sign_div_unsign_dkh
 Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_hie.tdf
     Info: Found entity 1: alt_u_div_hie
-Info: Implemented 461 device resources after synthesis - the final resource count might be different
+Info: Implemented 459 device resources after synthesis - the final resource count might be different
     Info: Implemented 5 input pins
     Info: Implemented 25 output pins
-    Info: Implemented 431 logic cells
+    Info: Implemented 429 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 267 megabytes
-    Info: Processing ended: Wed Jun 07 02:11:49 2017
+    Info: Processing ended: Mon Jun 12 21:20:58 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 

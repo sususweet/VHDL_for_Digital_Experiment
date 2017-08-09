@@ -1,0 +1,12 @@
+|div_clk
+CLK_32768 => beep_reg.CLK
+CLK_32768 => \beep_pro:cnt[0].CLK
+CLK_32768 => \beep_pro:cnt[1].CLK
+CLK_32768 => \beep_pro:cnt[2].CLK
+CLK_32768 => \beep_pro:cnt[3].CLK
+CLK_32768 => \beep_pro:cnt[4].CLK
+CLK_32768 => \beep_pro:cnt[5].CLK
+RST => ~NO_FANOUT~
+BEEP <= beep_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Jun 09 00:09:31 2017
+Fitter Status : Successful - Mon Jun 12 16:53:14 2017
 Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
 Revision Name : digital_clock
 Top-level Entity Name : digital_clock
 Family : MAX II
 Device : EPM570T100C5
 Timing Models : Final
-Total logic elements : 471 / 570 ( 83 % )
-Total pins : 22 / 76 ( 29 % )
+Total logic elements : 538 / 570 ( 94 % )
+Total pins : 25 / 76 ( 33 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

@@ -20,6 +20,26 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
+time_shower
+# storage
+db|time_shower.(0).cnf
+db|time_shower.(0).cnf
+# case_insensitive
+# source_file
+time_shower.bdf
+71c998c3d05812c78cb8b7bb1fbd6c58
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
 led_shower
 # storage
 db|time_shower.(1).cnf
@@ -31,7 +51,7 @@ ON
 # case_insensitive
 # source_file
 led_shower.vhd
-e4116b66b0be769c48eb3cb5ac1f22d8
+b4c29475f665f1d8f3e93183e7f21e
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -49,26 +69,6 @@ led_shower:inst
 # lmf
 d:|altera|91|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-time_shower
-# storage
-db|time_shower.(0).cnf
-db|time_shower.(0).cnf
-# case_insensitive
-# source_file
-time_shower.bdf
-71c998c3d05812c78cb8b7bb1fbd6c58
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
 # macro_sequence
 
 # end

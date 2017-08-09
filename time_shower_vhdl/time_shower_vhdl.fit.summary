@@ -1,0 +1,11 @@
+Fitter Status : Successful - Mon Jun 12 15:09:50 2017
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : time_shower_vhdl
+Top-level Entity Name : time_shower_vhdl
+Family : MAX II
+Device : EPM570T100C5
+Timing Models : Final
+Total logic elements : 33 / 570 ( 6 % )
+Total pins : 38 / 76 ( 50 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

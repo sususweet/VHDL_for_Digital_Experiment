@@ -1,0 +1,292 @@
+Analysis & Synthesis report for time_shower_vhdl
+Mon Jun 12 15:09:49 2017
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: led_shower:inst|74163:inst
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Jun 12 15:09:49 2017    ;
+; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name               ; time_shower_vhdl                         ;
+; Top-level Entity Name       ; time_shower_vhdl                         ;
+; Family                      ; MAX II                                   ;
+; Total logic elements        ; 33                                       ;
+; Total pins                  ; 38                                       ;
+; Total virtual pins          ; 0                                        ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM570T100C5       ;                    ;
+; Top-level entity name                                                      ; time_shower_vhdl   ; time_shower_vhdl   ;
+; Family name                                                                ; MAX II             ; Stratix II         ;
+; Optimization Technique                                                     ; Speed              ; Balanced           ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                              ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+
+; led_shower.bdf                   ; yes             ; User Block Diagram/Schematic File  ; F:/quartus/time_shower_vhdl/led_shower.bdf                ;
+; time_shower_vhdl.bdf             ; yes             ; User Block Diagram/Schematic File  ; F:/quartus/time_shower_vhdl/time_shower_vhdl.bdf          ;
+; 74247.bdf                        ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/74247.bdf  ;
+; 74241.bdf                        ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/74241.bdf  ;
+; 74138.bdf                        ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/74138.bdf  ;
+; 74163.tdf                        ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/74163.tdf  ;
+; f74163.bdf                       ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/f74163.bdf ;
+; 7404.bdf                         ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/7404.bdf   ;
+; 7408.bdf                         ; yes             ; Megafunction                       ; d:/altera/91/quartus/libraries/others/maxplus2/7408.bdf   ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                            ;
++---------------------------------------------+------------------------------------------+
+; Resource                                    ; Usage                                    ;
++---------------------------------------------+------------------------------------------+
+; Total logic elements                        ; 33                                       ;
+;     -- Combinational with no register       ; 30                                       ;
+;     -- Register only                        ; 0                                        ;
+;     -- Combinational with a register        ; 3                                        ;
+;                                             ;                                          ;
+; Logic element usage by number of LUT inputs ;                                          ;
+;     -- 4 input functions                    ; 18                                       ;
+;     -- 3 input functions                    ; 13                                       ;
+;     -- 2 input functions                    ; 1                                        ;
+;     -- 1 input functions                    ; 1                                        ;
+;     -- 0 input functions                    ; 0                                        ;
+;                                             ;                                          ;
+; Logic elements by mode                      ;                                          ;
+;     -- normal mode                          ; 31                                       ;
+;     -- arithmetic mode                      ; 2                                        ;
+;     -- qfbk mode                            ; 0                                        ;
+;     -- register cascade mode                ; 0                                        ;
+;     -- synchronous clear/load mode          ; 0                                        ;
+;     -- asynchronous clear/load mode         ; 0                                        ;
+;                                             ;                                          ;
+; Total registers                             ; 3                                        ;
+; Total logic cells in carry chains           ; 3                                        ;
+; I/O pins                                    ; 38                                       ;
+; Maximum fan-out node                        ; led_shower:inst|74163:inst|f74163:sub|34 ;
+; Maximum fan-out                             ; 9                                        ;
+; Total fan-out                               ; 130                                      ;
+; Average fan-out                             ; 1.83                                     ;
++---------------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                     ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------+
+; |time_shower_vhdl          ; 33 (0)      ; 3            ; 0          ; 38   ; 0            ; 30 (0)       ; 0 (0)             ; 3 (0)            ; 3 (0)           ; 0 (0)      ; |time_shower_vhdl                                       ; work         ;
+;    |led_shower:inst|       ; 33 (16)     ; 3            ; 0          ; 0    ; 0            ; 30 (16)      ; 0 (0)             ; 3 (0)            ; 3 (0)           ; 0 (0)      ; |time_shower_vhdl|led_shower:inst                       ; work         ;
+;       |7408:inst6|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |time_shower_vhdl|led_shower:inst|7408:inst6            ; work         ;
+;       |74138:inst2|        ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |time_shower_vhdl|led_shower:inst|74138:inst2           ; work         ;
+;       |74163:inst|         ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 3 (0)           ; 0 (0)      ; |time_shower_vhdl|led_shower:inst|74163:inst            ; work         ;
+;          |f74163:sub|      ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 3 (3)           ; 0 (0)      ; |time_shower_vhdl|led_shower:inst|74163:inst|f74163:sub ; work         ;
+;       |74247:inst5|        ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |time_shower_vhdl|led_shower:inst|74247:inst5           ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |time_shower_vhdl|led_shower:inst|B ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_shower:inst|74163:inst ;
++------------------------+--------+---------------------------------------+
+; Parameter Name         ; Value  ; Type                                  ;
++------------------------+--------+---------------------------------------+
+; DEVICE_FAMILY          ; MAX II ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE                        ;
++------------------------+--------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Mon Jun 12 15:09:47 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off time_shower_vhdl -c time_shower_vhdl
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Found 1 design units, including 1 entities, in source file led_shower.bdf
+    Info: Found entity 1: led_shower
+Info: Found 1 design units, including 1 entities, in source file time_shower_vhdl.bdf
+    Info: Found entity 1: time_shower_vhdl
+Info: Elaborating entity "time_shower_vhdl" for the top level hierarchy
+Info: Elaborating entity "led_shower" for hierarchy "led_shower:inst"
+Info: Elaborating entity "74247" for hierarchy "led_shower:inst|74247:inst5"
+Info: Elaborated megafunction instantiation "led_shower:inst|74247:inst5"
+Info: Elaborating entity "74241" for hierarchy "led_shower:inst|74241:inst7"
+Info: Elaborated megafunction instantiation "led_shower:inst|74241:inst7"
+Info: Elaborating entity "74138" for hierarchy "led_shower:inst|74138:inst2"
+Info: Elaborated megafunction instantiation "led_shower:inst|74138:inst2"
+Info: Elaborating entity "74163" for hierarchy "led_shower:inst|74163:inst"
+Info: Elaborated megafunction instantiation "led_shower:inst|74163:inst"
+Info: Elaborating entity "f74163" for hierarchy "led_shower:inst|74163:inst|f74163:sub"
+Info: Elaborated megafunction instantiation "led_shower:inst|74163:inst|f74163:sub", which is child of megafunction instantiation "led_shower:inst|74163:inst"
+Info: Elaborating entity "7404" for hierarchy "led_shower:inst|7404:inst8"
+Info: Elaborated megafunction instantiation "led_shower:inst|7404:inst8"
+Info: Elaborating entity "7408" for hierarchy "led_shower:inst|7408:inst6"
+Info: Elaborated megafunction instantiation "led_shower:inst|7408:inst6"
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted tri-state node feeding "led_shower:inst|74247:inst5|27" into a selector
+    Warning: Converted tri-state node feeding "led_shower:inst|74247:inst5|41" into a selector
+    Warning: Converted tri-state node feeding "led_shower:inst|74247:inst5|39" into a selector
+    Warning: Converted tri-state node feeding "led_shower:inst|74247:inst5|40" into a selector
+Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
+Info: Implemented 71 device resources after synthesis - the final resource count might be different
+    Info: Implemented 25 input pins
+    Info: Implemented 13 output pins
+    Info: Implemented 33 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 242 megabytes
+    Info: Processing ended: Mon Jun 12 15:09:49 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

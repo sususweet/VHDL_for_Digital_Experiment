@@ -33,10 +33,13 @@ ENTITY timer IS
 		CLK : IN STD_LOGIC;
 		CLK_HIGH : IN STD_LOGIC;
 		CLK_DBLE : IN STD_LOGIC;
+		CLK_QUAD : IN STD_LOGIC;
 		SET_TYPE : IN STD_LOGIC;
 		SET_ITEM : IN STD_LOGIC;
 		EN_ALARM : IN STD_LOGIC;
+		EN_MUSIC : IN STD_LOGIC;
 		EN_REPORT : IN STD_LOGIC;
+		MUSIC :IN STD_LOGIC;
 		SEC0 : BUFFER STD_LOGIC_VECTOR(3 downto 0);
 		SEC1 : BUFFER STD_LOGIC_VECTOR(3 downto 0);
 		MIN0 : BUFFER STD_LOGIC_VECTOR(3 downto 0);
@@ -67,6 +70,8 @@ ARCHITECTURE timer_architecture OF timer IS
 	
 	SIGNAL CLK11: STD_LOGIC := '1';
 	
+	--SIGNAL IS24HOUR: Boolean := TRUE;
+	
 	SIGNAL ALARM_MIN: INTEGER RANGE 0 TO 59 := 0;
 	SIGNAL ALARM_HOUR: INTEGER RANGE 0 TO 23 := 12;
 	SIGNAL DOTARRAY:std_logic_vector(5 DOWNTO 0);
@@ -93,20 +98,20 @@ BEGIN
 	END PROCESS;
 	--Setting mode end--
 
-	PROCESS(CLK_DBLE,SET_ITEM)
-	VARIABLE TIME_COUNT :integer range 0 to 1;
+	PROCESS(CLK_QUAD,SET_ITEM)
+	VARIABLE TIME_COUNT :integer range 0 to 3;
 	
 	BEGIN
-		IF(RISING_EDGE(CLK_DBLE)) THEN
-			IF (TIME_COUNT = 1) THEN
+		IF(RISING_EDGE(CLK_QUAD)) THEN
+			IF (TIME_COUNT = 3) THEN
 				TIME_COUNT := 0;
 				IF (cur_state /= sethour AND cur_state /= setminute) THEN
 					IF (TIME_SEC = 59) THEN
 						TIME_SEC <= 0;
-						TIME_MIN <= TIME_MIN + 1;
+						--  TIME_MIN <= TIME_MIN + 1;
 						IF (TIME_MIN = 59) THEN
 							TIME_MIN <= 0;
-							TIME_HOUR <= TIME_HOUR + 1;
+						--	TIME_HOUR <= TIME_HOUR + 1;
 							IF (TIME_HOUR = 23) THEN
 								TIME_HOUR <= 0;
 							ELSE
@@ -126,33 +131,52 @@ BEGIN
 			
 			IF(CLK11='0' AND SET_ITEM='1') THEN
 				CASE cur_state IS 
+					--WHEN nowtime =>
+					--	IS24HOUR <= NOT IS24HOUR;
 					WHEN sethour =>
+						IF (TIME_HOUR = 23) THEN
+							TIME_HOUR <= 0;
+						ELSE
 							TIME_HOUR <= TIME_HOUR + 1;
-							IF (TIME_HOUR = 23) THEN
-								TIME_HOUR <= 0;
-							END IF;
+						END IF;
+						--TIME_HOUR <= TIME_HOUR + 1;
+						--IF (TIME_HOUR = 23) THEN
+						--	TIME_HOUR <= 0;
+						--END IF;
 						
 					WHEN setminute =>
-						--IF (SET_ITEM = '0') THEN
+						IF (TIME_MIN = 59) THEN
+							TIME_MIN <= 0;
+						ELSE
 							TIME_MIN <= TIME_MIN + 1;
-							IF (TIME_MIN = 59) THEN
-								TIME_MIN <= 0;
-							END IF;
-						--END IF;
+						END IF;
+							--TIME_MIN <= TIME_MIN + 1;
+						--	IF (TIME_MIN = 59) THEN
+						--		TIME_MIN <= 0;
+						--	END IF;
+						
 					WHEN setalarmhour =>
-						--IF (SET_ITEM = '0') THEN
+						IF (ALARM_HOUR = 23) THEN
+							ALARM_HOUR <= 0;
+						ELSE
 							ALARM_HOUR <= ALARM_HOUR + 1;
-							IF (ALARM_HOUR = 23) THEN
-								ALARM_HOUR <= 0;
-							END IF;
-						--END IF;
+						END IF;
+							--ALARM_HOUR <= ALARM_HOUR + 1;
+							--IF (ALARM_HOUR = 23) THEN
+							--	ALARM_HOUR <= 0;
+							--END IF;
 					WHEN setalarmminute =>
-						--IF (SET_ITEM = '0') THEN
+						IF (ALARM_MIN = 59) THEN
+							ALARM_MIN <= 0;
+						ELSE
 							ALARM_MIN <= ALARM_MIN + 1;
-							IF (ALARM_MIN = 59) THEN
-								ALARM_MIN <= 0;
-							END IF;
-						--END IF;
+						END IF;
+					
+						---	ALARM_MIN <= ALARM_MIN + 1;
+						--	IF (ALARM_MIN = 59) THEN
+						--		ALARM_MIN <= 0;
+						--	END IF;
+						
 					WHEN OTHERS => NULL;
 				END CASE;
 				CLK11 <= '1';
@@ -160,33 +184,52 @@ BEGIN
 				CLK11 <= '0';
 			ELSIF (CLK11='0' AND SET_ITEM='0') THEN
 				CASE cur_state IS 
+					--WHEN nowtime =>
+					--	IS24HOUR <= NOT IS24HOUR;
 					WHEN sethour =>
+						IF (TIME_HOUR = 23) THEN
+							TIME_HOUR <= 0;
+						ELSE
 							TIME_HOUR <= TIME_HOUR + 1;
-							IF (TIME_HOUR = 23) THEN
-								TIME_HOUR <= 0;
-							END IF;
+						END IF;
+						--TIME_HOUR <= TIME_HOUR + 1;
+						--IF (TIME_HOUR = 23) THEN
+						--	TIME_HOUR <= 0;
+						--END IF;
 						
 					WHEN setminute =>
-						--IF (SET_ITEM = '0') THEN
+						IF (TIME_MIN = 59) THEN
+							TIME_MIN <= 0;
+						ELSE
 							TIME_MIN <= TIME_MIN + 1;
-							IF (TIME_MIN = 59) THEN
-								TIME_MIN <= 0;
-							END IF;
-						--END IF;
+						END IF;
+							--TIME_MIN <= TIME_MIN + 1;
+						--	IF (TIME_MIN = 59) THEN
+						--		TIME_MIN <= 0;
+						--	END IF;
+						
 					WHEN setalarmhour =>
-						--IF (SET_ITEM = '0') THEN
+						IF (ALARM_HOUR = 23) THEN
+							ALARM_HOUR <= 0;
+						ELSE
 							ALARM_HOUR <= ALARM_HOUR + 1;
-							IF (ALARM_HOUR = 23) THEN
-								ALARM_HOUR <= 0;
-							END IF;
-						--END IF;
+						END IF;
+							--ALARM_HOUR <= ALARM_HOUR + 1;
+							--IF (ALARM_HOUR = 23) THEN
+							--	ALARM_HOUR <= 0;
+							--END IF;
 					WHEN setalarmminute =>
-						--IF (SET_ITEM = '0') THEN
+						IF (ALARM_MIN = 59) THEN
+							ALARM_MIN <= 0;
+						ELSE
 							ALARM_MIN <= ALARM_MIN + 1;
-							IF (ALARM_MIN = 59) THEN
-								ALARM_MIN <= 0;
-							END IF;
-						--END IF;
+						END IF;
+					
+						---	ALARM_MIN <= ALARM_MIN + 1;
+						--	IF (ALARM_MIN = 59) THEN
+						--		ALARM_MIN <= 0;
+						--	END IF;
+						
 					WHEN OTHERS => NULL;
 				END CASE;
 			END IF;
@@ -203,8 +246,20 @@ BEGIN
 					SEC1 <= conv_std_logic_vector(TIME_SEC/10 rem 10,4);
 					MIN0 <= conv_std_logic_vector(TIME_MIN rem 10,4);
 					MIN1 <= conv_std_logic_vector(TIME_MIN/10 rem 10,4);
-					HOUR0 <= conv_std_logic_vector(TIME_HOUR rem 10,4);
-					HOUR1 <= conv_std_logic_vector(TIME_HOUR/10 rem 10,4);
+					
+					--IF (IS24HOUR = FALSE) THEN
+					--	IF (TIME_HOUR < 12) THEN 
+					--		HOUR0 <= conv_std_logic_vector(TIME_HOUR rem 10,4);
+					--		HOUR1 <= conv_std_logic_vector(TIME_HOUR/10 rem 10,4);
+					--	ELSE
+					--		HOUR0 <= conv_std_logic_vector((TIME_HOUR-12) rem 10,4);
+					--		HOUR1 <= conv_std_logic_vector((TIME_HOUR-12)/10 rem 10,4);
+					--	END IF;
+					--ELSE 
+						HOUR0 <= conv_std_logic_vector(TIME_HOUR rem 10,4);
+						HOUR1 <= conv_std_logic_vector(TIME_HOUR/10 rem 10,4);
+					--END IF;
+					
 					IF (TWINKLE = FALSE) THEN
 						DOTARRAY <= "101011";
 						TWINKLE := TRUE;
@@ -312,7 +367,7 @@ BEGIN
 		END IF;
 	END PROCESS;
 
-	PROCESS(CLK,TIME_SEC,TIME_MIN,TIME_HOUR,ALARM_MIN,ALARM_HOUR,EN_ALARM,EN_REPORT,CLK_HIGH,cur_state)
+	PROCESS(CLK,TIME_SEC,TIME_MIN,TIME_HOUR,ALARM_MIN,ALARM_HOUR,EN_ALARM,EN_REPORT,CLK_HIGH,MUSIC,cur_state,EN_MUSIC)
 	BEGIN
 	IF(cur_state /= sethour AND cur_state /= setminute) THEN
 		IF (EN_REPORT = '0' OR EN_ALARM = '0') THEN
@@ -320,8 +375,18 @@ BEGIN
 				ALARM <= '1';
 			ELSIF (EN_REPORT = '0' AND TIME_MIN = 0 AND TIME_SEC =0 AND CLK='1')THEN
 				ALARM <= CLK_HIGH;
-			ELSIF (EN_ALARM = '0' AND TIME_MIN = ALARM_MIN AND TIME_HOUR = ALARM_HOUR AND CLK='1') THEN
-				ALARM <= '1';
+			ELSIF (EN_ALARM = '0' AND TIME_MIN = ALARM_MIN AND TIME_HOUR = ALARM_HOUR) THEN
+				--IF (EN_MUSIC = '0' AND CLK_DBLE='1')THEN
+				--	ALARM <= '1';
+				--ELSIF (EN_MUSIC = '0' AND CLK_DBLE='0') THEN
+				--	ALARM <= '0';
+				IF (EN_MUSIC = '1' AND CLK='1') THEN
+					ALARM <= '1';
+				ELSIF (EN_MUSIC = '1' AND CLK='0') THEN 
+					ALARM <= '0';
+				ELSIF (EN_MUSIC = '0') THEN
+					ALARM <= MUSIC;
+				END IF;
 			ELSE 
 				ALARM <= '0';
 			END IF;

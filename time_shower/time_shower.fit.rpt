@@ -1,5 +1,5 @@
 Fitter report for time_shower
-Thu Jun 01 21:43:57 2017
+Mon Jun 12 15:06:35 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------+
 ; Fitter Summary                                                   ;
 +-----------------------+------------------------------------------+
-; Fitter Status         ; Successful - Thu Jun 01 21:43:57 2017    ;
+; Fitter Status         ; Successful - Mon Jun 12 15:06:35 2017    ;
 ; Quartus II Version    ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name         ; time_shower                              ;
 ; Top-level Entity Name ; time_shower                              ;
@@ -157,8 +157,8 @@ The pin-out file can be found in F:/quartus/time_shower/time_shower.pin.
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
 ;     -- 4 input functions                    ; 19                      ;
-;     -- 3 input functions                    ; 7                       ;
-;     -- 2 input functions                    ; 5                       ;
+;     -- 3 input functions                    ; 8                       ;
+;     -- 2 input functions                    ; 4                       ;
 ;     -- 1 input functions                    ; 1                       ;
 ;     -- 0 input functions                    ; 0                       ;
 ;                                             ;                         ;
@@ -187,8 +187,8 @@ The pin-out file can be found in F:/quartus/time_shower/time_shower.pin.
 ; Maximum fan-out                             ; 18                      ;
 ; Highest non-global fan-out signal           ; led_shower:inst|CNT6[1] ;
 ; Highest non-global fan-out                  ; 18                      ;
-; Total fan-out                               ; 134                     ;
-; Average fan-out                             ; 1.91                    ;
+; Total fan-out                               ; 135                     ;
+; Average fan-out                             ; 1.93                    ;
 +---------------------------------------------+-------------------------+
 
 
@@ -463,7 +463,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------+---------+
 ; led_shower:inst|CNT6[1]  ; 18      ;
 ; led_shower:inst|CNT6[0]  ; 17      ;
-; led_shower:inst|CNT6[2]  ; 9       ;
+; led_shower:inst|CNT6[2]  ; 10      ;
 ; led_shower:inst|SHUJU[3] ; 7       ;
 ; led_shower:inst|SHUJU[2] ; 7       ;
 ; led_shower:inst|SHUJU[1] ; 7       ;
@@ -510,7 +510,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_shower:inst|WLED[3]  ; 1       ;
 ; led_shower:inst|WLED[4]  ; 1       ;
 ; led_shower:inst|WLED[5]  ; 1       ;
-; led_shower:inst|Mux16~0  ; 1       ;
+; led_shower:inst|Mux20~0  ; 1       ;
 +--------------------------+---------+
 
 
@@ -519,11 +519,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+---------------------+
 ; Interconnect Resource Type ; Usage               ;
 +----------------------------+---------------------+
-; C4s                        ; 48 / 1,624 ( 3 % )  ;
+; C4s                        ; 46 / 1,624 ( 3 % )  ;
 ; Direct links               ; 5 / 1,930 ( < 1 % ) ;
 ; Global clocks              ; 1 / 4 ( 25 % )      ;
 ; LAB clocks                 ; 4 / 56 ( 7 % )      ;
-; LUT chains                 ; 1 / 513 ( < 1 % )   ;
+; LUT chains                 ; 3 / 513 ( < 1 % )   ;
 ; Local interconnects        ; 62 / 1,930 ( 3 % )  ;
 ; R4s                        ; 61 / 1,472 ( 4 % )  ;
 +----------------------------+---------------------+
@@ -647,7 +647,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Jun 01 21:43:56 2017
+    Info: Processing started: Mon Jun 12 15:06:35 2017
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off time_shower -c time_shower
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Selected device EPM570T100C5 for design "time_shower"
@@ -728,7 +728,7 @@ Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
 Info: Estimated most critical path is register to pin delay of 8.258 ns
     Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X6_Y6; Fanout = 7; REG Node = 'led_shower:inst|SHUJU[3]'
-    Info: 2: + IC(2.875 ns) + CELL(0.200 ns) = 3.075 ns; Loc. = LAB_X8_Y4; Fanout = 1; COMB Node = 'led_shower:inst|Mux16~0'
+    Info: 2: + IC(2.875 ns) + CELL(0.200 ns) = 3.075 ns; Loc. = LAB_X8_Y4; Fanout = 1; COMB Node = 'led_shower:inst|Mux20~0'
     Info: 3: + IC(2.861 ns) + CELL(2.322 ns) = 8.258 ns; Loc. = PIN_14; Fanout = 0; PIN Node = 'd[0]'
     Info: Total cell delay = 2.522 ns ( 30.54 % )
     Info: Total interconnect delay = 5.736 ns ( 69.46 % )
@@ -743,8 +743,8 @@ Warning: The Reserve All Unused Pins setting has not been specified, and will de
 Info: Generated suppressed messages file F:/quartus/time_shower/time_shower.fit.smsg
 Info: Quartus II Fitter was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 276 megabytes
-    Info: Processing ended: Thu Jun 01 21:43:57 2017
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Mon Jun 12 15:06:35 2017
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

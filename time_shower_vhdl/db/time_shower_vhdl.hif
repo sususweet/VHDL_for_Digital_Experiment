@@ -1,0 +1,252 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Full Version
+45
+3203
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+time_shower_vhdl
+# storage
+db|time_shower_vhdl.(0).cnf
+db|time_shower_vhdl.(0).cnf
+# case_insensitive
+# source_file
+time_shower_vhdl.bdf
+7b8bdc9764c7d672db3e447c031cda4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+led_shower
+# storage
+db|time_shower_vhdl.(1).cnf
+db|time_shower_vhdl.(1).cnf
+# case_insensitive
+# source_file
+led_shower.bdf
+d475d6d3c55f22df77fc8dda93a5fe39
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+led_shower:inst
+}
+# macro_sequence
+
+# end
+# entity
+74247
+# storage
+db|time_shower_vhdl.(2).cnf
+db|time_shower_vhdl.(2).cnf
+# case_insensitive
+# source_file
+d:|altera|91|quartus|libraries|others|maxplus2|74247.bdf
+9e3451ff60169a6a149fc5149bcbe67
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+led_shower:inst|74247:inst5
+}
+# macro_sequence
+
+# end
+# entity
+74241
+# storage
+db|time_shower_vhdl.(3).cnf
+db|time_shower_vhdl.(3).cnf
+# case_insensitive
+# source_file
+d:|altera|91|quartus|libraries|others|maxplus2|74241.bdf
+a29129517a67638c904f3a508ed8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+led_shower:inst|74241:inst7
+led_shower:inst|74241:inst10
+led_shower:inst|74241:inst12
+}
+# macro_sequence
+
+# end
+# entity
+74138
+# storage
+db|time_shower_vhdl.(4).cnf
+db|time_shower_vhdl.(4).cnf
+# case_insensitive
+# source_file
+d:|altera|91|quartus|libraries|others|maxplus2|74138.bdf
+32dc8fd1db23180dae8214abe35379
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+led_shower:inst|74138:inst2
+}
+# macro_sequence
+
+# end
+# entity
+74163
+# storage
+db|time_shower_vhdl.(5).cnf
+db|time_shower_vhdl.(5).cnf
+# case_insensitive
+# source_file
+d:|altera|91|quartus|libraries|others|maxplus2|74163.tdf
+7b6eab8239cb61d11fdf639ae0d920
+7
+# user_parameter {
+DEVICE_FAMILY
+MAX II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+QC
+-1
+3
+QB
+-1
+3
+QA
+-1
+3
+CLRN
+-1
+3
+CLK
+-1
+3
+LDN
+-1
+2
+ENT
+-1
+2
+ENP
+-1
+2
+}
+# hierarchies {
+led_shower:inst|74163:inst
+}
+# macro_sequence
+
+# end
+# entity
+f74163
+# storage
+db|time_shower_vhdl.(6).cnf
+db|time_shower_vhdl.(6).cnf
+# case_insensitive
+# source_file
+d:|altera|91|quartus|libraries|others|maxplus2|f74163.bdf
+9cc9fa2c3e7f5da9d94821209d4efe
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+led_shower:inst|74163:inst|f74163:sub
+}
+# macro_sequence
+
+# end
+# entity
+7404
+# storage
+db|time_shower_vhdl.(7).cnf
+db|time_shower_vhdl.(7).cnf
+# case_insensitive
+# source_file
+d:|altera|91|quartus|libraries|others|maxplus2|7404.bdf
+ae46c6a7dbdd7253f645eacda16769
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+led_shower:inst|7404:inst8
+led_shower:inst|7404:inst9
+led_shower:inst|7404:inst11
+led_shower:inst|7404:inst13
+}
+# macro_sequence
+
+# end
+# entity
+7408
+# storage
+db|time_shower_vhdl.(8).cnf
+db|time_shower_vhdl.(8).cnf
+# case_insensitive
+# source_file
+d:|altera|91|quartus|libraries|others|maxplus2|7408.bdf
+b591965498d8849bf8c2c9a46d5d8f90
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+led_shower:inst|7408:inst6
+}
+# macro_sequence
+
+# end
+# complete
+

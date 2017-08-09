@@ -56,7 +56,7 @@ ARCHITECTURE timer_architecture OF timer IS
 	SIGNAL TIME_SEC: INTEGER RANGE 0 TO 59 := 0;
 	SIGNAL TIME_MIN: INTEGER RANGE 0 TO 59 := 0;
 	SIGNAL TIME_HOUR: INTEGER RANGE 0 TO 23 := 0;
-	SIGNAL ALARM_MIN: INTEGER RANGE 0 TO 59 := 0;
+	SIGNAL ALARM_MIN: INTEGER RANGE 0 TO 59 := 2;
 	SIGNAL ALARM_HOUR: INTEGER RANGE 0 TO 23 := 0;
 BEGIN
 	--Setting mode--
@@ -116,23 +116,27 @@ BEGIN
 				WHEN OTHERS => NULL;
 			END CASE;
 			IF (cur_state /= sethour AND cur_state /= setminute) THEN
-				IF (TIME_SEC = 59) THEN
-					TIME_SEC <= 0;
-					TIME_MIN <= TIME_MIN + 1;
-					IF (TIME_MIN = 59) THEN
-						TIME_MIN <= 0;
-						TIME_HOUR <= TIME_HOUR + 1;
-						IF (TIME_HOUR = 23) THEN
-							TIME_HOUR <= 0;
+			
+					IF (TIME_SEC = 59) THEN
+						TIME_SEC <= 0;
+						--  TIME_MIN <= TIME_MIN + 1;
+						IF (TIME_MIN = 59) THEN
+							TIME_MIN <= 0;
+						--	TIME_HOUR <= TIME_HOUR + 1;
+							IF (TIME_HOUR = 23) THEN
+								TIME_HOUR <= 0;
+							ELSE
+								TIME_HOUR <= TIME_HOUR + 1;
+							END IF;
 						ELSE
-							TIME_HOUR <= TIME_HOUR + 1;
+							TIME_MIN <= TIME_MIN + 1;
 						END IF;
-					ELSE
-						TIME_MIN <= TIME_MIN + 1;
-					END IF;
-				ELSE 
-					TIME_SEC <= TIME_SEC+1;
-				END IF;		
+					ELSE 
+						TIME_SEC <= TIME_SEC+1;
+					END IF;		
+			
+			
+	
 			END IF;	
 		END IF;
 	END PROCESS;
@@ -241,12 +245,12 @@ BEGIN
 	BEGIN
 		IF (TIME_MIN = 59 AND TIME_SEC>=56 AND CLK='0' AND EN_REPORT = '0')THEN
 			--IF (SET_HOUR = '1' AND SET_MIN = '1') THEN
-				ALARM <= '0';
+				ALARM <= '1';
 			--ELSE 
 				--ALARM <= '0';
 			--END IF;
 		ELSIF (TIME_MIN = 0 AND TIME_SEC =0 AND CLK='0' AND EN_REPORT = '0')THEN
-			ALARM <= '0';
+			ALARM <= '1';
 		ELSE
 			IF (EN_ALARM = '0') THEN
 				IF (TIME_MIN = ALARM_MIN AND TIME_HOUR = ALARM_HOUR AND CLK='0')THEN
@@ -255,7 +259,7 @@ BEGIN
 					ALARM <= '0';
 				END IF;
 			ELSE
-				ALARM <= '1';
+				ALARM <= '0';
 			END IF;
 		END IF;
 	END PROCESS;

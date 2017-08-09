@@ -10020,7 +10020,7 @@ ON
 # case_insensitive
 # source_file
 timer.vhd
-812aefdd4a8f50b35493679715a015c0
+3e5d28f9f80134ffdc7312c6a94b6a
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
