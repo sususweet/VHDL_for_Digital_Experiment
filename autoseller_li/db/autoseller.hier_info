@@ -1,0 +1,15 @@
+|autoseller
+P <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst1.CLK
+clk => inst0.CLK
+X => inst13.IN0
+X => inst9.IN0
+X => inst4.IN0
+X => inst18.IN0
+Y => inst12.IN0
+Y => inst.IN1
+Y => inst8.IN1
+Y => inst16.IN1
+S <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+
+

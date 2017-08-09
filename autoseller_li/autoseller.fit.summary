@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sun May 14 18:39:10 2017
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : autoseller
+Top-level Entity Name : autoseller
+Family : MAX II
+Device : EPM570T100C5
+Timing Models : Final
+Total logic elements : 4 / 570 ( < 1 % )
+Total pins : 5 / 76 ( 7 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
